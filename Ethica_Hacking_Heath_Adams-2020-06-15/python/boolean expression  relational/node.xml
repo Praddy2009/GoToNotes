@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Boolean Expression &amp; Relational</string>
+  <key>nodeid</key><string>5cd7ce7f-75b8-4b3e-ba3d-407b2ae7f523</string>
+  <key>modified_time</key><integer>1583777592</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1583776648</integer>
+  <key>order</key><integer>4</integer>
+</dict>
+</node>

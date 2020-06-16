@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>IP Addresses</title>
+</head><body><u><br/>
+</u><u><b><span style="font-size: 15pt">IP Addresses</span></b></u><br/>
+<br/>
+An <b>Internet Protocol address</b>&nbsp;(IP address) is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication.<br/>
+<br/>
+If we understand the total number of things on the Earth that may be connected to the Internet we can estimate the number of IP addresses we need.<br/>
+<br/>
+It serves two main functions:<br/>
+1) Host or Network interface identification<br/>
+2) Location Addressing<br/>
+<br/>
+<b><span style="font-size: 12pt">Que) How to check your IP?</span></b><ul><li style="list-style-type: none">&nbsp; &nbsp;Open Terminal</li>
+<li style="list-style-type: none">&nbsp; &nbsp;</li>
+<li style="list-style-type: none">&nbsp; &nbsp;ifconfig (Linux Distro)</li>
+<li style="list-style-type: none">&nbsp; &nbsp;ipconfig (Windows Distro)</li>
+</ul>
+<br/>
+<img src="image.png" width="500" height="330" /><br/>
+<br/>
+<b>Internet Protocol version 4</b>&nbsp;(IPv4) defines a IP address as a <b>32-bit</b>&nbsp;<b>decimal </b>number (4,29,49,67,296 Addresses) <br/>
+Ex: <b>10.0.2.15</b>&nbsp;is IPv4<br/>
+<br/>
+However,because of the growth of the Internet and the depletion of available IPv4 addresses,a new version of IP (<b>IPv6</b>),using 128 bit <b>alphanumeric</b>(3.4028236692093846346337460743177e+38‬ addresses),was standerdized.<br/>
+Ex: <b>fe80::a00:27ff:fe2f:4e42</b>&nbsp;is IPv6<br/>
+<br/>
+<b><span style="font-size: 12pt">Que) If IPv4 is outnumbered then why we still able to use it?<br/>
+</span></b>It's because of technology named <b>Network Address translation</b>(<b>NAT</b>). We use private IP address and share it with all our devices and use a single IP to communicate from outer world.<br/>
+<br/>
+<img src="image 2.png" width="550" height="411" /><br/>
+<br/>
+<br/>
+The way NAT works is when a corporate computer with a private IP address sends a packet to a public IP address outside the corporate network, it first goes to the NAT device. The NAT notes the packet’s source and destination addresses in a translation table.<br/>
+<br/>
+The NAT changes the source address of the packet to the public-facing address of the NAT device and sends it along to the external destination. When a packet replies, the NAT translates the destination address to the private IP address of the computer that initiated the communication. This can be done so that a single public IP address can represent multiple privately addressed computers.<br/>
+<b><span style="font-size: 14pt"><br/>
+When will IPv4 be “shut off”?<br/>
+</span></b><br/>
+Most of the world<a href="https://ipv4.potaroo.net/"> “ran out” of new IPv4 addresses</a> between 2011 and 2018 – but we won’t completely be out of them as IPv4 addresses get sold and re-used (as mentioned earlier), and any leftover addresses will be used for IPv6 transitions.<br/>
+<br/>
+There’s no official switch-off date, so people shouldn’t be worried that their internet access will suddenly go away one day. As more networks transition, more content sites support IPv6 and more end users upgrade their equipment for IPv6 capabilities, the world will slowly move away from IPv4.<br/>
+<br/>
+<b><span style="font-size: 13pt">FOR NAT CHECK:<br/>
+</span></b><a href="https://www.youtube.com/watch?v=FTUV0t6JaDA">https://www.youtube.com/watch?v=FTUV0t6JaDA</a>&nbsp; <br/>
+<br/>
+<b><span style="font-size: 13pt">FOR Subnetting CHECK:</span></b><br/>
+<a href="https://www.youtube.com/watch?v=Ct4PU6CyvTQ&list=PLh94XVT4dq02frQRRZBHzvj2hwuhzSByN&index=4">https://www.youtube.com/watch?v=Ct4PU6CyvTQ&amp;list=PLh94XVT4dq02frQRRZBHzvj2hwuhzSByN&amp;index=4</a>&nbsp; <br/>
+<br/>
+<u>Conclusion<br/>
+</u>Ek Org ek public ip leti hai(IPv4)(for router) fir using NAT apne andar private ip de deti hai.....jiski wo subnetting bhi kar sakti hai<br/>
+</body></html>

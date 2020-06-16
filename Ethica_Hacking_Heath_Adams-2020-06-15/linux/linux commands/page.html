@@ -1,0 +1,70 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Linux Commands</title>
+</head><body><br/>
+<b>pwd </b>: Present Working Directory<br/>
+<b><br/>
+</b><b>cd  </b>: Change Directory<br/>
+	 cd ..    //Comeback 1 step<br/>
+	 cd destination   //To move to a destination<br/>
+<br/>
+<b>mkdir</b> : To make a directory<br/>
+<b><br/>
+</b><b>mv   </b>: To cut and paste file from source to destination<br/>
+	  mv source destination<br/>
+<br/>
+<b>cp</b>   : To copy a file from source to destination<br/>
+	  cp source destination<br/>
+<br/>
+<b>man  </b>: Gives manual/help pages for any command<br/>
+      man command<br/>
+      command --help<br/>
+<br/>
+<b>rm    </b>: To delete a file<br/>
+<br/>
+<b>ls     </b>: Display sub directories and files<br/>
+<br/>
+<b>rmdir  </b>: Delete folders<br/>
+<br/>
+<b>passwd </b>: To change user Password<br/>
+<br/>
+<b>adduser </b>: To add new user for our Kali<ul><li style="list-style-type: none">adduser username</li>
+</ul>
+<b>su     </b>: Switch user<ul><li style="list-style-type: none"><ul><li style="list-style-type: none">su username</li>
+</ul>
+</li>
+</ul>
+<span style="font-size: 15pt"><b><br/>
+</b></span><span style="font-size: 15pt"><b>User Permissions</b></span><br/>
+<br/>
+<img height="132" src="image.png" width="450"/><br/>
+<br/>
+When we run command <b>ls -la </b>we will get something shown above<br/>
+On left side it contains 1:3:3:3 <br/>
+where 1st one tells its file or directory<br/>
+and rest 3:3:3 contains the combination of w(write) x(execute)r(read) <br/>
+first one is for Owner<br/>
+Second is for Group<br/>
+Third is for common user outside of group<br/>
+<br/>
+<span style="font-size: 14pt"><b>To Grant file permissions:</b></span><br/>
+<br/>
+1) Grant rwx permission to all<br/>
+	<b>chmod 777 filename<br/>
+</b><b><br/>
+</b><img src="image 2.png"/><br/>
+<br/>
+<br/>
+<br/>
+<span style="font-size: 13pt"><b>To See the user passwords(in hashed format)<br/>
+<br/>
+</b></span><b>cd /etc/shadow</b><br/>
+<br/>
+<span style="font-size: 13pt"><b>To See the user list<br/>
+<br/>
+</b></span><b>cd /etc/passwd</b><br/>
+<br/>
+<img height="367" src="image 3.png" width="500"/><br/>
+<br/>
+If User is added in sudoers file he/she can use power of root users</body></html>

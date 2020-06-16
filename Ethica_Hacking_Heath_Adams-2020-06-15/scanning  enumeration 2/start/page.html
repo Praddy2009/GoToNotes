@@ -1,0 +1,30 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Start</title>
+</head><body><br/>
+We have initialized the Vulnerable Machine Kioptix on our VM<br/>
+Put both <b>kali</b>and<b>New Machine</b>on <b>Bridge network</b><br/>
+<br/>
+<img src="image.png"/><br/>
+<br/>
+<b>Step1:<br/>
+</b><br/>
+So first we need to know the ip of machine<br/>
+Let's find ip of kali using ifconfig and use netdiscover as the vulnerable machine is in same subnet<br/>
+<br/>
+<img src="image 2.png"/><br/>
+<br/>
+As IP is not displaying on Machine So we will use the tool<br/>
+<b>netdiscover -r xx.xx.xx.0/24 </b>to check the whole subnet range<br/>
+<br/>
+<img src="image 3.png"/><br/>
+<br/>
+We got the Machines IP<br/>
+<br/>
+<img src="image 4.png"/><br/>
+<br/>
+another way to do it is via NMAP -sn<br/>
+<br/>
+<br/>
+</body></html>

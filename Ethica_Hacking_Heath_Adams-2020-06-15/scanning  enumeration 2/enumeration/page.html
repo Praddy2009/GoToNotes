@@ -1,0 +1,110 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Enumeration</title>
+</head><body>Enumeration is defined as the process of extracting user names, machine names, network resources, shares and services from a system. In this phase, the attacker creates an active connection to the system and performs directed queries to gain more information about the target. The gathered information is used to identify the vulnerabilities or weak points in system security and tries to exploit in the System gaining phase.<br/>
+<br/>
+So lets move to open ports which hosts websites<br/>
+Both 80 &amp; 443 ports runnig default Apache webpage<br/>
+<br/>
+<img height="340" src="image.png" width="750"/><br/>
+<br/>
+On clicking the documentation we are redirected to bad page but information is disclosed here<br/>
+<br/>
+<img src="image 2.png"/><br/>
+<br/>
+After this lets check all the subdirectories hosted over website using <b>Nikto</b>(Web Vulnerability scanning) or <b>Dirbuster</b><br/>
+<br/>
+nikto -h 192.168.43.68<br/>
+<br/>
+<img src="image 3.png"/><br/>
+<br/>
+Now we will use Dirbuster to enumerate the directories on web<br/>
+<br/>
+<br/>
+<img src="image 4.png"/><br/>
+<b><br/>
+I<span style="background-color: #ffff00">n case of apache find php<br/>
+</span></b><b><span style="background-color: #ffff00">In case of IIS find asp,aspx,asm,asmx</span></b><br/>
+<br/>
+When we start it we will get the directories<br/>
+<br/>
+<img src="image 5.png"/><br/>
+<br/>
+<br/>
+<hr/><br/>
+<span style="font-size: 13pt">Now lets move on to <b>SMB </b>on <b>port 139</b><br/>
+</span><br/>
+<b><br/>
+</b><b>What is SMB</b>?<br/>
+<br/>
+The Server Message Block Protocol (SMB protocol) is a client server communication protocol used for sharing access to files, printers, serial ports and other resources on a network. It can also carry transaction protocols<br/>
+for interprocess communication.<br/>
+<br/>
+The SMB protocol enables an application -- or the user of an application -- to access files on a remote server, as well as other resources, including printers, mail slots.<br/>
+<br/>
+During Nmap we found<br/>
+<img src="image 6.png"/><br/>
+<span style="font-size: 14pt"><br/>
+Its SMB version 2.x but don't know exactly what version it is running?<br/>
+</span><br/>
+So first step is to find out the exact version of SMB<br/>
+So we'll use <b>metasploit</b>to check the version<br/>
+Launch metasploit using <b>msfconsole</b><br/>
+<img src="image 7.png"/><br/>
+<br/>
+Here we find 1960<b>exploits modules</b>,1094<b>auxiliary modules</b>(enumeration &amp; scanning purpose),336<b>post</b>(post exploitation modules)<br/>
+<br/>
+Lets &gt;<b>search smb</b> //to search each and every module for smb  <br/>
+<br/>
+<img src="image 8.png"/><br/>
+<br/>
+Here we search for an auxiliary module to do SMB Version Detection<br/>
+<br/>
+&gt;<b>use auxiliary/scanner/smb/smb_version<br/>
+</b>&gt;<b>info<br/>
+</b><b><img src="image 9.png"/><br/>
+</b><br/>
+Instead of info you can also write<br/>
+&gt;<b>options		</b>//gives only the important informations<b><br/>
+</b><br/>
+<img src="image 10.png"/><br/>
+<br/>
+&gt;<b>set rhosts 192.168.43.68<br/>
+</b>&gt;<b>run<br/>
+</b><b><br/>
+</b><img src="image 11.png"/><br/>
+<br/>
+So now we have the SMB version<ul><li style="list-style-type: none"><ul><li style="list-style-type: none"/>
+</ul>
+</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+</ul>
+Let's use another tool to try to connect to SMB service<br/>
+#<b>smbclient -L \\\\192.168.43.68\\<br/>
+</b>press enter in password field //anonymous login<b><br/>
+</b><img src="image 12.png"/><br/>
+<br/>
+Let's try to connect with these <b>fileshare </b>names <br/>
+<br/>
+#<b>smbclient \\\\192.168.43.68\\ADMIN$    //</b>found that access is denied<br/>
+#<b>smbclient \\\\192.168.43.68\\IPC$		//</b>Access is given but then <b>deadend</b><hr/><br/>
+<span style="font-size: 13pt">Now lets move on to <b>SSH </b>on <b>port 22<br/>
+</b><b><br/>
+</b>What is SSH?<br/>
+</span>The SSH protocol uses encryption to secure the connection between a client and a server. All user authentication, commands, output, and file transfers are encrypted to protect against attacks in the network.<br/>
+<br/>
+<img src="image 13.png"/><br/>
+<br/>
+But now we don't have the password so it's a dead end<br/>
+<hr/><br/>
+Use #<b>searchsploit </b>&lt;service&gt;<br/>
+<br/>
+<img height="284" src="image 14.png" width="800"/><br/>
+<hr/>Nessus starts at <b>https://127.0.0.1:8834</b></body></html>

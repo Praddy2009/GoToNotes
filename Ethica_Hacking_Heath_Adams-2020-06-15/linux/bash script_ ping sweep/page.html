@@ -1,0 +1,65 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Bash Script_ Ping Sweep</title>
+</head><body><b>Moto : </b>To create bash scripts to Automate the task<br/>
+<br/>
+<b>Ping Sweep :<br/>
+</b>Ping sweep is just a technique that can be used to find out which hosts are alive in a network or large number of IP addresses.<br/>
+We can use ping sweep to ping large number of hosts in one go.<br/>
+<br/>
+Creating a script:<br/>
+<br/>
+<b>Step 1:</b>Create a file<br/>
+<img src="image.png"/><br/>
+<br/>
+<b>Step 2: </b>Write the code<br/>
+<img src="image 2.png"/><br/>
+<br/>
+First line is to declare that it's a bash script<br/>
+<br/>
+<b>for ip in `seq 1 254` states that </b>: a variable named ip between 1 to 254 do the following task<br/>
+<br/>
+<b>ping -c 1</b>: says that do ping for 1 packet<br/>
+<br/>
+<b>$1 : </b>is for user input for first 3 octates of ip address <b>+ the $ip variable from above loop </b>completes the fourth octate<br/>
+<br/>
+<b>|</b>: pipeline symbol used to add a command<br/>
+<br/>
+<b>grep &quot;64 bytes&quot;</b>extracts the line which contains the word &quot;64 bytes&quot;<br/>
+<b><br/>
+</b><img src="image 3.png"/><br/>
+<br/>
+<b>cut -d &quot; &quot;</b>: Divides/cuts the line on spaces(&quot; &quot;) . -d stands for delimiter<br/>
+<br/>
+<img src="image 4.png"/><br/>
+<br/>
+<b>-f 4</b>: is to get the 4th block. -f stands for field<br/>
+<br/>
+<img src="image 5.png"/><br/>
+<br/>
+<b>tr -d &quot;:&quot; </b>: translate/remove the colon(:) from the extracted ip address<br/>
+<img src="image 6.png"/><br/>
+<br/>
+<br/>
+Now we can give permission to script to make it executable &amp; execute it<br/>
+<img src="image 7.png"/><br/>
+<br/>
+we can save the ip to a file using cat command<br/>
+<br/>
+<img src="image 8.png"/><br/>
+<br/>
+Now let's use nmap to do a ping sweep <br/>
+<br/>
+<img src="image 9.png"/><br/>
+<br/>
+we doing stealth scan on port 80 with T4 speed. <br/>
+$ can be replaced with ;<br/>
+<br/>
+<b>Better script:<br/>
+<br/>
+<img src="image 10.png"/><br/>
+<br/>
+<br/>
+<br/>
+</b></body></html>
