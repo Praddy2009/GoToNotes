@@ -1,0 +1,102 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Authentication Bypass</title>
+</head><body><br/>
+<span style="font-size: 16pt"><b>How a Auth Bypass Works</b></span><br/>
+  <br/>
+                         <img height="302" src="image.png" width="600"/><br/>
+<span style="font-size: 13pt"><ul><li>When a client connecting to server then it sends the request(From left to right) and in return gets a response from the server.</li>
+<li>If the client is able to modify the response then chances of Authentication bypass increases.(Possible if the application just checking the client side code instead of checking the server side code.)</li>
+</ul>
+</span><ul><span style="font-size: 13pt"><li><b>CASE 1</b>: OTP Bypass: </li>
+</span><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><span style="font-size: 13pt"><li>Checking whether the OTP's are right or wrong improperly leads to bypass</li>
+<li><span style="color: #ff0000">Verifying at the client side only &amp; taking decision is dangerous.</span></li>
+</span><li><span style="font-size: 13pt">Only, allowing logging into application based on on true/false conditions are dangerous. </span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul><li><span style="font-size: 13pt"><b>EXAMPLE 1</b></span></li>
+<span style="font-size: 13pt"><li style="list-style-type: none">Visit the website: https://www.healthie.in/</li>
+<li style="list-style-type: none">While Sign-Up with fake credentials you'll get OTP on your given fake mobile number. </li>
+<li style="list-style-type: none">As you dont know the OTP activate the Burp Proxy and input any random 4 digit OTP</li>
+<li style="list-style-type: none"><img height="174" src="image 2.png" width="300"/></li>
+<li style="list-style-type: none">It will be intersepted in Burp</li>
+<li style="list-style-type: none"><img src="image 3.png"/></li>
+<li style="list-style-type: none">Intersept the response on this phase and forward</li>
+<li style="list-style-type: none"><img height="302" src="image 4.png" width="350"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Do the changes in response</li>
+<li style="list-style-type: none"><img src="image 8.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Wohoo you signedin as a new user with facke credentials</li>
+<li style="list-style-type: none"><img src="image 7.png"/></li>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li><b>EXAMPLE 2</b></li>
+<li style="list-style-type: none">Visit site: https://www.99acres.com/NRI-Real-Estate.htm</li>
+<li style="list-style-type: none">Do Signup with fake credentials</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="271" src="image 5.png" width="200"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Enter a random code and start BurpSuit</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="221" src="image 6.png" width="300"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Burp suit will intersept API Calls</li>
+<li style="list-style-type: none"><img src="image 9.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Do intercept the response</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="328" src="image 10.png" width="350"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Do the changes in response</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image 11.png"/></li>
+<li style="list-style-type: none">Turnoff BurpSuit and refresh the page you'll be loggedIn</li>
+<li style="list-style-type: none"><img src="image 12.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li><b>EXAMPLE 3</b></li>
+<li style="list-style-type: none">Visit site: https://www.starquik.com/</li>
+<li style="list-style-type: none">Signup and it allows 0000 as default OTP</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li><b>EXAMPLE 4</b></li>
+<li style="list-style-type: none">Visit site: https://www.starquik.com/</li>
+<li style="list-style-type: none">Signup with fake credentials</li>
+<li style="list-style-type: none"><img height="348" src="image 13.png" width="250"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">At OTP screen put wrong OTP and Start Burp</li>
+<li style="list-style-type: none"><img height="207" src="image 14.png" width="350"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Burpsuit will intersept</li>
+<li style="list-style-type: none"><img src="image 15.png"/></li>
+<li style="list-style-type: none">Do changes and intersept the response also</li>
+<li style="list-style-type: none"><img src="image 16.png"/></li>
+<b><li style="list-style-type: none">Tip : When the OTP is wrong then the website immediately throws message but here we see that it showing us two to three more responses</li>
+<li style="list-style-type: none">So we try giving input to any of the requests</li>
+</b><li style="list-style-type: none"><img src="image 17.png"/></li>
+<li style="list-style-type: none">And forward it </li>
+<li style="list-style-type: none">Wollah we have an account with fake credentials</li>
+<li style="list-style-type: none"><img src="image 18.png"/></li>
+<li style="list-style-type: none"/>
+</span></ul>
+<span style="font-size: 13pt"/></body></html>

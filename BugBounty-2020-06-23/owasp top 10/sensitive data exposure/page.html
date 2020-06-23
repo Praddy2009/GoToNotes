@@ -1,0 +1,36 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Sensitive Data Exposure</title>
+</head><body><b><span style="font-size: 16pt">Sensitive Data Exposure<br/>
+</span></b><ul><li><span style="font-size: 13pt">When any application or API do not protect sensitive data properly like user account details, credit card details, passwords etc.</span></li>
+<span style="font-size: 13pt"><li>Attacker can view this sensitive data and get access to internal network</li>
+<li>GitHub Tokens and API Keys Leakages</li>
+</span><li><span style="font-size: 13pt">Sensitive Invoices Indexed by Google</span></li>
+<li><span style="font-size: 13pt">Insecure storage of Data also leads to SDE</span>.</li>
+</ul>
+<br/>
+<span style="font-size: 16pt"><b>Why it Happens</b></span><span style="font-size: 13pt"><br/>
+</span><ul><li><span style="font-size: 13pt">No proper access control over when exchanging sensitive data</span></li>
+<span style="font-size: 13pt"><li><span style="color: #ff0000">API's not properly protected</span></li>
+<li>Lack of Robots.txt </li>
+<li>Lack of Data Strip when saving at server.</li>
+</span></ul>
+<span style="font-size: 13pt"><br/>
+(Tip: Robots.txt is a file which contains set of rules for crawlers i.e what part of website can be crawled and what not can be crawled)<br/>
+<br/>
+</span><span style="font-size: 16pt"><b>What can be achieved by it</b></span><span style="font-size: 13pt"><br/>
+</span><ul><li><span style="font-size: 13pt">Sensitive Information of the Users leak, i.e -Transaction Details, Passwords</span></li>
+<span style="font-size: 13pt"><li>API Keys</li>
+<li>Tokens of Internal Portals only accessible to Domain Admins</li>
+<li>Passwords, SSH Keys, aka <span style="color: #ff0000">anything that is sensitive</span></li>
+</span></ul>
+<br/>
+<b><span style="font-size: 16pt">How do we fix SDE issues</span></b><br/>
+<ul><li><span style="font-size: 13pt"><b>Don't store sensitive data unnecessarily</b></span></li>
+<span style="font-size: 13pt"><b><li>Make sure to encrypt all SD at rest</li>
+</b><li>Disable catching Responses that has SD</li>
+<li>Do not put keys, tokens in Gitub or anywhere in server.</li>
+<li>Implement <span style="color: #ff0000">Access Control</span>for users (Make checker Functionality)</li>
+</span></ul>
+</body></html>

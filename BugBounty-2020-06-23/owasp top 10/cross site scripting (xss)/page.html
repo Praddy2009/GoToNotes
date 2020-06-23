@@ -1,0 +1,37 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Cross Site Scripting (XSS)</title>
+</head><body><b><span style="font-size: 16pt">Cross Site Scripting (XSS)<br/>
+</span></b><ul><li><span style="font-size: 13pt">The attack allows attacker to execute <span style="color: #ff00ff"><b>javascript</b></span></span></li>
+<span style="font-size: 13pt"><li><span style="color: #000000">There are </span><span style="color: #ff0000"><b>3 types</b></span><span style="color: #000000">of XSS</span></li>
+</span><li style="list-style-type: none"><ul><span style="font-size: 13pt"><span style="color: #000000"><li>Reflected XSS</li>
+<li>Stored XSS</li>
+<li>DOM XSS</li>
+</span></span></ul>
+</li>
+</ul>
+<ul><span style="font-size: 13pt"><li><b><span style="color: #000000">RXSS :</span></b><span style="color: #000000">The application includes invalidated or unescaped users input as part of HTML Output,which can be used further for </span><span style="color: #ff0000"><b>ATO's(Account take overs)</b></span><b><span style="color: #000000">. </span></b><span style="color: #000000">In case their is search bar and i input alert(1) and it gets executed then it's RXSS vulnerable</span>.<span style="color: #ff0000"><b>This attack, allows attacker to execute js in victims browser and hijack the session cookie leading to ATO.</b></span></li>
+</span></ul>
+<ul><span style="font-size: 13pt"><span style="color: #000000"><li><b>SXSS :</b>Which is later viewed by another user or admin(V-<b>ATO</b>). Their is an edit profile section and we gave js payload in firstname and lastname field and we save it. Let's say its later viewed by admin the arbitrary js payload gets executed and gives the cookies to the attacker.</li>
+</span></span></ul>
+<ul><li><b><span style="font-size: 13pt"><span style="color: #000000">DXSS : </span></span></b><span style="font-size: 13pt"><span style="color: #000000">Client side attack, where untrusted input is passed in source and comes out of sink and executes</span></span>.</li>
+</ul>
+<br/>
+<b><span style="font-size: 16pt">Why it Happens</span></b><ul><li><span style="font-size: 13pt">No sanitization oe Escaping</span></li>
+<span style="font-size: 13pt"><li>Input is directly taken as the HTML output</li>
+<li>Bad Coding practices</li>
+</span></ul>
+<br/>
+<b><span style="font-size: 16pt">What can be achieved by it</span></b><span style="font-size: 13pt"><br/>
+</span><ul><li><span style="font-size: 13pt">Account Takeovers</span></li>
+<span style="font-size: 13pt"><li>Keyloggers</li>
+<li>Redirection</li>
+<li><span style="color: #ff0000">and a lot more..</span></li>
+</span></ul>
+<span style="font-size: 13pt"><span style="color: #ff0000"><br/>
+</span></span><b><span style="font-size: 16pt">how do we fix XSS </span></b><ul><li><span style="font-size: 13pt">Input Sanitization</span></li>
+<span style="font-size: 13pt"><li>Escaping and encoding</li>
+<li>WAF(to block XSS attacks)</li>
+</span></ul>
+</body></html>

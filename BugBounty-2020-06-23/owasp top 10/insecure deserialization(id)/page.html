@@ -1,0 +1,21 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Insecure Deserialization(ID)</title>
+</head><body><b><span style="font-size: 16pt">Insecure Deserialization<br/>
+</span></b><ul><li><span style="font-size: 13pt">Applications those serialise<span style="color: #ff0000">hostile or tampered object by attacker</span></span></li>
+<span style="font-size: 13pt"><li><span style="color: #000000">When an application serialises and deserialises the data based on input without checking it properly may lead to </span><span style="color: #ff0000">RCE</span></li>
+</span></ul>
+<br/>
+<span style="font-size: 16pt"><b>Why it Happens</b></span><ul><li><span style="font-size: 13pt">Accept serialized objects from untrusted source and deserialize it</span></li>
+</ul>
+<br/>
+<b><span style="font-size: 16pt">What can be achieved by it</span></b><ul><span style="font-size: 13pt"><li>RCE</li>
+<li>Sensitive file disclosure<span style="color: #ff0000">(etc/passwd)</span></li>
+</span></ul>
+<br/>
+<span style="font-size: 16pt"><b>how do we fix ID </b></span><ul><li><span style="font-size: 13pt">Best way is <span style="color: #ff0000">not to accept</span>serialized objcts from untrusted sources</span></li>
+<span style="font-size: 13pt"><li><span style="color: #ff0000">Integrity checks</span>for serialized objects to prevent hostile object creation or data tampering</li>
+<li><span style="color: #ff0000">Logging</span>deserialization exceptions and failure, such as where the incoming type is not the expected type, or the deserialization throws exception</li>
+</span></ul>
+</body></html>

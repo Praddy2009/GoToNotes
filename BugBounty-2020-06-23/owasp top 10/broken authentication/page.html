@@ -1,0 +1,40 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Broken Authentication</title>
+</head><body><b><span style="font-size: 16pt">Broken Authentication<br/>
+</span></b><ul><li><span style="font-size: 13pt">When any application functionality is broken/weak and attacker is able to bypass the authentication using <b>session token flaws, brute force, No rate limiting, Password compromise </b>using <b>response manipulation </b>or any other flaws which can give an attacker temporary or permanent access to the user identity.</span></li>
+</ul>
+<span style="font-size: 13pt"><br/>
+</span><span style="font-size: 16pt"><b>Vulnerabilities<br/>
+</b></span><ul><li><span style="font-size: 13pt">OTP Bypass</span></li>
+<span style="font-size: 13pt"><li>Captcha Bypass</li>
+<li>Common Passwords BruteForce</li>
+<li>2FA Bypass <b/></li>
+</span></ul>
+<br/>
+<span style="font-size: 16pt"><b>Why it Happens</b></span><span style="font-size: 13pt"><br/>
+</span><ul><li><span style="font-size: 13pt">Manipulated Response is interpreted by the application</span></li>
+<span style="font-size: 13pt"><li><span style="color: #ff0000">No Rate Limit</span></li>
+<li>Lack of session management</li>
+</span></ul>
+<span style="font-size: 13pt"><br/>
+</span><b><span style="font-size: 16pt">What can be achieved by it</span></b><span style="font-size: 13pt"><br/>
+</span><ul><li><span style="font-size: 13pt">Temporary Access to User account (<b>TATO</b>)</span></li>
+<span style="font-size: 13pt"><li>Permanent Access to User account (<b>PATO</b>)</li>
+<li>Attacker can modify and alter the user details</li>
+<li>Accounts can be used for malicious purpose to conduct attacks.</li>
+</span></ul>
+<br/>
+<b><span style="font-size: 16pt">How do we fix BA issues</span></b><br/>
+<ul><li><span style="font-size: 13pt"><b>Usage of Strong Auth(JWT,SAML,OAuth)</b>- Input Validation</span></li>
+<li><span style="font-size: 13pt"><b>Do not allow Default or weak Creds</b></span></li>
+<span style="font-size: 13pt"><li style="list-style-type: none"><ul><li>Escaping is the primary means to make sure that untrusted data can't be used to convey an injection attack.</li>
+<li>There is <b>no harm </b>in escaping data properly- it will still render in the browser properly.</li>
+<li>Escaping simply lets the interpreter know the data is not intended to be executed, and therefore prevents attacks from working.</li>
+</ul>
+</li>
+<li><b>Rate limit : </b>Using safe interfaces.</li>
+<li>Usage of Server side secure session management that generates <span style="color: #ff0000">high entropy secure</span>sessions.</li>
+</span></ul>
+</body></html>

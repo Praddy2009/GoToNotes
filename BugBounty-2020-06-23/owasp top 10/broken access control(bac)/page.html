@@ -1,0 +1,42 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Broken Access Control(BAC)</title>
+</head><body><b><span style="font-size: 16pt">Broken Access Control(BAC)</span></b><ul><li><span style="font-size: 13pt">Restricted users access not properly handled(<span style="color: #ff0000"><b>MFLAC</b></span>)</span></li>
+<span style="font-size: 13pt"><li style="list-style-type: none">Ex: There is a login portal for school having 3 access levels.</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">1.Student,  2.Teacher, 3.Principal</li>
+</ul>
+</li>
+<li style="list-style-type: none"/>
+</span><li style="list-style-type: none"><ul><span style="font-size: 13pt"><li style="list-style-type: none">Student should accesss and manage his own attendence,Teacher should be allowed to see/modify students data, Principal should have access to teachers and students data.</li>
+</span><span style="color: #ff0000"><li style="list-style-type: none"><span style="font-size: 13pt">IF access control is not configured, student is able to modify others and teachers data also</span>.</li>
+</span></ul>
+</li>
+</ul>
+<span style="color: #ff0000"><br/>
+</span><span style="font-size: 16pt"><b>Why it Happens</b></span><span style="font-size: 13pt"><br/>
+</span><ul><li><span style="font-size: 13pt">Due to lack of effective Access Control between 2 roles</span></li>
+<span style="font-size: 13pt"><li>Best Example in Banking Sector is <b>Maker and checker </b>Roles</li>
+</span><li><span style="color: #ff0000"><span style="font-size: 13pt">If maker is able to bypass checker's functionality, then it's a flaw</span>.</span></li>
+</ul>
+<br/>
+<b><span style="font-size: 16pt">What can be achieved by it</span></b><span style="font-size: 13pt"><br/>
+</span><ul><li><b><span style="font-size: 13pt">Privilege Escalation:</span></b></li>
+<li style="list-style-type: none"><ul><span style="font-size: 13pt"><li>Horizontal Escalation- <span style="color: #ff0000">user to user</span></li>
+<li>Vertical Escalation - <span style="color: #ff0000">user to admin / admin to super admin</span></li>
+</span></ul>
+</li>
+<span style="font-size: 13pt"><li><span style="color: #000000">C</span><span style="color: #ff0000">ross </span><span style="color: #000000">O</span><span style="color: #ff0000">rigin </span><span style="color: #000000">R</span><span style="color: #ff0000">esource </span><span style="color: #000000">S</span><span style="color: #ff0000">haring</span></li>
+<li><span style="color: #000000">Access to API with missing access controls for <b>POST,PUT,DELETE</b></span></li>
+<li><span style="color: #000000">Allowing Primary Key to</span><span style="color: #ff0000">view/edit/modify/change</span><span style="color: #000000">someones data</span><span style="color: #ff0000">.</span></li>
+<li><span style="color: #000000">Metadata Manipulation such as replaying JWT access control tokens</span></li>
+</span></ul>
+<br/>
+<span style="font-size: 16pt"><b>How do we fix BAC issues</b></span><br/>
+<ul><li><span style="font-size: 13pt">Impliment Strong Access Control Mechanism</span></li>
+<span style="font-size: 13pt"><li>Only Effective if enforced in trust server side code or server less API</li>
+<li>Tokens, Auth should be invalidated as soon as Logout</li>
+<li>Decisions should not be made by plain cookies parms like</li>
+<span style="color: #ff0000"><li style="list-style-type: none">user=admin, access=superadmin, roles=tiktoker</li>
+</span></span></ul>
+</body></html>

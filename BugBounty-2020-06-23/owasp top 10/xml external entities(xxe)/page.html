@@ -1,0 +1,29 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>XML External Entities(XXE)</title>
+</head><body><b><span style="font-size: 16pt">XML External Entities(XXE)<br/>
+</span></b><ul><li><span style="font-size: 13pt">Applications those parse <span style="color: #ff0000"><b>XML Input</b></span></span></li>
+<li><span style="font-size: 13pt"><b>XML input containing a eference to an external entity is processed by a weakly configured XML parser</b></span></li>
+<span style="font-size: 13pt"><li>XXE may lead to disclosure of <span style="color: #ff0000"><b>sensitive data, SSRF, Port Scanning,DOS or RCE</b></span></li>
+</span></ul>
+<br/>
+<span style="font-size: 16pt"><b>Why it Happens</b></span><span style="font-size: 13pt"><br/>
+</span><ul><li><span style="font-size: 13pt">Incorrect processing on XML input and parsing</span></li>
+</ul>
+<br/>
+<span style="font-size: 16pt"><b>What can be achieved by it</b></span><span style="font-size: 13pt"><br/>
+</span><ul><li><span style="font-size: 13pt">XXE may lead to disclosure of</span></li>
+<li><span style="font-size: 13pt">Sensitive data <span style="color: #ff0000">(etc/passwd)</span></span></li>
+<span style="font-size: 13pt"><li>SSRF<span style="color: #ff0000">(hit a request to your collaborator/server)</span></li>
+<li>Port Scanning<span style="color: #ff0000">(enumerate 127.0.0.1 and ports)</span></li>
+<li>Denial Of Service<span style="color: #ff0000">(Denial of Service)</span></li>
+<li>RCE <span style="color: #ff0000">(Remote code execution OOB)</span></li>
+</span></ul>
+<br/>
+<span style="font-size: 16pt"><b>How do we fix SDE issues</b></span><br/>
+<ul><li><span style="font-size: 13pt">Validate or escape tainted data within the system identifier in the DTD</span></li>
+<span style="font-size: 13pt"><li>The safest way to prevent XXE is always to disable DTDs (External Entities) completely</li>
+<li>Depending on the parser, disable DTD's</li>
+</span></ul>
+</body></html>
