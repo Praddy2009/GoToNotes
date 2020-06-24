@@ -1,0 +1,33 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Account Takeover (User Id)</title>
+</head><body><b><span style="font-size: 16pt">Account Takeover (User Id)</span></b><ul><li style="list-style-type: none"/>
+<span style="font-size: 13pt"><li>Mapping users as per uid, gid and and other params like user_id, user=, etc is good practice</li>
+<li>Untill proper checks and access control is in place</li>
+</span><li><span style="font-size: 13pt">Logging into other users account by just using their userId's</span></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<b><li style="list-style-type: none"><span style="font-size: 15pt">Example 1</span><span style="font-size: 13pt"/></li>
+</b><span style="font-size: 13pt"><li style="list-style-type: none">Visit https://wforwoman.com/</li>
+<li style="list-style-type: none">Login with proper credentials</li>
+<li style="list-style-type: none">Now Logout and login again but this time start BurpSuit</li>
+</span><li style="list-style-type: none"/>
+<li style="list-style-type: none"><span style="font-size: 13pt">This time again give correct OTP but intecept the response</span></li>
+<li style="list-style-type: none">	<span style="font-size: 13pt"/></li>
+<li style="list-style-type: none"><span style="font-size: 13pt">We Do changes(id) in intercepted response</span></li>
+<li style="list-style-type: none"><img src="image.png"/>   <img src="image 2.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><span style="font-size: 13pt">And we are in someone elses account</span></li>
+<li style="list-style-type: none"><img src="image 3.png"/></li>
+<li style="list-style-type: none"><hr/><span style="font-size: 15pt"><b>Example 2</b></span><b><span style="font-size: 13pt"/></b></li>
+<span style="font-size: 13pt"><li style="list-style-type: none">Visit https://www.misrii.com/</li>
+<li style="list-style-type: none">Make proper account</li>
+<li style="list-style-type: none">Now Login again with correct OTP but Intercept it with BurpSuit</li>
+<li style="list-style-type: none">Intersept the response</li>
+<li style="list-style-type: none">Make changes in uid of response</li>
+<li style="list-style-type: none"/>
+</span><li style="list-style-type: none"><hr/>	</li>
+</ul>
+</body></html>
