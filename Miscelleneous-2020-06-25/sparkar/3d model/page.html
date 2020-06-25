@@ -1,0 +1,59 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>3D model</title>
+</head><body><br/>
+<b><span style="font-size: 18pt">Importing 3D model<br/>
+</span></b><br/>
+<img height="298" src="image.png" width="550"/><br/>
+<hr/><br/>
+<b><span style="font-size: 15pt">MATERIALS</span></b><br/>
+<br/>
+<img height="245" src="image 2.png" width="250"/><br/>
+<br/>
+In inspector panel<br/>
+<img height="1293" src="image 3.png" width="450"/><br/>
+<br/>
+<br/>
+<br/>
+Let’s look at the various types of shaders:<br/>
+<br/>
+<b>Standard</b><br/>
+This shader type uses a lighting system called the Phong model that's good for simulating realistic lighting on 3D objects.<br/>
+<br/>
+<b>Flat</b><br/>
+This shader type is more performant than the standard shader and <b>doesn't respond to lighting</b> - which makes it good for applying to 2D objects.<br/>
+<b><br/>
+</b><b>Face Paint</b><br/>
+Use this shader when you're creating a mask effect that shows some of the user's skin underneath a texture - like a tattoo or make up. This is because the face paint shader preserves the luminance of the face underneath, but removes the color. This means your own texture can be added / multiplied over it.<br/>
+<br/>
+<b>Blended</b><br/>
+The blended shader includes a blending mode to mix textures and colors.<br/>
+<br/>
+<b>Retouching</b><br/>
+Use this shader to add retouching effects to faces and scenes.<br/>
+<br/>
+<b>Physically-Based</b><br/>
+Use this shader to create super realistic looking surfaces. You can apply a combination of albedo, ORM, normal and environment textures to a physically-based material.<br/>
+<br/>
+<br/>
+<b><span style="font-size: 13pt">APPLYING MATERIAL TO 3D MODEL</span></b><br/>
+<ul><li>In the Scene panel, select the object, and expand the group.</li>
+<li>Select the part or the 3D object inside the group.</li>
+<li>Now, in the Inspector panel, under the Material option, change it to the material you just created - plastic.</li>
+<li>You should now see the head’s appearance change.</li>
+</ul>
+<img src="image 4.png"/><br/>
+<hr/><b><span style="font-size: 15pt">TEXTURE<br/>
+<br/>
+</span></b><br/>
+In Spark AR, you can apply one or more textures to a material, then apply the material to an object. <b>You cannot directly apply a texture to an object without applying it on a material first.</b><br/>
+<br/>
+<br/>
+<i>Note:Spark AR Studio supports PNG and JPG texture files. Files can be a maximum of 1024x1024 pixels in size. <br/>
+<br/>
+</i><img height="457" src="image 5.png" width="750"/><br/>
+<br/>
+<br/>
+<br/>
+</body></html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Looping through Database</title>
+</head><body><br/>
+To return more than one row:<br/>
+<br/>
+<img src="image.png"/>--------&gt; <img height="94" src="image 2.png" width="750"/><br/>
+<hr/><span style="font-size: 12pt"><b><br/>
+</b></span><span style="font-size: 12pt"><b>To fetch data using conditions</b></span><br/>
+<br/>
+<span style="color: #d4d4d4"><span style="background-color: #1e1e1e"><span style="font-family: Consolas"><span style="font-size: 14pt"><span style="color: #9cdcfe">$query </span>= <span style="color: #ce9178">&quot;</span><span style="color: #569cd6">SELECT </span>* <span style="color: #569cd6">FROM </span><span style="color: #ce9178">users </span><span style="color: #569cd6">WHERE </span><span style="color: #ce9178">id</span>=<span style="color: #b5cea8">1</span><span style="color: #ce9178">&quot;</span>;</span></span></span></span> <br/>
+<br/>
+OR<br/>
+<br/>
+<span style="color: #d4d4d4"><span style="background-color: #1e1e1e"><span style="font-family: Consolas"><span style="font-size: 14pt"><span style="color: #9cdcfe">$query</span>=<span style="color: #ce9178">&quot;</span><span style="color: #569cd6">SELECT </span>* <span style="color: #569cd6">FROM <span style="color: #ce9178">users </span>WHERE </span><span style="color: #ce9178">email</span>=<span style="color: #ce9178">'Bhuvan@fd.com'&quot;</span>;</span></span></span></span> <br/>
+<br/>
+OR<br/>
+<span style="color: #d4d4d4"><span style="background-color: #1e1e1e"><span style="font-family: Consolas"><span style="font-size: 14pt"><span style="color: #9cdcfe">$mail </span>= <span style="color: #ce9178">&quot;Kushal@fd.com&quot;</span>;</span></span></span></span> <br/>
+<span style="color: #d4d4d4"><span style="font-size: 14pt"><span style="font-family: Consolas"><span style="background-color: #1e1e1e"><span style="color: #9cdcfe">$query</span>=<span style="color: #ce9178">&quot;</span><span style="color: #569cd6">SELECT </span>* <span style="color: #569cd6">FROM <span style="color: #ce9178">users </span>WHERE </span><span style="color: #ce9178">email</span>=<span style="color: #ce9178">'&quot;.</span><span style="color: #9cdcfe">$mail</span><span style="color: #ce9178">.&quot;'&quot;</span>;</span></span></span></span> <br/>
+<br/>
+OR<br/>
+<br/>
+<span style="color: #d4d4d4"><span style="background-color: #1e1e1e"><span style="font-family: Consolas"><span style="font-size: 14pt"><span style="color: #9cdcfe">$query</span>=<span style="color: #ce9178">&quot;</span><span style="color: #569cd6">SELECT </span>* <span style="color: #569cd6">FROM </span><span style="color: #ce9178">users </span><span style="color: #569cd6">WHERE </span><span style="color: #ce9178">email </span><span style="color: #569cd6">LIKE </span><span style="color: #ce9178">'%@fd.com'&quot;</span>;</span></span></span></span> <br/>
+<br/>
+Note sometimes the names contains some characters which SQL can't interpret <br/>
+Sol :<ul><span style="font-size: 14pt"><li style="list-style-type: none">$name =&quot;Rob 0'Prady&quot;</li>
+<li style="list-style-type: none">$query = &quot;Select * FROM users WHERE name =' &quot;.mysqli_real_escape_string($link ,$name)&quot; ' &quot;;</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Also it reduces sql injections. So whenever we take variable and put in mysql string use escaping</li>
+</span><li style="list-style-type: none"/>
+</ul>
+<hr/><br/>
+<b><span style="font-size: 13pt">Note: </span></b><span style="color: #dcdcaa"><span style="font-size: 14pt"><span style="font-family: Consolas"><span style="background-color: #1e1e1e"><span style="color: #d4d4d4">mysqli_num_rows</span></span></span></span></span><span style="font-size: 14pt"><span style="font-family: Consolas"><span style="background-color: #1e1e1e"><span style="color: #d4d4d4"><span style="font-size: 13pt"><b>(<span style="color: #9cdcfe">$result</span>)</b></span></span></span></span></span><span style="font-size: 13pt"><b> returns the number of rows present in result<br/>
+</b></span><span style="font-size: 13pt"><b><br/>
+</b></span><span style="font-size: 13pt"><b>for ex : </b></span><span style="color: #9cdcfe"><span style="font-size: 14pt"><span style="font-family: Consolas"><span style="background-color: #1e1e1e"><span style="color: #d4d4d4">$query</span></span></span></span></span><span style="font-size: 14pt"><span style="font-family: Consolas"><span style="background-color: #1e1e1e"><span style="color: #d4d4d4"><span style="font-size: 13pt"><b>=<span style="color: #ce9178">&quot;</span><span style="color: #569cd6">SELECT</span><span style="color: #ce9178">`id`</span><span style="color: #569cd6">FROM</span><span style="color: #ce9178">`users`</span><span style="color: #569cd6">WHERE</span><span style="color: #ce9178">email</span>=<span style="color: #ce9178">'&quot;.mysqli_real_escape_string(</span><span style="color: #9cdcfe">$link</span><span style="color: #ce9178">,</span><span style="color: #9cdcfe">$_POST</span><span style="color: #ce9178">['Mail']).&quot;'&quot;</span>;</b></span></span></span></span></span><ul><span style="font-size: 14pt"><span style="font-family: Consolas"><span style="color: #d4d4d4"><span style="font-size: 13pt"><b><li style="list-style-type: none">  <span style="color: #9cdcfe"><span style="background-color: #1e1e1e">$result</span></span><span style="background-color: #1e1e1e">=<span style="color: #dcdcaa">mysqli_query</span>(<span style="color: #9cdcfe">$link</span>,<span style="color: #9cdcfe">$query</span>);</span></li>
+<li style="list-style-type: none"><span style="color: #c586c0">  <span style="background-color: #1e1e1e">if</span></span><span style="background-color: #1e1e1e">(<span style="color: #dcdcaa">mysqli_num_rows</span>(<span style="color: #9cdcfe">$result</span>)&gt;<span style="color: #b5cea8">0</span>)</span></li>
+</b></span></span></span></span><span style="font-size: 13pt"><b><li style="list-style-type: none"><span style="font-size: 14pt"><span style="font-family: Consolas"><span style="color: #ffffff">  </span><span style="color: #d4d4d4"><span style="background-color: #1e1e1e">{<span style="color: #dcdcaa">echo</span><span style="color: #ce9178">&quot;Alreadytaken&quot;</span>;}</span></span></span></span> </li>
+<li style="list-style-type: none"/>
+</b></span></ul>
+<hr/><br/>
+</body></html>

@@ -1,0 +1,174 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<style>
+.node
+{
+    padding-left: 20px;
+    display: block;
+}
+
+.node_collapsed
+{
+    padding-left: 20px;
+    display: none;
+
+    
+    visibility: hidden;
+    display: none;
+}
+
+
+
+a:active
+{
+text-decoration:none;
+color: #0000FF;
+font-weight: bold;
+}
+
+a:visited
+{
+text-decoration:none;
+color: #000;
+font-weight: bold;
+}
+
+a:link
+{
+text-decoration:none;
+color: #000;
+font-weight: bold;
+}
+
+a:hover
+{
+text-decoration: underline;
+color: #500;
+font-weight: bold;
+}
+
+</style>
+
+
+<script language="javascript">
+  
+    var displayStates = [];
+
+    function showDiv(div)
+    {    
+        div.style.height     = "";
+        div.style.display    = "block";
+        div.style.visibility = "visible";
+    }
+
+    function hideDiv(div)
+    {
+        div.style.height     = "0px";
+        div.style.display    = "none";      
+        div.style.visibility = "hidden";
+    }
+
+    function toggleDiv(div, defaultState)
+    {
+
+        // set default on first use
+        if (displayStates[div] == undefined)
+            displayStates[div] = defaultState;
+
+        // toggle state
+        displayStates[div] = !displayStates[div];       
+
+        // hide / show
+        if (displayStates[div])
+            showDiv(div);
+        else {
+            hideDiv(div);
+        }
+    }
+
+    function toggleDivName(divname, defaultState)
+    {
+        toggleDiv(document.getElementById(divname), defaultState);
+    }
+
+</script>
+
+<nobr><tt><a href='javascript: toggleDivName("a30c7227-6486-498d-9af2-3a6eb6b3257d", true)'>+</a>&nbsp;</tt>Miscellaneous</nobr><br/>
+<div id='a30c7227-6486-498d-9af2-3a6eb6b3257d' class='node'><nobr><tt><a href='javascript: toggleDivName("10fceb73-f807-493d-8c9f-32674dd86392", false)'>+</a>&nbsp;</tt>JSON</nobr><br/>
+<div id='10fceb73-f807-493d-8c9f-32674dd86392' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='json/json/page.html' target='viewer'>JSON</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='json/creating%20a%20json/page.html' target='viewer'>Creating a JSON</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='json/where%20to%20check%20for%20errors/page.html' target='viewer'>Where to check for errors</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='json/datatypes%20in%20json/page.html' target='viewer'>Datatypes in JSON</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='json/create%20json%20object%20of%20key%202/page.html' target='viewer'>Create JSON object of key</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='json/acces%20value%20using%20for%20loop/page.html' target='viewer'>Acces value using For Loop</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='json/stringify/page.html' target='viewer'>Stringify</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("ad652775-579d-42ad-ae9f-676fe57b02b3", false)'>+</a>&nbsp;</tt>Javascript</nobr><br/>
+<div id='ad652775-579d-42ad-ae9f-676fe57b02b3' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='javascript/setting%20up/page.html' target='viewer'>Setting Up</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='javascript/accessing%20html%20elements/page.html' target='viewer'>Accessing Html elements</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='javascript/manipulating%20styles/page.html' target='viewer'>Manipulating Styles</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='javascript/variables/page.html' target='viewer'>Variables</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='javascript/arrays/page.html' target='viewer'>Arrays</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='javascript/if%20statements/page.html' target='viewer'>If Statements</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='javascript/switch_statements/page.html' target='viewer'>Switch_Statements</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='javascript/input%20from%20user/page.html' target='viewer'>Input from user</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("22d715ba-3104-436b-9441-3350f596ce29", false)'>+</a>&nbsp;</tt>PHP</nobr><br/>
+<div id='22d715ba-3104-436b-9441-3350f596ce29' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='php/basics/page.html' target='viewer'>Basics</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='php/hello%20world/page.html' target='viewer'>Hello World</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='php/variables/page.html' target='viewer'>Variables</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='php/if_else/page.html' target='viewer'>If_Else</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='php/loops/page.html' target='viewer'>Loops</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='php/get_variable/page.html' target='viewer'>GET_VARIABLE</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='php/post_variable/page.html' target='viewer'>POST_VARIABLE</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='php/sendemail_via_php/page.html' target='viewer'>SendEmail_via_PHP</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='php/include%20php%20inside%20php/page.html' target='viewer'>Include PHP inside PHP</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("f088f02e-60b6-4103-a5b1-0eb885cf1ed9", false)'>+</a>&nbsp;</tt>MySQL</nobr><br/>
+<div id='f088f02e-60b6-4103-a5b1-0eb885cf1ed9' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='mysql/getting%20started/page.html' target='viewer'>Getting Started</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='mysql/connect%20to%20database/page.html' target='viewer'>Connect to Database</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='mysql/retrieve%20data/page.html' target='viewer'>Retrieve data</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='mysql/add%20to%20database/page.html' target='viewer'>Add to Database</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='mysql/looping%20through%20database/page.html' target='viewer'>Looping through Database</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='mysql/session%20and%20cookies/page.html' target='viewer'>Session and Cookies</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='mysql/storing%20password%20securely/page.html' target='viewer'>Storing Password securely</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("4f1c8eb1-63af-49f4-9713-a1e8384a7b3f", false)'>+</a>&nbsp;</tt>Photo to 3D</nobr><br/>
+<div id='4f1c8eb1-63af-49f4-9713-a1e8384a7b3f' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='photo%20to%203d/making/page.html' target='viewer'>Making</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("a37f67c1-5b5a-4c04-ab57-7caa9c889247", false)'>+</a>&nbsp;</tt>Networking_Imran Rafai</nobr><br/>
+<div id='a37f67c1-5b5a-4c04-ab57-7caa9c889247' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='networking_imran%20rafai/what%20is/page.html' target='viewer'>What is?</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='networking_imran%20rafai/osi%20model/page.html' target='viewer'>OSI Model</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='networking_imran%20rafai/ip/page.html' target='viewer'>IP</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='networking_imran%20rafai/subnetting/page.html' target='viewer'>Subnetting</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='networking_imran%20rafai/internetworking%20devices/page.html' target='viewer'>Internetworking Devices</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='networking_imran%20rafai/local%20%20global%20transmission/page.html' target='viewer'>Local &amp; Global Transmission</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='networking_imran%20rafai/dhcp%2C%20tcp%20trans%2C%20common%20ports/page.html' target='viewer'>DHCP, TCP Trans, Common ports</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='networking_imran%20rafai/configure%20switch/page.html' target='viewer'>Configure Switch</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("ba6b58bd-2879-4d31-90cb-d0d07b67bc11", false)'>+</a>&nbsp;</tt>Cryptography</nobr><br/>
+<div id='ba6b58bd-2879-4d31-90cb-d0d07b67bc11' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='cryptography/encryption/page.html' target='viewer'>Encryption</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("2f18826e-a137-4fa4-a7d6-374964b914ad", false)'>+</a>&nbsp;</tt>SparkAR</nobr><br/>
+<div id='2f18826e-a137-4fa4-a7d6-374964b914ad' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='sparkar/getting%20started/page.html' target='viewer'>Getting started</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='sparkar/3d%20model/page.html' target='viewer'>3D model</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='sparkar/2d%20elements_using%20png%20frames/page.html' target='viewer'>2D elements_Using png frames</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='sparkar/using%20gifs/page.html' target='viewer'>Using Gifs</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='sparkar/lighting/page.html' target='viewer'>Lighting</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='sparkar/importing%20audio/page.html' target='viewer'>Importing audio</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='sparkar/face_tracker/page.html' target='viewer'>Face_Tracker</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='sparkar/plane_tracker/page.html' target='viewer'>Plane_tracker</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='sparkar/target_tracker/page.html' target='viewer'>Target_Tracker</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='sparkar/testing_app/page.html' target='viewer'>Testing_app</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("a75bcdf6-eb59-40f4-b38f-b99b4977e6b1", false)'>+</a>&nbsp;</tt><a href='trash' target='viewer'>Trash</a></nobr><br/>
+<div id='a75bcdf6-eb59-40f4-b38f-b99b4977e6b1' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='trash/new%20page/page.html' target='viewer'>New Page</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='trash/weather%20app/page.html' target='viewer'>Weather APP</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt>New Folder</nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='trash/new%20page%202/page.html' target='viewer'>New Page</a></nobr><br/>
+</div>
+</div>
+</body></html>

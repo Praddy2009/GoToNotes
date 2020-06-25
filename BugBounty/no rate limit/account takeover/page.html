@@ -1,0 +1,34 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Account takeover</title>
+</head><body><b><span style="font-size: 16pt">No Rate Limit leads to Account takeover(ATO)<br/>
+</span></b><ul><span style="font-size: 13pt"><li style="list-style-type: none">We will send x number of simultaneous requests to the server &amp; server will act on each request.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Thus by sending x number of right OTP Token, Password we can successfully crack the code.</li>
+<li style="list-style-type: none"/>
+</span><li style="list-style-type: none"><span style="font-size: 13pt"><span style="color: #ff0000">No validation and limiting the requests &amp; taking decisions is dangerous.</span></span></li>
+</ul>
+<ul><li style="list-style-type: none"><span style="font-size: 15pt"><b>Example 1 </b></span><span style="font-size: 13pt">//basically we are bruitforcing here and the application is not stooping us due to no rate limit.</span><b/></li>
+<span style="font-size: 13pt"><li style="list-style-type: none">Visit : https://www.netmeds.com/customer/account/login (<span style="color: #ff0000">Patched</span>)</li>
+<li style="list-style-type: none">Assuming that you have already created an account</li>
+<li style="list-style-type: none">Login with wrong OTP and start BurpSuit</li>
+<li style="list-style-type: none"><img height="193" src="image.png" width="450"/></li>
+<li style="list-style-type: none">Burpsuit will intercept </li>
+</span></ul>
+<span style="font-size: 13pt"><img src="image 2.png"/><br/>
+   Send it to repeater, intruder, intercept the response</span><ul><span style="font-size: 13pt"><li style="list-style-type: none">Go to intruder-&gt;Positions-&gt;Clear</li>
+<li style="list-style-type: none">Select OTP area and Add</li>
+</span><li style="list-style-type: none"><img src="image 3.png"/></li>
+<span style="font-size: 13pt"><li style="list-style-type: none">Go to Intruder-&gt;Payloads-&gt;Payloadtype(Numbers)</li>
+<li style="list-style-type: none">Give number in range </li>
+</span><li style="list-style-type: none"><img src="image 4.png"/></li>
+</ul>
+	<span style="font-size: 13pt"><span style="color: #000000">Uncheck the URL encoding</span></span><ul><span style="font-size: 13pt"><span style="color: #000000"><li style="list-style-type: none">Start the attack </li>
+<li style="list-style-type: none">For Correct OTP it will give response. Copy the response</li>
+<li style="list-style-type: none">Start the intercept on and paste the response </li>
+<li style="list-style-type: none"/>
+</span></span><li style="list-style-type: none"><b><span style="font-size: 15pt">Example 2 </span></b><span style="font-size: 13pt">//basically we are bruitforcing OTP here and the application is not stooping us due to no rate limit.</span><b/></li>
+<span style="font-size: 13pt"><li style="list-style-type: none">Visit : lemonroad //but now its been <span style="color: #ff0000">patched</span></li>
+</span></ul>
+</body></html>

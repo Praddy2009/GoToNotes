@@ -1,0 +1,40 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Encryption</title>
+</head><body><span style="font-size: 13pt"><b>Encryption</b>is the principal application of cryptography; it makes data incomprehensible in order to ensure its confidentiality.<br/>
+Encryption uses an algorithm called a <b>cipher</b>and a secret value called the <b>key</b>; if you don’t know the secret key, you can’t decrypt, nor can you learn any bit of information on the encrypted message—and neither can any attacker. <br/>
+<br/>
+There are 2 types of encryption:<br/>
+1) <b>Symmetric Encryption</b> : the key used to decrypt is the same as the key used to encrypt <br/>
+2) <b>Asymmetric/Public-key Encryption</b>: the key used to decrypt is different from the key used to encrypt <br/>
+</span><hr/><br/>
+<b><span style="font-size: 14pt">Basics<br/>
+</span></b><ul><li><b><span style="font-size: 13pt">Plaintext</span></b><span style="font-size: 13pt">refers to the <b>unencrypted</b>message and <b>ciphertext</b>to the <b>encrypted</b>message. </span></li>
+<span style="font-size: 13pt"><li><b>Encryption</b>turns a plaintext into a ciphertext</li>
+<li><b>Decryption</b>turns a ciphertext back into a plaintext. </li>
+</span><li><span style="font-size: 13pt"><b><span style="color: #000000"><span style="background-color: #ffff99">Cipher Text &gt;= Plain text</span></span></b></span></li>
+</ul>
+<br/>
+                                    <img src="image.png"/><br/>
+<hr/><span style="font-size: 14pt"><b>Classical Ciphers<br/>
+<br/>
+</b></span><b><span style="font-size: 12pt">The Caesar Cipher:</span></b><span style="font-size: 12pt"/>(Each letter was shifted with value of 3)<br/>
+<br/>
+<img height="271" src="image 2.png" width="400"/><span style="font-size: 12pt"><br/>
+</span><br/>
+<br/>
+<b><span style="font-size: 12pt">The Vigenere Cipher:</span></b><span style="font-size: 12pt"/>(Each letter was shifted with value determined by a key made up of letters)<br/>
+<br/>
+                          <img src="image 3.png"/><br/>
+<hr/><br/>
+<br/>
+<span style="font-size: 14pt"><b>How ciphers work<br/>
+<br/>
+</b></span><span style="font-size: 10pt">Cipher </span>contains two main component<br/>
+<b>1) Permutation </b>(It is a function that transforms an item (in cryptography, a letter or a group of bits) such that each item has a unique inverse, With a permutation, each letter has exactly one inverse.  ) <b><br/>
+</b><b>2) A mode of operation </b>(is an algorithm that uses a permutation to process messages of arbitrary size. The mode of operation (or just mode) of a cipher mitigates the exposure of duplicate letters in the plaintext by using different permutations for duplicate letters.  )<br/>
+<br/>
+<br/>
+<br/>
+</body></html>

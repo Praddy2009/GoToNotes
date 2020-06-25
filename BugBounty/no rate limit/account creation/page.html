@@ -1,0 +1,45 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Account Creation</title>
+</head><body><b><span style="font-size: 16pt">No Rate limit on Account Creation<br/>
+</span></b><ul><span style="font-size: 13pt"><li>We will send x number of simultaneous requests to the server &amp; server will act on request.</li>
+<li>Thus, making x number of email accounts on the website</li>
+</span><li><span style="color: #ff0000"><span style="font-size: 13pt">No validation or limiting the request &amp; taking decisions is dangerous</span></span></li>
+</ul>
+<ul><b><li style="list-style-type: none"><span style="font-size: 15pt">Example 1 </span></li>
+</b><span style="font-size: 13pt"><li style="list-style-type: none">Visit : https://www.voot.com/</li>
+</span><span style="font-size: 12pt"><span style="color: #000000"><li style="list-style-type: none">So here the thing is that this website on register don send the verification link to email so we can create as many account as possible</li>
+<li style="list-style-type: none">Move to register page and give fake credentials and Open Burpsuit</li>
+<li style="list-style-type: none">Burp will intercept</li>
+<li style="list-style-type: none"><img height="180" src="image.png" width="250"/></li>
+<li style="list-style-type: none">Send it to Repeater(For saving this intecept for future use) &amp; intercept the response</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">In response we will find that the account IsExist false</li>
+<li style="list-style-type: none"><img src="image 2.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Fill form</li>
+<li style="list-style-type: none"><img height="252" src="image 3.png" width="250"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Burp suit will intercept</li>
+<li style="list-style-type: none"><img height="295" src="image 4.png" width="300"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Send it to Repeater &amp; intruder(For performing attack) &amp; intecept the request.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">And the account will be made.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Go to Intruder-&gt;Positions-&gt;Clear</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Select the email address and Press add</li>
+<li style="list-style-type: none"><img src="image 5.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Now open the notepad and write some invalid mail IDś and paste it in Intruder-&gt; Payload -&gt; PayloadOption Simple List</li>
+<li style="list-style-type: none"><img height="200" src="image 6.png" width="350"/></li>
+<li style="list-style-type: none">Uncheck the URL encoding in the bottom</li>
+<li style="list-style-type: none">Go to Intruder-&gt;Options and input 5000 in throttel fixed <b>//possible only in professional version</b></li>
+<li style="list-style-type: none"><img src="image 7.png"/></li>
+<li style="list-style-type: none">Start Attack</li>
+<li style="list-style-type: none">And it will create your account</li>
+</span></span><li style="list-style-type: none"><img src="image 8.png"/></li>
+</ul>
+</body></html>

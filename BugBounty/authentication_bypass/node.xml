@@ -2,7 +2,7 @@
 <node>
 <version>6</version>
 <dict>
-  <key>expanded</key><false/>
+  <key>expanded</key><true/>
   <key>title</key><string>Authentication_Bypass</string>
   <key>nodeid</key><string>d264c9c1-97e7-4654-bc27-54b33b01a10f</string>
   <key>modified_time</key><integer>1592857199</integer>

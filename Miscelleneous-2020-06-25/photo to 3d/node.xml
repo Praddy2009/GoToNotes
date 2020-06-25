@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Photo to 3D</string>
+  <key>nodeid</key><string>4f1c8eb1-63af-49f4-9713-a1e8384a7b3f</string>
+  <key>modified_time</key><integer>1589616325</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>application/x-notebook-dir</string>
+  <key>created_time</key><integer>1589616325</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>order</key><integer>4</integer>
+  <key>info_sort</key><string>title</string>
+</dict>
+</node>

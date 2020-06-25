@@ -1,0 +1,38 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Local &amp; Global Transmission</title>
+</head><body><br/>
+<span style="font-size: 16pt"><b>Local Transmission<br/>
+</b></span><span style="font-size: 12pt">In local transmission data is transmission is determined by destination mac address<br/>
+<br/>
+<b>Scenerio: </b>Here machine 10.1.1.10(<b>Machine A</b>) wants to send data to machine 10.1.1.11(<b>Machine B</b>) but don't know the destination mac address<b><br/>
+</b><b><br/>
+</b></span><img height="344" src="image.png" width="500"/><br/>
+<br/>
+<span style="font-size: 12pt"><b>Step1</b>: Now Machine A creates a ARP(Address Resolution Protocol) request to Switch<br/>
+</span><br/>
+<img height="576" src="image 2.png" width="650"/><br/>
+<br/>
+<b><span style="font-size: 12pt">Step2</span></b><span style="font-size: 12pt">: </span>Switch broadcast that request to everyone<br/>
+<br/>
+<img height="550" src="image 3.png" width="600"/><br/>
+<br/>
+<span style="font-size: 12pt"><b>Step3</b>: Only the desired machine replies to switch and then reaches to our Machine A<br/>
+<br/>
+</span><img height="410" src="image 4.png" width="400"/><br/>
+<br/>
+<br/>
+<br/>
+<b><span style="font-size: 12pt">Step4</span></b><span style="font-size: 12pt">: Now Machine A sends the packet to switch but this time switch learnt the Mac address so it directly transmits the data to destination</span><br/>
+<br/>
+<br/>
+<img height="428" src="image 5.png" width="550"/><hr/><br/>
+<br/>
+<br/>
+<b><span style="font-size: 16pt">Out of the network Transmission</span></b><br/>
+<br/>
+<br/>
+Same ARP kind of thing is done<br/>
+<br/>
+<img height="529" src="image 6.png" width="750"/></body></html>

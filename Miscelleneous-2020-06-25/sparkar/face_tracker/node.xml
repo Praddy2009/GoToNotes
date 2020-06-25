@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Face_Tracker</string>
+  <key>nodeid</key><string>bd091f11-eb93-4688-af7e-59f0cf76d5db</string>
+  <key>modified_time</key><integer>1586887059</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1586885752</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>order</key><integer>6</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

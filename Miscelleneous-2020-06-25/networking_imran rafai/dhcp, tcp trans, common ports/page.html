@@ -1,0 +1,28 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>DHCP, TCP Trans, Common ports</title>
+</head><body><b><span style="font-size: 16pt">Dynamic host protocol configuration:<br/>
+</span></b><span style="font-size: 11pt">It's a protocol to get a IP address automatically/Dynamically </span><span style="font-size: 10pt"><br/>
+</span><div style="text-align: left"><span style="font-family: arial"><span style="font-size: 11pt">It's is a network protocol used on IP networks where a </span></span></div><span style="font-size: 11pt">DHCP<div style="text-align: left"><span style="font-family: arial"> server automatically assigns an IP address and other information to each host on the network so they can communicate efficiently with other endpoints.</span></div> </span><span style="font-size: 10pt"><br/>
+</span><span style="font-size: 16pt"><b><br/>
+</b></span><b><span style="font-size: 12pt">It consist's of 6 steps</span></b>:<br/>
+<img height="390" src="image.png" width="300"/><br/>
+<br/>
+<b>1) DHCP Discovery : </b>Here the machine broadcasts and ask's <b>Is there any dhcp server here in subnet?<br/>
+</b><b>2) DHCP Offers: </b>DHCP server offers an IP address from it's reserved pool<br/>
+<b>3) DHCP Request: </b>New machine accepts the IP and sends request to DHCP<br/>
+<b>4) DHCP Ack: </b>DHCP server reserves/assigns the IP to the machine and acknowleges it<br/>
+<br/>
+<b>5) DHCP Information: </b>Its issued by client in case client demands more info than the info provided by DHCP<br/>
+<b>6) DHCP Release: </b>At the time we disconnect the machine this message is given to DHCP server to reserve back the IP alloted.(<b>Not Mandatory</b>)<br/>
+<hr/><br/>
+<b><span style="font-size: 15pt">Transmission Control Protocol (TCP):<br/>
+<br/>
+3 way Handshake<br/>
+<img height="279" src="image 2.png" width="650"/><br/>
+<br/>
+</span></b><b><span style="font-size: 15pt">TCP Windowing :</span></b><span style="font-size: 15pt"/><span style="font-size: 13pt">Transmission starts with small no of packets and then increases</span><b><span style="font-size: 15pt"><br/>
+</span></b><b><span style="font-size: 15pt"><br/>
+<br/>
+</span></b></body></html>

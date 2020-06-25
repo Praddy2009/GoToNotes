@@ -1,0 +1,49 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>2D elements</title>
+</head><body><b><span style="font-size: 14pt">The Canvas <br/>
+</span></b>The canvas is an object that will scale in size depending on the device screen.<br/>
+2D objects like rectangles or 2D text will always be children of a canvas. This means they'll scale in sync with the screen of the device.<br/>
+<br/>
+<b><span style="font-size: 11pt">Note</span></b>: <ul><li style="list-style-type: none">In order to add any 2D element like a rectangle or text to the effect, you’ll need to add a Canvas. The canvas will always be the parent of these elements.</li>
+<li style="list-style-type: none"><i>If you add a 2D element directly, a Canvas will be automatically added for you by Spark AR Studio.</i> </li>
+</ul>
+<br/>
+<span style="font-size: 14pt"><b>Rectangle </b></span><br/>
+A rectangle is a 2D shape in Spark AR Studio. You can use it to render textures and materials, creating 2D effects like frames, backgrounds and colored overlays in your effect.<br/>
+<br/>
+<b><span style="font-size: 14pt">2D text</span></b><br/>
+With this element, you can bring in text to your effect, even custom fonts that you’d like to use.<br/>
+<img src="image.png"/><br/>
+<br/>
+<span style="font-size: 14pt"><b>Adding a frame<br/>
+<br/>
+</b></span>Add canvas to scene and rename it<br/>
+<img src="image 2.png"/><br/>
+<br/>
+&gt;Add rectangle to scene<br/>
+&gt;Import Asset(the downloaded png file)<br/>
+<img src="image 3.png"/><br/>
+&gt;Textures cannot be directly applied onto objects, for this we need to setup a Material.<br/>
+&gt;Add a material and assign the png file as texture to material<br/>
+<br/>
+<span style="font-size: 11pt">&gt;<div style="text-align: left"><span style="font-family: Open Sans">Now select the rectangle and on the Inspector Panel, click on the + in the Materials tab.</span></div>Assign the material<br/>
+</span><br/>
+You should see the frame appear on the screen now.<br/>
+Let’s adjust a few settings to make sure it adjusts itself to different resolutions -<br/>
+<br/>
+<span style="font-size: 12pt">&gt;<div style="text-align: left"><span style="font-family: Open Sans">Select Rectangle in the Scene panel and in the Inspector panel, set the Pinning and Flexibility options to the following:</span></div></span><br/>
+<br/>
+<img height="214" src="image 4.png" width="250"/><br/>
+This makes the rectangle fit to every device screen.<br/>
+<br/>
+&gt;Put alpha test on for material (in case PNG isn't transparent)<br/>
+<img src="image 5.png"/><br/>
+<br/>
+<img src="image 6.png"/><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body></html>

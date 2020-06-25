@@ -1,15 +1,13 @@
 <!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<title>Authentication Bypass</title>
-</head><body><br/>
-<span style="font-size: 16pt"><b>How a Auth Bypass Works</b></span><br/>
+<title>OTP Bypass</title>
+</head><body><b><span style="font-size: 16pt">How a Auth Bypass Works</span></b><br/>
   <br/>
-                         <img height="302" src="image.png" width="600"/><br/>
-<span style="font-size: 13pt"><ul><li>When a client connecting to server then it sends the request(From left to right) and in return gets a response from the server.</li>
+                         <img height="302" src="image.png" width="600"/><ul><span style="font-size: 13pt"><li>When a client connecting to server then it sends the request(From left to right) and in return gets a response from the server.</li>
 <li>If the client is able to modify the response then chances of Authentication bypass increases.(Possible if the application just checking the client side code instead of checking the server side code.)</li>
-</ul>
-</span><ul><span style="font-size: 13pt"><li><b>CASE 1</b>: OTP Bypass: </li>
+</span></ul>
+<ul><span style="font-size: 13pt"><li><b>CASE 1</b>: OTP Bypass: </li>
 </span><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><span style="font-size: 13pt"><li>Checking whether the OTP's are right or wrong improperly leads to bypass</li>
 <li><span style="color: #ff0000">Verifying at the client side only &amp; taking decision is dangerous.</span></li>
 </span><li><span style="font-size: 13pt">Only, allowing logging into application based on on true/false conditions are dangerous. </span></li>
@@ -20,7 +18,7 @@
 </ul>
 </li>
 </ul>
-<ul><li><span style="font-size: 13pt"><b>EXAMPLE 1</b></span></li>
+<ul><li><b><span style="font-size: 13pt">EXAMPLE 1</span></b></li>
 <span style="font-size: 13pt"><li style="list-style-type: none">Visit the website: https://www.healthie.in/</li>
 <li style="list-style-type: none">While Sign-Up with fake credentials you'll get OTP on your given fake mobile number. </li>
 <li style="list-style-type: none">As you dont know the OTP activate the Burp Proxy and input any random 4 digit OTP</li>
@@ -35,7 +33,9 @@
 <li style="list-style-type: none"/>
 <li style="list-style-type: none">Wohoo you signedin as a new user with facke credentials</li>
 <li style="list-style-type: none"><img src="image 7.png"/></li>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
 <li><b>EXAMPLE 2</b></li>
 <li style="list-style-type: none">Visit site: https://www.99acres.com/NRI-Real-Estate.htm</li>
@@ -62,7 +62,9 @@
 <li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
@@ -73,7 +75,9 @@
 <li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
 <li style="list-style-type: none"/>

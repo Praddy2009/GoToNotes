@@ -1,0 +1,76 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Subnetting</title>
+</head><body><b><span style="font-size: 12pt">Que) If IPv4 is outnumbered then why we still able to use it?<br/>
+</span></b>It's because of technology named <b>Network Address translation</b>(<b>NAT</b>). We use private IP address and share it with all our devices and use a single IP to communicate from outer world.<br/>
+<br/>
+The way NAT works is when a corporate computer with a private IP address sends a packet to a public IP address outside the corporate network, it first goes to the NAT device. The NAT notes the packet’s source and destination addresses in a translation table.<br/>
+<br/>
+The NAT changes the source address of the packet to the public-facing address of the NAT device and sends it along to the external destination. When a packet replies, the NAT translates the destination address to the private IP address of the computer that initiated the communication. This can be done so that a single public IP address can represent multiple privately addressed computers.<br/>
+<b><span style="font-size: 14pt"><br/>
+When will IPv4 be “shut off”?<br/>
+</span></b><br/>
+Most of the world<a href="https://ipv4.potaroo.net/"> “ran out” of new IPv4 addresses</a> between 2011 and 2018 – but we won’t completely be out of them as IPv4 addresses get sold and re-used (as mentioned earlier), and any leftover addresses will be used for IPv6 transitions.<br/>
+<br/>
+There’s no official switch-off date, so people shouldn’t be worried that their internet access will suddenly go away one day. As more networks transition, more content sites support IPv6 and more end users upgrade their equipment for IPv6 capabilities, the world will slowly move away from IPv4.<br/>
+<br/>
+<b><span style="font-size: 13pt">FOR NAT CHECK:<br/>
+</span></b><a href="https://www.youtube.com/watch?v=FTUV0t6JaDA">https://www.youtube.com/watch?v=FTUV0t6JaDA</a> <br/>
+<br/>
+<u>Conclusion<br/>
+</u>Ek Org ek public ip leti hai(IPv4)(for router) fir using NAT apne andar private ip de deti hai.....jiski wo subnetting bhi kar sakti hai<br/>
+<hr/>One other way is to use IPv4 wisely by <b>Subnetting?<br/>
+</b><b><br/>
+</b>Subnetting allows you to create multiple logical networks that exist within a single Class A, B, or C network. If you do not subnet, you are only able to use one network from your Class A, B, or C network, which is unrealistic.<br/>
+<br/>
+Before going to Subnetting we need to konw difference between <b>Private IP </b>&amp;<b>Public IP<br/>
+</b><a href="https://whatismyipaddress.com/private-ip">https://whatismyipaddress.com/private-ip</a> <br/>
+<br/>
+<img height="542" src="image 2.png" width="700"/><b><br/>
+</b><b><span style="font-size: 15pt"><br/>
+</span></b><b><span style="font-size: 15pt">Private IP:</span></b><span style="font-size: 15pt"><span style="font-family: arial"><div style="text-align: left">The organizations that distribute IP addresses to the world reserves a range of IP addresses for </div></span><i>private networks</i><span style="font-family: arial"><div style="text-align: left">.</div></span></span> <b><br/>
+</b><img src="image.png"/><br/>
+<hr/><span style="font-size: 15pt"><b>Scenerio : </b>A company goes to buy an IP address let's say he got Class C IP address(254 Hosts) but let say it has only 10 PC so rest 244 is wasted<br/>
+<hr/><b><u>Class C Subnetting</u></b><br/>
+</span><img height="341" src="image 3.png" width="750"/><br/>
+<br/>
+<img height="448" src="image 4.png" width="750"/><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<img height="409" src="image 5.png" width="850"/><br/>
+<br/>
+<br/>
+<img height="498" src="image 6.png" width="800"/><br/>
+<br/>
+<img height="489" src="image 7.png" width="800"/><br/>
+<br/>
+<br/>
+<img height="372" src="image 8.png" width="650"/><br/>
+<hr/><br/>
+<span style="font-size: 17pt">CLASS B Subnetting<br/>
+<br/>
+</span><img height="381" src="image 9.png" width="800"/><br/>
+<br/>
+<img height="477" src="image 10.png" width="750"/><br/>
+<br/>
+<hr/><br/>
+<span style="font-size: 21pt">CLASS A Subnetting<br/>
+<br/>
+</span><img height="358" src="image 11.png" width="750"/><br/>
+<br/>
+<img height="423" src="image 12.png" width="700"/><br/>
+<hr/><br/>
+<span style="font-size: 14pt">Subnet Mask Should be in this number</span><br/>
+<img height="211" src="image 13.png" width="850"/><br/>
+<br/>
+<br/>
+<hr/><br/>
+<br/>
+<span style="font-size: 20pt"><b>Supernetting</b></span><br/>
+<br/>
+<img height="469" src="image 14.png" width="750"/><br/>
+<br/>
+</body></html>
