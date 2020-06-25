@@ -1,1 +1,3 @@
-#Some go to git commands
+## Some Go-to git command
+
+`git init` - To initialize 
