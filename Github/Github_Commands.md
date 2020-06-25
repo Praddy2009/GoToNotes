@@ -1,6 +1,7 @@
 ## Some Go-to git command
 
 ### Most Visited
+`git pull origin <branchname>` -To pull the updated repo
 `git init`  - To initialize 
 <br>
 `git clone <clone address>` - To clone Repositry on local system
