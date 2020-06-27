@@ -80,7 +80,6 @@ do
   echo $i
 done
 ```
-
 <br>
 <br>
 
@@ -88,6 +87,16 @@ While loop
 ```
 i=1
 while [ $i -lt 5 ]
+do
+  echo "hero"
+  i=$(( i+1 ))
+done
+```
+<br>
+<br>
+```
+i=1
+until [ $i -eq 5 ]
 do
   echo "hero"
   i=$(( i+1 ))
