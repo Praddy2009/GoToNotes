@@ -54,3 +54,41 @@ else
   Statement
 fi  
 ```
+
+Case statement
+```
+vehicle="UFO"
+
+case $vehicle in
+  "car" )
+    echo "It's car" ;;
+  "bus" )
+    echo "It's bus" ;;
+  "truck" )
+    echo "It's truck" ;;
+  * )
+    echo "It's Unknown" ;; 
+esac
+```
+<br>
+<br>
+
+For Loop
+```
+for (( i=0; i<5; i++ ))
+do
+  echo $i
+done
+```
+
+<br>
+<br>
+While loop
+```
+i=1
+while [ $i -lt 5 ]
+do
+  echo "hero"
+  i=$(( i+1 ))
+done
+```
