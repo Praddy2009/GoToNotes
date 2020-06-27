@@ -94,6 +94,8 @@ done
 ```
 <br>
 <br>
+
+Until loop
 ```
 i=1
 until [ $i -eq 5 ]
