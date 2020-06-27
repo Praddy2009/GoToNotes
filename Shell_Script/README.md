@@ -4,6 +4,8 @@
 <br>
 `var_name=var_value` : To store value in a variable
 <br>
+`read var_name` : To take input of variable
+<br>
 `$var_name` : To access value stored inside variable
 <br>
 To make a variable readonly
