@@ -14,12 +14,14 @@
     </dict>
   </array>
   <key>expanded</key><true/>
-  <key>title</key><string>Machine Learning (educative.io)</string>
   <key>nodeid</key><string>21f39dcb-d561-47c6-969d-c3e051b3baf2</string>
   <key>modified_time</key><integer>1593601098</integer>
+  <key>content_type</key><string>application/x-notebook-dir</string>
+  <key>created_time</key><integer>1593601098</integer>
+  <key>title</key><string>Machine Learning (educative.io)</string>
   <key>column_widths</key><dict>
     <key>created_time</key><integer>150</integer>
-    <key>modified_time</key><integer>917</integer>
+    <key>modified_time</key><integer>992</integer>
     <key>title</key><integer>150</integer>
   </dict>
   <key>attr_defs</key><array>
@@ -115,8 +117,6 @@
     </dict>
   </array>
   <key>version</key><integer>6</integer>
-  <key>content_type</key><string>application/x-notebook-dir</string>
-  <key>created_time</key><integer>1593601098</integer>
   <key>order</key><integer>0</integer>
 </dict>
 </node>

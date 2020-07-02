@@ -5,8 +5,10 @@
 </head><body><b><span style="font-size: 16pt"><br/>
 </span></b><b><span style="font-size: 16pt">Chapter Goals:</span></b><ul><div style="text-align: left"><span style="font-size: 13pt"><li style="list-style-type: none">Learn about NumPy arrays and how to initialize them</li>
 </span></div><span style="font-size: 13pt"><li style="list-style-type: none"><div style="text-align: left">Write code to create several NumPy arrays</div></li>
-</span><li style="list-style-type: none"><ul><span style="font-size: 13pt"><li style="list-style-type: none"/>
-<li style="list-style-type: none"><hr/></li>
+</span></ul>
+<span style="font-size: 13pt"/><ul><li style="list-style-type: none"><ul><span style="font-size: 13pt"><li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 </span><li style="list-style-type: none"/>
 </ul>
 </li>
@@ -26,17 +28,24 @@
 <li style="list-style-type: none">The code below is an example of np.array upcasting. Both integers are cast to their floating point eqivalents.</li>
 <li style="list-style-type: none"><img src="image 3.png"/> <img src="image 4.png"/></li>
 <li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 </span><b><span style="font-size: 16pt"><li style="list-style-type: none"/>
 </span></b></ul>
 <b><span style="font-size: 16pt">Copying<br/>
-</span><span style="font-size: 13pt"/></b><span style="font-size: 13pt"><ul>Similar to Python lists, when we make a reference to a NumPy array it doesn't create a different array. Therefore, if we change a value using the reference variable, it changes the original array as well. We get around this by using an array's inherent <b>copy </b>function. The function has no required arguments,and it returns the copied array</ul>
-.<br/>
+</span></b><span style="font-size: 13pt">Similar to Python lists, when we make a reference to a NumPy array it doesn't create a different array. Therefore, if we change a value using the reference variable, it changes the original array as well. We get around this by using an array's inherent <b>copy </b>function. The function has no required arguments,and it returns the copied array.<br/>
 </span><ul><span style="font-size: 13pt"><li style="list-style-type: none">In the code example below, <span style="color: #ff0000">c</span>is<span style="color: #000000">a </span>reference to<span style="color: #ff0000">a</span>while <span style="color: #ff0000">d</span>is a copy. Therefore, changing<span style="color: #ff0000">c</span>leads to the same change in <span style="color: #ff0000">a</span>, while changing <span style="color: #ff0000">d</span>doesn't change the value of <span style="color: #ff0000">b</span>.</li>
 <li style="list-style-type: none"/>
 </span><li style="list-style-type: none"><img src="image 5.png"/> <img src="image 6.png"/></li>
 <li style="list-style-type: none"/>
-<li style="list-style-type: none"><hr/><span style="font-size: 16pt"><b/></span></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 </ul>
 <br/>
 <b><span style="font-size: 16pt">Casting<br/>
@@ -45,39 +54,63 @@
 <li style="list-style-type: none">The code below shows an example of casting using the <b>astype</b>function. The <b>dtype</b>property returns the type of an array.</li>
 </span><li style="list-style-type: none"><img src="image 7.png"/>   <img src="image 9.png"/></li>
 <li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 </ul>
 <br/>
 <span style="font-size: 16pt"><b>NaN</b></span><br/>
 <ul><span style="font-size: 13pt"><li style="list-style-type: none">When we don't want a NumPy array to contain a value at a placeholder index,we can use <b>np.nan </b>to act as a placeholder. A common usage for np.nan is a filler value for incomplete data.</li>
-<li style="list-style-type: none">The code below shows an example usage of np.nan.Nte that <b>np.nan</b>can't take on an integer type.</li>
+<li style="list-style-type: none">The code below shows an example usage of np.nan.Note that <b>np.nan</b>can't take on an integer type.</li>
 </span></ul>
-<ul><img src="image 8.png"/> </ul>
-<img src="image 10.png"/><br/>
-<ul><li style="list-style-type: none"><hr/></li>
+<br/>
+<img src="image 8.png"/> <img src="image 10.png"/><br/>
+<ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
 </ul>
 <span style="font-size: 16pt"><b>Infinity<br/>
 </b></span><ul><span style="font-size: 13pt"><li style="list-style-type: none">To represent infinity in NumPy, we use the<b>np.inf </b>special value.We can also represent negative infinity with <b>-np.inf</b>	.</li>
 </span></ul>
-<ul><span style="font-size: 13pt">The </span></ul>
-<span style="font-size: 13pt">code below shows an example usage of <b>np.inf</b>. Note that <b>np.inf</b>cannot take on an integer type.</span><ul><li style="list-style-type: none"/>
+<br/>
+<span style="font-size: 13pt">The code below shows an example usage of <b>np.inf</b>. Note that <b>np.inf</b>cannot take on an integer type.</span><ul><li style="list-style-type: none"/>
 </ul>
 	<img src="image 11.png"/>  <img src="image 12.png"/><ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 </ul>
 <br/>
 <b><span style="font-size: 16pt">Some questions</span></b><ul><b><span style="font-size: 16pt"><li style="list-style-type: none"/>
 <li style="list-style-type: none"><img height="118" src="image 13.png" width="850"/></li>
 <li style="list-style-type: none"><img src="image 20.png"/></li>
 </span></b></ul>
-<ul><li style="list-style-type: none"><hr/></li>
+<ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"><img height="118" src="image 14.png" width="900"/></li>
 <li style="list-style-type: none"><img src="image 19.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"><img height="202" src="image 15.png" width="750"/></li>
 <li style="list-style-type: none"><img src="image 18.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"><img height="148" src="image 16.png" width="800"/></li>
 </ul>
 	<img src="image 17.png"/></body></html>
