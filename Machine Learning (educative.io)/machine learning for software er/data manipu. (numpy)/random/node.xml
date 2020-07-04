@@ -2,14 +2,14 @@
 <node>
 <version>6</version>
 <dict>
-  <key>title</key><string>NumPy Basics</string>
-  <key>nodeid</key><string>855e799d-1bfb-4455-b0d1-128ae11795f0</string>
-  <key>modified_time</key><integer>1593773776</integer>
+  <key>title</key><string>Random</string>
+  <key>nodeid</key><string>605c24ca-06b4-43bf-9ad3-c5569a890bbe</string>
+  <key>modified_time</key><integer>1593865357</integer>
   <key>version</key><integer>6</integer>
   <key>content_type</key><string>text/xhtml+xml</string>
-  <key>created_time</key><integer>1593688044</integer>
+  <key>created_time</key><integer>1593848335</integer>
   <key>info_sort_dir</key><integer>1</integer>
-  <key>order</key><integer>2</integer>
+  <key>order</key><integer>4</integer>
   <key>info_sort</key><string>order</string>
 </dict>
 </node>

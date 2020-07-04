@@ -1,0 +1,97 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Math</title>
+</head><body><b><span style="font-size: 16pt">Chapter Goals:</span></b><ul><span style="font-size: 13pt"><li style="list-style-type: none"><div style="text-align: left"><span style="font-family: Droid Serif">Learn how to perform math operations in NumPy</span></div> </li>
+<li style="list-style-type: none"><div style="text-align: left"><span style="font-family: Droid Serif">Write code using NumPy math functions</span></div> </li>
+</span></ul>
+<ul><li style="list-style-type: none"><hr/></li>
+</ul>
+<span style="font-size: 13pt"><br/>
+</span><span style="font-size: 16pt"><b>Arithmatic</b></span><ul><span style="font-size: 13pt"><li style="list-style-type: none">One of the main purposes of NumPy is to perform multi-dimensional arithmetic. Using NumPy arrays, we can apply arithmetic to each element with a single operation.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">The code below shows multi-dimensional arithmetic with NumPy.</li>
+<li style="list-style-type: none"/>
+</span></ul>
+<ul><li style="list-style-type: none"><img src="image.png"/>  <img src="image 2.png"/>   <img src="image 3.png"/></li>
+</ul>
+<br/>
+<ul><span style="font-size: 13pt"><li style="list-style-type: none">Using NumPy arithmetic, we can easily modify large amounts of numeric data with only a few operations. For example, we could convert a dataset of Fahrenheit temperatures to their equivalent Celsius form.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">The code below converts Fahrenheit to Celsius in NumPy.</li>
+<li style="list-style-type: none"/>
+</span><li style="list-style-type: none"><img src="image 4.png"/>  <img src="image 5.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><span style="font-size: 13pt">It is important to note that performing arithmetic on NumPy arrays <b>does not change the original array, </b>and instead produces a new array that is the result of the arithmatic operation.</span></li>
+</ul>
+<ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+</ul>
+<br/>
+<span style="font-size: 16pt"><b>Non-linear functions<br/>
+</b></span><ul><span style="font-size: 13pt"><li style="list-style-type: none">Apart from basic arithmetic operations, NumPy also allows you to use non-linear functions such as exponentials and logarithms.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">The function <span style="font-family: Droid Serif"><div style="text-align: left"><span style="color: #00007f"><span style="background-color: #e5e5e5">np.exe</span><span style="background-color: #ffffff"/></span><span style="background-color: #ffffff">performs a base e exponential on an array, while the function </span><span style="color: #00007f"><span style="background-color: #e5e5e5">np.exe2</span><span style="background-color: #ffffff"/></span><span style="background-color: #ffffff">performs a base 2 exponential.Likewise, </span><span style="color: #00007f"><span style="background-color: #e5e5e5">np.log</span><span style="background-color: #ffffff">, </span><span style="background-color: #e5e5e5">np.log2</span><span style="background-color: #ffffff">, </span><span style="background-color: #e5e5e5">np.log10</span></span><span style="background-color: #ffffff">all perform logarithms on an input array,using base e, base 2, and base 10, respectively.</span></div></span></li>
+</span></ul>
+<span style="font-size: 13pt"><span style="font-family: Droid Serif"><div style="text-align: left"><span style="background-color: #ffffff"><br/>
+<br/>
+<br/>
+<br/>
+</span></div></span></span><ul><li style="list-style-type: none"><ul><span style="background-color: #ffffff"><span style="font-family: Droid Serif"><div style="text-align: left"><span style="font-size: 13pt"><li style="list-style-type: none"/>
+</span></div></span></span><li style="list-style-type: none"/>
+</ul>
+</li>
+</ul>
+<br/>
+<span style="font-size: 13pt">The code below shows various exponentials and logarithms with NumPy. Note that <span style="background-color: #ffcc99"><span style="color: #ff0000">np.e</span></span><span style="color: #ff0000"/>and<span style="color: #ff0000"><span style="background-color: #ffcc99">np.pi</span></span>represent the mathematical constants e and <span style="font-family: Nimbus Roman No9 L"><b>π</b></span> </span><ul><li style="list-style-type: none"><ul><span style="font-size: 13pt"><li style="list-style-type: none">, respectively<span style="color: #ff0000"/></li>
+<span style="color: #ff0000"><li style="list-style-type: none"/>
+</span></span><li style="list-style-type: none"><img src="image 6.png"/>  <img src="image 7.png"/></li>
+<li style="list-style-type: none"/>
+</ul>
+</li>
+<span style="font-size: 13pt"><li style="list-style-type: none">To do a regular power operation with any base, we use <span style="background-color: #e5e5e5"><span style="color: #00007f"><div style="text-align: left"><span style="font-family: Droid Serif">np.power</span></div></span></span><span style="color: #00007f"><div style="text-align: left"><span style="font-family: Droid Serif"><span style="background-color: #ffffff"/></span></div></span>The first argument to the function is the base, while the second is the power. If the base or power is an array rather than a single number, the operation is applied to every element in the array.</li>
+<li style="list-style-type: none"/>
+</span><li style="list-style-type: none"><img src="image 8.png"/>  <img src="image 9.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+</ul>
+<br/>
+<span style="font-size: 16pt"><b>Matrix Multiplication</b></span><ul><span style="font-size: 13pt"><li style="list-style-type: none">Since NumPy arrays are basically vectors and matrices, it makes sense that there are functions for dot products and matrix multiplication. Specifically, the main function to use is <span style="background-color: #e5e5e5"><span style="color: #00007f"><span style="font-family: Droid Serif"><div style="text-align: left">np.matmul</div></span></span></span><span style="color: #00007f"><span style="font-family: Droid Serif"><div style="text-align: left"><span style="background-color: #ffffff"/></div></span></span>which takes two vector/matrix arrays as input and produces a dot product or matrix multiplication.</li>
+</span></ul>
+<ul><span style="font-size: 13pt"><li style="list-style-type: none">The code below shows various examples of matrix multiplication. When both inputs are 1-D, the output is the dot product.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Note that the dimensions of the two input matrices must be valid for a matrix multiplication. Specifically, the second dimension of the first matrix must equal the first dimension of the second matrix, otherwise <span style="background-color: #ffcc99"><span style="color: #ff0000">np.matmul</span></span><span style="color: #ff0000"/>will result in<span style="color: #ff0000"><span style="background-color: #ffcc99">ValueError</span></span></li>
+<span style="color: #ff0000"><li style="list-style-type: none"/>
+</span></span><li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image 10.png"/>	 <img src="image 11.png"/></li>
+</ul>
+<hr/><ul><li style="list-style-type: none"><img height="428" src="image 12.png" width="700"/></li>
+</ul>
+<ul><li style="list-style-type: none"><ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+</ul>
+</li>
+</ul>
+<img height="262" src="image 13.png" width="850"/><br/>
+<hr/><br/>
+<img height="186" src="image 14.png" width="850"/><br/>
+<hr/><br/>
+<img height="254" src="image 15.png" width="850"/><ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+</ul>
+<br/>
+</body></html>

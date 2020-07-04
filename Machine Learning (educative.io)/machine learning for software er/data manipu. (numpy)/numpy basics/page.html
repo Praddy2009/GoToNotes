@@ -2,96 +2,86 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>NumPy Basics</title>
-</head><body><b><span style="font-size: 16pt">Chapter Goals:</span></b><ul><li><div style="text-align: left"><span style="font-family: Droid Serif"><span style="font-size: 13pt">Learn about some basic NumPy operations</span></span></div><span style="font-size: 13pt"> </span></li>
-<span style="font-size: 13pt"><li><div style="text-align: left"><span style="font-family: Droid Serif">Write code using the basic NumPy functions</span></div> </li>
+</head><body><b><span style="font-size: 16pt">Chapter Goals:</span></b><ul><li><span style="font-size: 13pt"><span style="font-family: Droid Serif"><div style="text-align: left">Learn about some basic NumPy operations</div></span> </span></li>
+<span style="font-size: 13pt"><li><span style="font-family: Droid Serif"><div style="text-align: left">Write code using the basic NumPy functions</div></span> </li>
 </span></ul>
 <ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"><hr/></li>
 <li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 </ul>
-<b><span style="font-size: 16pt">Ranged data<br/>
-</span></b>		<span style="font-size: 13pt"><ul><span style="font-family: Droid Serif"><div style="text-align: left">While </div></span><span style="color: #ff0000"><span style="background-color: #ffcc99">np.array</span></span><div style="text-align: left"><span style="font-family: Droid Serif"/></div></ul>
-can be used to create any array, it is equivalent to hardcoding an array. This won't work when the array has hundreds of values. Instead, NumPy provides an option to create ranged data arrays using<ul><div style="text-align: left"><span style="font-family: Droid Serif"><span style="color: #00007f"><span style="background-color: #e5e5e5">np.arange</span><span style="background-color: #ffffff"/></span></span></div></ul>
-The function acts very similar to the <ul><span style="background-color: #e5e5e5"><div style="text-align: left"><span style="font-family: Droid Serif"><span style="color: #00007f">range</span></span></div></span></ul>
-<b/>function in Python, and will always return a 1-D array.<br/>
-</span><ul><span style="font-size: 13pt"><li style="list-style-type: none">The code below contains example usage of <span style="color: #ff0000"><span style="background-color: #ffcc99">np.arange</span></span><div style="text-align: left"><span style="font-family: Droid Serif"/></div>.</li>
+<span style="font-size: 16pt"><b>Ranged data<br/>
+</b></span>		<div style="text-align: left"><span style="font-family: Droid Serif"><span style="font-size: 13pt">While </span></span></div><span style="font-size: 13pt"><span style="background-color: #ffcc99"><span style="color: #ff0000">np.array</span></span><span style="font-family: Droid Serif"><div style="text-align: left"/></span>can be used to create any array, it is equivalent to hardcoding an array. This won't work when the array has hundreds of values. Instead, NumPy 	 <br/>
+</span><span style="font-size: 13pt">	   provides an option to create ranged data arrays using <span style="background-color: #e5e5e5"><span style="color: #00007f"><div style="text-align: left"><span style="font-family: Droid Serif">np.arange</span></div></span></span><span style="color: #00007f"><div style="text-align: left"><span style="font-family: Droid Serif"><span style="background-color: #ffffff"/></span></div></span>The function acts very similar to the <span style="color: #00007f"><span style="font-family: Droid Serif"><div style="text-align: left"><span style="background-color: #e5e5e5">range</span></div></span></span><b/>function in Python, and will always return a 1-D array.<br/>
+</span><ul><li style="list-style-type: none"><ul><span style="font-size: 13pt"><li style="list-style-type: none">The code below contains example usage of <span style="background-color: #ffcc99"><span style="color: #ff0000">np.arange</span></span><span style="font-family: Droid Serif"><div style="text-align: left"/></span>.</li>
 </span></ul>
-<ul><img src="image.png"/>  </ul>
-<img src="image 2.png"/><br/>
-<ul><span style="font-size: 13pt"><li style="list-style-type: none">The output of <span style="color: #ff0000"><span style="background-color: #ffcc99">np.arange</span></span><span style="background-color: #ffffff"/>is specified as follows:</li>
-</span></ul>
-<span style="font-size: 13pt"><ul><ul>&gt; If </ul>
+</li>
 </ul>
-<div style="text-align: left"><span style="font-family: Droid Serif">only a single number, </span></div><i>n</i><div style="text-align: left"><span style="font-family: Droid Serif">, is passed in as an argument, </span></div><ul><span style="background-color: #ffcc99"><span style="color: #ff0000">np.arange</span></span></ul>
-<div style="text-align: left"><span style="font-family: Droid Serif">will return an array with all the integers in the range [0, <i>n</i>). </span></div><div style="text-align: left"><span style="font-family: Droid Serif"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><b>Note: </b>the lower end is inclusive while the upper end is exclusive.</li>
+<ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><img src="image.png"/>  <img src="image 2.png"/></li>
 </ul>
 </li>
 </ul>
-</span></div><div style="text-align: left"><span style="font-family: Droid Serif"><ul>  &gt; </ul>
-For two arguments, <i>m</i> and <i>n</i>, </span></div><ul><span style="color: #ff0000"><span style="background-color: #ffcc99">np.arange</span></span></ul>
-<div style="text-align: left"><span style="font-family: Droid Serif">will return an array with all the integers in the range [<i>m</i>, <i>n</i>). </span></div><div style="text-align: left"><span style="font-family: Droid Serif"><ul>  &gt; </ul>
-For three arguments, <i>m</i>, <i>n</i>, and <i>s</i>, </span></div><ul><span style="background-color: #ffcc99"><span style="color: #ff0000">np.arange</span></span></ul>
-<div style="text-align: left"><span style="font-family: Droid Serif">will return an array with the integers in the range [<i>m</i>, <i>n</i>) using a step size of <i>s</i>. </span></div><ul><li style="list-style-type: none"><div style="text-align: left"><span style="font-family: Droid Serif">   </span></div></li>
+<span style="font-size: 13pt"><ul><li style="list-style-type: none">The output of <span style="background-color: #ffcc99"><span style="color: #ff0000">np.arange</span></span><span style="background-color: #ffffff"/>is specified as follows:</li>
+<li style="list-style-type: none">&gt; If <span style="font-family: Droid Serif"><div style="text-align: left">only a single number, </div></span><i>n</i><span style="font-family: Droid Serif"><div style="text-align: left">, is passed in as an argument, </div></span><span style="color: #ff0000"><span style="background-color: #ffcc99">np.arange</span></span><span style="font-family: Droid Serif"><div style="text-align: left">will return an array with all the integers in the range [0, <i>n</i>).  <b>Note: </b>the lower end is inclusive while the upper end is exclusive.</div></span></li>
 </ul>
-<ul><div style="text-align: left"><span style="font-family: Droid Serif">  &gt; Like </span></div><span style="color: #ff0000"><span style="background-color: #ffcc99">np.array</span></span><div style="text-align: left"><span style="font-family: Droid Serif">,</span></div><span style="color: #ff0000"><span style="background-color: #ffcc99">np.arange</span></span></ul>
-<div style="text-align: left"><span style="font-family: Droid Serif">performs upcasting. It also has the </span></div><ul><span style="color: #ff0000"><span style="background-color: #ffcc99">dtype</span></span></ul>
- <div style="text-align: left"><span style="font-family: Droid Serif">keyword argument to manually cast the array.<br/>
-</span></div><div style="text-align: left"><span style="font-family: Droid Serif"><br/>
+<span style="font-family: Droid Serif"><div style="text-align: left">   &gt; For two arguments, <i>m</i> and <i>n</i>, </div></span><span style="background-color: #ffcc99"><span style="color: #ff0000">np.arange</span></span><span style="font-family: Droid Serif"><div style="text-align: left">will return an array with all the integers in the range [<i>m</i>, <i>n</i>).   &gt; For three arguments, <i>m</i>, <i>n</i>, and <i>s</i>, </div></span><span style="color: #ff0000"><span style="background-color: #ffcc99">np.arange</span></span><span style="font-family: Droid Serif"><div style="text-align: left">will return an 	array with the integers in the range [<i>m</i>, <i>n</i>) using a step size of <i>s</i>. </div></span><ul><li style="list-style-type: none"><span style="font-family: Droid Serif"><div style="text-align: left">   </div></span></li>
+</ul>
+<br/>
+<span style="font-family: Droid Serif"><div style="text-align: left">  &gt; Like </div></span><span style="background-color: #ffcc99"><span style="color: #ff0000">np.array</span></span><span style="font-family: Droid Serif"><div style="text-align: left">,</div></span><span style="background-color: #ffcc99"><span style="color: #ff0000">np.arange</span></span><span style="font-family: Droid Serif"><div style="text-align: left">performs upcasting. It also has the </div></span><span style="background-color: #ffcc99"><span style="color: #ff0000">dtype</span></span> <span style="font-family: Droid Serif"><div style="text-align: left">keyword argument to manually cast the array.<br/>
+</div></span><span style="font-family: Droid Serif"><div style="text-align: left"><br/>
 <br/>
 <br/>
 <br/>
-</span></div> <ul><li style="list-style-type: none">	</li>
+</div></span> <ul><li style="list-style-type: none">	</li>
 <li style="list-style-type: none"/>
 </ul>
-<ul>To specify </ul>
-the number of elements in the returned array, rather than the step size, we can use the<span style="color: #00007f"> </span><ul><li style="list-style-type: none"><span style="color: #00007f"><span style="background-color: #e5e5e5">np.linespace</span></span>function.</li>
+<ul><li style="list-style-type: none">To specify the number of elements in the returned array, rather than the step size, we can use the<span style="color: #00007f"> <span style="background-color: #e5e5e5">np.linespace</span></span>function.</li>
 <li style="list-style-type: none"/>
 </ul>
-<ul>This </ul>
-function takes in a required first two arguments, for the start and end of the range, respectively. The end of the range is inclusive for <span style="color: #00007f"> </span><ul><span style="color: #00007f"><span style="background-color: #e5e5e5">np.linespace</span></span></ul>
-, unless the keyword argument <ul><span style="background-color: #ffcc99"><span style="color: #ff0000">endpoint</span></span>is set to <span style="background-color: #ffcc99"><span style="color: #ff0000">False</span></span></ul>
-To specify the number of elements, we set the </span><ul><span style="font-size: 13pt"><li style="list-style-type: none"><span style="color: #ff0000"><span style="background-color: #ffcc99">num</span></span>keyword argument (it's default value is <span style="color: #ff0000"><span style="background-color: #ffcc99">50</span></span>).</li>
+</span><ul><li style="list-style-type: none"><span style="font-size: 13pt">This function takes in a required first two arguments, for the start and end of the range, respectively. The end of the range is inclusive for <span style="background-color: #e5e5e5"><span style="color: #00007f">np.linespace</span></span>, unless the keyword argument <span style="color: #ff0000"><span style="background-color: #ffcc99">endpoint</span></span>is set to <span style="color: #ff0000"><span style="background-color: #ffcc99">False</span></span>To specify the number of elements, we set the </span></li>
+<span style="font-size: 13pt"><li style="list-style-type: none"><span style="background-color: #ffcc99"><span style="color: #ff0000">num</span></span>keyword argument (it's default value is <span style="background-color: #ffcc99"><span style="color: #ff0000">50</span></span>).</li>
 <li style="list-style-type: none"/>
-<li style="list-style-type: none">The code below showsexample usage of <span style="color: #ff0000"><span style="background-color: #ffcc99">np.linespace</span></span>. It also takes in the <span style="color: #ff0000"><span style="background-color: #ffcc99">dtype</span></span>keyword argument for manual casting.</li>
+<li style="list-style-type: none">The code below showsexample usage of <span style="background-color: #ffcc99"><span style="color: #ff0000">np.linespace</span></span>. It also takes in the <span style="background-color: #ffcc99"><span style="color: #ff0000">dtype</span></span>keyword argument for manual casting.</li>
 <li style="list-style-type: none"><img src="image 3.png"/>  <img src="image 4.png"/></li>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
 <li style="list-style-type: none"><hr/></li>
 <li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 </span></ul>
-<b><span style="font-size: 16pt">Reshaping data</span></b><span style="font-size: 13pt"/><span style="font-size: 13pt"><ul>The function we use to reshape data in NumPy is <span style="color: #00007f"><span style="background-color: #e5e5e5">np.reshape </span></span></ul>
-It takes in an array and a new shape as required arguments. The new shape must exactly contain all the elements from the input array. For example, we could reshape an array with 12 elements to <ul><span style="background-color: #ffcc99"><span style="color: #ff0000">(4,3)</span></span><span style="color: #00007f"><span style="background-color: #ffffff">,</span></span></ul>
- but we can't reshape it to </span><ul><span style="font-size: 13pt"><li style="list-style-type: none"><span style="background-color: #ffcc99"><span style="color: #ff0000">(4,4)</span></span></li>
-<span style="background-color: #ffcc99"><span style="color: #ff0000"><li style="list-style-type: none"/>
+<span style="font-size: 16pt"><b>Reshaping data</b></span><ul><span style="font-size: 13pt"><li style="list-style-type: none">The function we use to reshape data in NumPy is <span style="background-color: #e5e5e5"><span style="color: #00007f">np.reshape </span></span>It takes in an array and a new shape as required arguments. The new shape must exactly contain all the elements from the input array. For example, we could reshape an array with 12 elements to <span style="color: #ff0000"><span style="background-color: #ffcc99">(4,3)</span></span><span style="background-color: #ffffff"><span style="color: #00007f">,</span></span> but we can't reshape it to <span style="color: #ff0000"><span style="background-color: #ffcc99">(4,4)</span></span></li>
+<span style="color: #ff0000"><span style="background-color: #ffcc99"><li style="list-style-type: none"/>
 </span></span></span><span style="font-size: 12pt"><li style="list-style-type: none">We are allowed to use the special value of -1 in at most one dimension of the new shape. The dimension with -1 will take on the value necessary to allow the new shape to contain all the elements of the array.</li>
 <li style="list-style-type: none"/>
 <li style="list-style-type: none">[The basic idea here is that we ask reshape to plz reshape our array in dimensions we specify (x,y,z,...) and if we wan't to preserve any axis from before then at that place we add -1]</li>
 <li style="list-style-type: none">Link : <a href="https://www.youtube.com/watch?v=3wi0lJPfLUY">Concept of Reshaping(1:44) </a></li>
 <li style="list-style-type: none"/>
-</span><li style="list-style-type: none"><span style="font-size: 12pt">The code below shows example usages of </span><span style="font-size: 13pt"><span style="color: #ff0000"><span style="background-color: #ffcc99">np.reshape</span></span></span></li>
-<span style="font-size: 13pt"><span style="color: #ff0000"><span style="background-color: #ffcc99"><li style="list-style-type: none"/>
+</span><li style="list-style-type: none"><span style="font-size: 12pt">The code below shows example usages of </span><span style="background-color: #ffcc99"><span style="color: #ff0000"><span style="font-size: 13pt">np.reshape</span></span></span></li>
+<span style="background-color: #ffcc99"><span style="color: #ff0000"><span style="font-size: 13pt"><li style="list-style-type: none"/>
 </span></span></span></ul>
-<ul><img src="image 5.png"/>   </ul>
-<img height="88" src="image 6.png" width="800"/><ul><span style="font-size: 13pt"><li style="list-style-type: none"/>
+<ul><li style="list-style-type: none"><img src="image 5.png"/>   <img height="88" src="image 6.png" width="800"/></li>
+<span style="font-size: 13pt"><li style="list-style-type: none"/>
+<li style="list-style-type: none">While the <span style="color: #ff0000"><span style="background-color: #ffcc99">np.reshape</span><span style="background-color: #ffffff"/></span>function can perform any reshaping utilities we need, NumPy provides an inherent function for flattening an array. Flattening an array reshapes it into a 1D array. Since we need to flatten data quite often, it is a useful function</li>
 </span></ul>
-<span style="font-size: 13pt"><ul>While the <span style="background-color: #ffcc99"><span style="color: #ff0000">np.reshape</span></span><span style="color: #ff0000"><span style="background-color: #ffffff"/></span></ul>
-function can perform any reshaping utilities we need, NumPy provides an inherent function for flattening an array. Flattening an array reshapes it into a 1D array. Since we need to flatten data quite often, it is a useful function<br/>
-<ul>The code below flattens an array using the inherent <span style="color: #ff0000"><span style="background-color: #ffcc99">flatten</span><span style="background-color: #ffffff"/></span></ul>
-function</span><ul><img src="image 7.png"/>  </ul>
-<img src="image 8.png"/><br/>
-<ul><li style="list-style-type: none"><hr/>	</li>
-</ul>
-<b><span style="font-size: 16pt">Transposing</span></b><span style="font-size: 13pt"><ul>Similar to how it is common to reshape data, it is also common to transpose data. Perhaps we have data that's supposed to be in a particular format, but some new data we get is rearranged. We can just transpose the data, using the <span style="background-color: #e5e5e5"><span style="color: #00007f">np.transpose</span></span><span style="color: #00007f"><span style="background-color: #ffffff"/></span></ul>
-function, to convert it to the proper format.<br/>
-</span><ul><span style="font-size: 13pt"><li style="list-style-type: none">The code below shows an example usage of the  <span style="background-color: #ffcc99"><span style="color: #ff0000">np.transpose</span></span>function. The matrix rows become columns after the transpose.</li>
-</span></ul>
-<ul><img src="image 9.png"/> </ul>
-<img src="image 10.png"/><br/>
-<span style="font-size: 13pt"><ul>The function takes in a required first argument, which will be the array we want to transpose. It also has a single keyword argument called <span style="color: #ff0000"><span style="background-color: #ffcc99">axes</span><span style="background-color: #ffffff"/></span></ul>
-which represents the new permutation of the dimension.<br/>
-</span><ul><span style="font-size: 13pt"><li style="list-style-type: none">The permutation is a tuple/list of integers, with the same length as the number of dimensions in the array. It tells us where to switch up the dimensions. For example, if the permutation had 3 at index 1, it means the old third dimension of the data becomes the new second dimension (since index 1 represents the second dimension).</li>
+<span style="font-size: 13pt"/><ul><li style="list-style-type: none"><span style="font-size: 13pt">The code below flattens an array using the inherent <span style="background-color: #ffcc99"><span style="color: #ff0000">flatten</span></span><span style="color: #ff0000"><span style="background-color: #ffffff"/></span>function</span></li>
+<li style="list-style-type: none"><img src="image 7.png"/>  <img src="image 8.png"/></li>
 <li style="list-style-type: none"/>
-<li style="list-style-type: none">The code below shows an example usage of the <span style="color: #ff0000"><span style="background-color: #ffcc99">np.transpose</span></span> function with the <span style="background-color: #ffcc99"><span style="color: #ff0000">axes</span></span><span style="color: #ff0000"><span style="background-color: #ffffff"/></span>keyword argument. The <span style="color: #ff0000"><span style="background-color: #ffcc99">shape</span><span style="background-color: #ffffff"/></span>property gives us the shape of an array.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none">	</li>
+</ul>
+<span style="font-size: 16pt"><b>Transposing</b></span><ul><span style="font-size: 13pt"><li style="list-style-type: none">Similar to how it is common to reshape data, it is also common to transpose data. Perhaps we have data that's supposed to be in a particular format, but some new data we get is rearranged. We can just transpose the data, using the <span style="color: #00007f"><span style="background-color: #e5e5e5">np.transpose</span><span style="background-color: #ffffff"/></span>function, to convert it to the proper format.</li>
+</span></ul>
+<ul><span style="font-size: 13pt"><li style="list-style-type: none">The code below shows an example usage of the  <span style="color: #ff0000"><span style="background-color: #ffcc99">np.transpose</span></span>function. The matrix rows become columns after the transpose.</li>
+</span></ul>
+<ul><li style="list-style-type: none"><img src="image 9.png"/> <img src="image 10.png"/></li>
+<span style="font-size: 13pt"><li style="list-style-type: none">The function takes in a required first argument, which will be the array we want to transpose. It also has a single keyword argument called <span style="background-color: #ffcc99"><span style="color: #ff0000">axes</span></span><span style="color: #ff0000"><span style="background-color: #ffffff"/></span>which represents the new permutation of the dimension.</li>
+</span></ul>
+<ul><span style="font-size: 13pt"><li style="list-style-type: none">The permutation is a tuple/list of integers, with the same length as the number of dimensions in the array. It tells us where to switch up the dimensions. For example, if the permutation had 3 at index 1, it means the old third dimension of the data becomes the new second dimension (since index 1 represents the second dimension).</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">The code below shows an example usage of the <span style="background-color: #ffcc99"><span style="color: #ff0000">np.transpose</span></span> function with the <span style="color: #ff0000"><span style="background-color: #ffcc99">axes</span><span style="background-color: #ffffff"/></span>keyword argument. The <span style="background-color: #ffcc99"><span style="color: #ff0000">shape</span></span><span style="color: #ff0000"><span style="background-color: #ffffff"/></span>property gives us the shape of an array.</li>
 <li style="list-style-type: none"/>
 </span><li style="list-style-type: none"><img src="image 11.png"/> <img src="image 12.png"/></li>
 <li style="list-style-type: none">array([</li>
@@ -102,35 +92,44 @@ which represents the new permutation of the dimension.<br/>
 </ul>
 </li>
 <li style="list-style-type: none"/>
-<span style="font-size: 13pt"><li style="list-style-type: none">In this example, the old first dimension became the new third dimension, the old second dimension became the new first dimension, and the old third dimension became the new second dimension. The default value for <span style="background-color: #ffcc99"><span style="color: #ff0000">axes</span></span> is a dimension reversal (e.g. for 3-D data the default <span style="background-color: #ffcc99"><span style="color: #ff0000">axes</span></span> value is <span style="color: #ff0000"><span style="background-color: #ffcc99">[2, 1, 0]</span></span>).</li>
+<span style="font-size: 13pt"><li style="list-style-type: none">In this example, the old first dimension became the new third dimension, the old second dimension became the new first dimension, and the old third dimension became the new second dimension. The default value for <span style="color: #ff0000"><span style="background-color: #ffcc99">axes</span></span> is a dimension reversal (e.g. for 3-D data the default <span style="color: #ff0000"><span style="background-color: #ffcc99">axes</span></span> value is <span style="background-color: #ffcc99"><span style="color: #ff0000">[2, 1, 0]</span></span>).</li>
 <li style="list-style-type: none"/>
-</span><li style="list-style-type: none"><hr/></li>
+</span><li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
 </ul>
-<span style="font-size: 16pt"><b>Zeros and ones<br/>
-</b></span><ul><span style="font-size: 13pt">Sometimes, we need to create arrays filled solely with 0 or 1. For example, since binary data is labeled with 0 and 1, we may need to create dummy datasets of strictly one label. For creating these arrays, NumPy provides the functions <span style="background-color: #e5e5e5"><span style="color: #00007f">np.zeros</span></span><span style="color: #00007f"><span style="background-color: #ffffff">&amp; </span><span style="background-color: #e5e5e5">np.ones</span></span></span></ul>
- <span style="font-size: 13pt">They both take in the same arguments, which includes just one required argument, the array shape.</span><span style="font-size: 13pt">The functions also allow for manual casting using the <span style="font-family: Droid Serif"><div style="text-align: left"/></span><ul><span style="background-color: #ffcc99"><span style="color: #ff0000">dtype</span></span></ul>
-keyword argument.<br/>
-</span><span style="font-size: 13pt"/><ul><span style="font-size: 13pt"><li style="list-style-type: none">The code below shows example usage <span style="color: #ff0000"><span style="background-color: #ffcc99">np.zeros</span><span style="background-color: #ffffff"/></span><span style="background-color: #ffffff"><span style="color: #00007f">&amp;</span><span style="color: #ff0000"/></span><span style="color: #ff0000"><span style="background-color: #ffcc99">np.ones</span></span></li>
-<span style="color: #ff0000"><span style="background-color: #ffcc99"><li style="list-style-type: none"/>
+<b><span style="font-size: 16pt">Zeros and ones<br/>
+</span></b><ul><li style="list-style-type: none"><span style="font-size: 13pt">Sometimes, we need to create arrays filled solely with 0 or 1. For example, since binary data is labeled with 0 and 1, we may need to create dummy datasets of strictly one label. For creating these arrays, NumPy provides the functions <span style="color: #00007f"><span style="background-color: #e5e5e5">np.zeros</span><span style="background-color: #ffffff">&amp; </span><span style="background-color: #e5e5e5">np.ones</span></span></span> <span style="font-size: 13pt">They both take in the same arguments, which includes just one required argument, the array shape.</span><span style="font-size: 13pt">The functions also allow for manual casting using the <div style="text-align: left"><span style="font-family: Droid Serif"/></div><span style="color: #ff0000"><span style="background-color: #ffcc99">dtype</span></span>keyword argument.</span></li>
+</ul>
+<ul><span style="font-size: 13pt"><li style="list-style-type: none">The code below shows example usage <span style="background-color: #ffcc99"><span style="color: #ff0000">np.zeros</span></span><span style="color: #ff0000"><span style="background-color: #ffffff"/></span><span style="background-color: #ffffff"><span style="color: #00007f">&amp;</span><span style="color: #ff0000"/></span><span style="color: #ff0000"><span style="background-color: #ffcc99">np.ones</span></span></li>
+<span style="background-color: #ffcc99"><span style="color: #ff0000"><li style="list-style-type: none"/>
 </span></span></span><li style="list-style-type: none"><img src="image 13.png"/> <img src="image 14.png"/></li>
 <li style="list-style-type: none"/>
-<span style="font-size: 13pt"><li style="list-style-type: none">If we want to create an array of 0's or 1's with the same shape as another array, we can use <span style="background-color: #e5e5e5"><span style="color: #00007f">np.zeros_like</span></span><span style="color: #00007f"><span style="background-color: #ffffff">&amp; </span><span style="background-color: #e5e5e5">np.one_like</span></span></li>
+<span style="font-size: 13pt"><li style="list-style-type: none">If we want to create an array of 0's or 1's with the same shape as another array, we can use <span style="color: #00007f"><span style="background-color: #e5e5e5">np.zeros_like</span><span style="background-color: #ffffff">&amp; </span><span style="background-color: #e5e5e5">np.one_like</span></span></li>
 </span><li style="list-style-type: none"><img src="image 15.png"/>  <img src="image 16.png"/></li>
 <li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
 <li style="list-style-type: none"><img height="229" src="image 17.png" width="750"/></li>
 <li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
 <li style="list-style-type: none"><img height="178" src="image 18.png" width="650"/></li>
 <li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
 <li style="list-style-type: none"><img height="187" src="image 19.png" width="750"/></li>
 <li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
 <li style="list-style-type: none"><img height="151" src="image 20.png" width="750"/></li>
 <li style="list-style-type: none"/>
