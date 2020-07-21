@@ -1,0 +1,60 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>DataFrame</title>
+</head><body><b><span style="font-size: 16pt">Chapter Goals:</span></b><ul><li style="list-style-type: none"><div style="text-align: left"><span style="font-size: 18pt"><span style="font-family: Droid Serif">Learn about the pandas DataFrame object and its basic utilities</span></span></div> </li>
+<li style="list-style-type: none"><div style="text-align: left"><span style="font-size: 18pt"><span style="font-family: Droid Serif">Write code to create and manipulate a pandas DataFrame</span></span></div> </li>
+<li style="list-style-type: none"/>
+</ul>
+<hr/><ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+</ul>
+2-D data <br/>
+<br/>
+One of the main purposes of pandas is to deal with tabular data, i.e. data that comes from tables or spreadsheets. Since tabular data contains rows and columns, it is 2-D. For working with 2-D data, we use the pandas.DataFrame object, which we'll refer to simply as a DataFrame.<br/>
+<br/>
+A DataFrame is created through the pd.DataFrame constructor, which takes in essentially the same arguments as ps.Series. However, while a Series could be constructed from a scalar (representing a single value Series), a DataFrame cannot.<br/>
+<br/>
+Furthrmore, pd.DataFrame takes in an additional  columns keyword argument, which represents the labels for the columns (similar to how index represents the row lables)<br/>
+<br/>
+<img src="image.png"/>     <img src="image 2.png"/><br/>
+<br/>
+Note that when we use a Python dictionary for initialization, the DataFrame takes the dictionary's keys as its column labels.<br/>
+<hr/><br/>
+Upcasting <br/>
+<br/>
+When we initialize a DataFrame of mixed types, upcasting occurs on a per-column basis. The dtypes property returns the types in each column as a Series of types.<br/>
+<br/>
+The code below shows how upcasting works in DataFrames. You'll notice that upcasting only occurs in the first column for the DataFrame below, because the second column's values are both integers.<br/>
+<br/>
+<img src="image 3.png"/>    <img src="image 4.png"/><br/>
+<hr/><br/>
+Appending rows <br/>
+<br/>
+We can append additional rows to a given DataFrame through the append function.The required argument for the function is either a Series or DataFrame, representing the row(s) we append.<br/>
+<br/>
+Note that the append function returns the modified DataFrame but doesn't actually change the original. Furthermore, when we append a Series to the DataFrame, we either need to specify the name for the series or use the ignore_index keyword argument. Setting ignore_index=True will change the row labels to integer indexes. <br/>
+<br/>
+<img src="image 5.png"/>    <img src="image 6.png"/><br/>
+<hr/><br/>
+Dropping data <br/>
+<br/>
+We can drop rows or columns from a given DataFrame through the drop function. There is no required argument, but the keyword arguments of the function gives us two ways to drop rows/columns from a DataFrame.<br/>
+<br/>
+The first way is using the labels keyword argument to specify the labels of the rows/columns we want to drop. We use this alongside the axis keyword argument (which has default value of 0) to drop from the rows or columns axis.<br/>
+<br/>
+The second method is to directly use the index or columns keyword arguments to specify the labels of the rows or columns directly, without needing to use axis.<br/>
+<br/>
+<img src="image 7.png"/>   <img src="image 8.png"/><br/>
+<br/>
+Similar to append, the drop function returns the modified DataFrame but doesn't actually change the original.<br/>
+<br/>
+Note that when using lables and axis, we can't drop both rows and columns from the Dataframe.<br/>
+<hr/><br/>
+<img height="144" src="image 9.png" width="900"/><br/>
+<hr/><br/>
+<img height="115" src="image 10.png" width="800"/><br/>
+<hr/><br/>
+<img src="image 11.png"/><br/>
+<br/>
+</body></html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Statistics</title>
+</head><body><b><span style="font-size: 16pt">Chapter Goals:</span></b><ul><span style="font-size: 13pt"><li style="list-style-type: none"><div style="text-align: left"><span style="font-family: Droid Serif">Learn about basic statistical analysis in NumPy</span></div> </li>
+</span><li style="list-style-type: none"><span style="font-size: 13pt"><div style="text-align: left"><span style="font-family: Droid Serif">Write code to obtain statistics for NumPy arrays</span></div> </span></li>
+</ul>
+<br/>
+<b><span style="font-size: 16pt">Analysis </span></b><ul><span style="font-size: 13pt"><li style="list-style-type: none"/>
+<li style="list-style-type: none">It is often useful to analyze data for its main characteristics and interesting trends. Though we will go more in-depth on data analysis in the section of this course titled Data Preprocessing with scikit-learn, there are still a few techiques in NumPy that allow us to quickly inspect data arrays.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">For example, we can obtain minimum and maximum values of a NumPy array using its inherent min and max functions. This gives us an initial sense of the data's range, and can alert us to extreme outliers in the data.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image.png"/> <img src="image 2.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">The axis keyword argument is identical to how it was used in np.argmin and np.argmax from the chapter on Indexing. In our example, we use </li>
+<li style="list-style-type: none">axis=0 : to find an array of the minimum values in each column of arr</li>
+<li style="list-style-type: none">axis=1 : o find an array of the maximum values in each row of arr</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+</span></ul>
+<span style="font-size: 16pt"><b>Statistical metrics </b></span><ul><li style="list-style-type: none"><span style="font-size: 13pt"/></li>
+<span style="font-size: 13pt"><li style="list-style-type: none">NumPy also provides basic statistical functions such as np.mean, np.var, and np.median, to calculate the mean, variance, and median of the data, respectively.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">The code below shows how to obtain basic statistics with NumPy. Note that np.median applied without axis takes the median of the flattened array.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image 3.png"/>  <img src="image 4.png"/></li>
+<li style="list-style-type: none"/>
+</span></ul>
+<span style="font-size: 13pt"><hr/></span><ul><span style="font-size: 13pt"><li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="266" src="image 5.png" width="550"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="192" src="image 6.png" width="600"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="277" src="image 7.png" width="500"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+</span></ul>
+</body></html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Aggregation</title>
+</head><body><b><span style="font-size: 16pt">Chapter Goals:</span></b><ul><span style="font-size: 13pt"><li style="list-style-type: none"><span style="font-family: Droid Serif"><div style="text-align: left">Learn how to aggregate data in NumPy</div></span> </li>
+<li style="list-style-type: none"><span style="font-family: Droid Serif"><div style="text-align: left">Write code to obtain sums and concatenations of NumPy arrays</div></span> </li>
+<li style="list-style-type: none"/>
+</span></ul>
+<hr/><br/>
+<span style="font-size: 16pt"><b>Summation </b></span><span style="font-size: 13pt"/><ul><span style="font-size: 13pt"><li style="list-style-type: none"/>
+<li style="list-style-type: none">In the chapter on Math, we calculated the sum of individual values between multiple arrays. To sum the values within a single array, we use the np.sum function</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">The function takes in a NumPy array as its required argument, and uses the axis keyword argument in the same way as described in previous chapters. If the axis  keyword argument is not specified, np.sum returns the overall sum of the array.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image.png"/><img src="image 2.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">In addition to regular sums, NumPy can perform <a href="https://mathworld.wolfram.com/CumulativeSum.html">cumulative sums</a>using np.cumsum . Like np.sum, np.cumsum also takes in a NumPy array as a required argument and uses the axis argument. If the axis keyword argument is not specified, np.cumsum will return the cumulative sums for the flattened array.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image 3.png"/>  <img height="164" src="image 4.png" width="250"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+</span></ul>
+<b><span style="font-size: 16pt">Concatenation </span></b><span style="font-size: 13pt"/><span style="font-size: 13pt"><ul><li style="list-style-type: none"/>
+<li style="list-style-type: none">An important part of aggregation is combining multiple datasets. In NumPy, this equates to combining multiple arrays into one. The function we use to do this is np.concatenate.</li>
+<li style="list-style-type: none">Like the summation functions, np.concatenate uses the axis keyword argument. However, the default value for axis is 0 (i.e. dimension 0). Furthermore, the required argument for  np.concatenate isa list of arrays which the function combines into a single array.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="202" src="image 5.png" width="650"/> <img src="image 6.png"/></li>
+<li style="list-style-type: none"/>
+</ul>
+<hr/></span><ul><span style="font-size: 13pt"><li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="249" src="image 7.png" width="550"/>  </li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="219" src="image 8.png" width="650"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="262" src="image 9.png" width="850"/></li>
+</span></ul>
+</body></html>

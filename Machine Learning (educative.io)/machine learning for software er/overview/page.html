@@ -16,32 +16,31 @@ Most machine learning tasks generalize to one of the following two learning type
 <span style="font-size: 13pt"><br/>
 </span><br/>
 <ul><div style="text-align: left"><span style="font-family: Droid Serif"><li style="list-style-type: none"><b><span style="font-size: 16pt">Unsupervised Learning</span></b><span style="font-size: 18pt">: </span></li>
-<li style="list-style-type: none"><span style="font-size: 13pt">Using <i>unlabeled</i> data to allow a model to learn relationships between data observations and pick up on underlying patterns. Most data in the world is unlabeled, which makes unsupervised learning a very useful method of machine learning.</span><span style="font-size: 18pt"/></li>
+<li style="list-style-type: none"><span style="font-size: 13pt">Using <i>unlabeled</i> data to allow a model to learn relationships between data observations and pick up on underlying patterns. Most data in the world is unlabeled, which makes unsupervised learning a very useful method of machine learning.</span></li>
 </span></div><li style="list-style-type: none"/>
 <span style="font-size: 13pt"><li><b>Example: </b>Going back to the same picture dataset from above, but now assume the training dataset is unlabeled. Using unsupervised learning, a model will be able to pick up on the inherent differences between pictures with a lake and pictures without a lake, e.g. differences in pixel color or orientation. This allows the model to cluster the pictures into two separate groups.</li>
 </span></ul>
 <br/>
-      <img height="400" src="image.png" width="500"/>     <img height="396" src="image 2.png" width="500"/><ul><li/>
-</ul>
+      <img height="400" src="image.png" width="500"/>     <img height="396" src="image 2.png" width="500"/><br/>
 <hr/><ul><li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
 </ul>
-<span style="font-size: 16pt"><b>Steps of the Machine Learning Process <br/>
-</b></span><span style="font-size: 16pt"><b/></span><b><span style="font-size: 13pt">Data Collection</span></b><span style="font-size: 13pt">: The process of <b>extracting raw datasets</b>for the machine learning task. This data can come from a variety of places, ranging from open-source online resources to paid crowdsourcing. The first step of the machine learning process is arguably the most important. If the data you collect is poor quality or irrelevant, then the model you train will be poor quality as well.<br/>
-</span><span style="font-size: 13pt"/><ul><span style="font-size: 13pt"><li><b>Data Processing and Preparation:</b>Once you’ve gathered the relevant data, you need to process it and make sure that it is in a <b>usable format </b>for training a machine learning model. This includes handling missing data, dealing with outliers, etc.</li>
-<li/>
-<li><b>Feature Engineering</b>: Once you’ve collected and processed your dataset, you will likely need to transform some of the features (and sometimes even drop some features) in order to optimize how well a model can be trained on the data.</li>
-<li/>
-<li><b>Model Selection: </b>Based on the dataset, you will choose which<b>model architecture to use</b>. This is one of the main tasks of industry engineers. Rather than attempting to come up with a completely novel model architecture, most tasks can be thoroughly performed with an existing architecture (or combination of model architectures).</li>
-<li/>
-<li><b>Model Training and Data Pipeline: </b>After selecting the model architecture, you will create a data pipeline for training the model. This means creating a <b>continuous stream of batched data</b>observations to efficiently train the model. Since training can take a long time, you want your data pipeline to be as efficient as possible.</li>
-<li/>
-<li><b>Model Validation</b>: After training the model for a sufficient amount of time, you will need to validate the model’s performance on a held-out portion of the overall dataset. This data needs to come from the same underlying distribution as the training dataset, but needs to be different data that the model has not seen before.</li>
-<li/>
-<li><b>Model Persistence</b>: Finally, after training and validating the model’s performance, you need to be able to properly save the model weights and possibly push the <b>model to production</b>. This means setting up a process with which new users can easily use your pre-trained model to make predictions.</li>
-<li style="list-style-type: none"/>
-<li/>
-<li/>
-<li style="list-style-type: none"/>
+<span style="font-size: 16pt"><b>Steps of the Machine Learning Process </b></span><ul><span style="font-size: 13pt"><li style="list-style-type: none"><b>Data Collection</b>: The process of <b>extracting raw datasets</b>for the machine learning task. This data can come from a variety of places, ranging from open-source online resources to paid crowdsourcing. The first step of the machine learning process is arguably the most important. If the data you collect is poor quality or irrelevant, then the model you train will be poor quality as well.</li>
 </span></ul>
-</body></html>
+<span style="font-size: 13pt"><ul><li><b>Data Processing and Preparation:</b>Once you’ve gathered the relevant data, you need to process it and make sure that it is in a <b>usable format </b>for training a machine learning model. This includes handling missing data, dealing with outliers, etc.</li>
+</ul>
+<ul><li><b>Feature Engineering</b>: Once you’ve collected and processed your dataset, you will likely need to transform some of the features (and sometimes even drop some features) in order to optimize how well a model can be trained on the data.</li>
+</ul>
+<ul><li><b>Model Selection: </b>Based on the dataset, you will choose which<b>model architecture to use</b>. This is one of the main tasks of industry engineers. Rather than attempting to come up with a completely novel model architecture, most tasks can be thoroughly performed with an existing architecture (or combination of model architectures).</li>
+</ul>
+<ul><li><b>Model Training and Data Pipeline: </b>After selecting the model architecture, you will create a data pipeline for training the model. This means creating a <b>continuous stream of batched data</b>observations to efficiently train the model. Since training can take a long time, you want your data pipeline to be as efficient as possible.</li>
+</ul>
+<ul><li><b>Model Validation</b>: After training the model for a sufficient amount of time, you will need to validate the model’s performance on a held-out portion of the overall dataset. This data needs to come from the same underlying distribution as the training dataset, but needs to be different data that the model has not seen before.</li>
+</ul>
+<ul><li><b>Model Persistence</b>: Finally, after training and validating the model’s performance, you need to be able to properly save the model weights and possibly push the <b>model to production</b>. This means setting up a process with which new users can easily use your pre-trained model to make predictions.</li>
+</ul>
+<br/>
+<br/>
+<br/>
+<br/>
+</span></body></html>

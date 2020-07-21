@@ -1,0 +1,51 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Series</title>
+</head><body><b><span style="font-size: 16pt">Chapter Goals:</span></b><ul><li style="list-style-type: none"><span style="font-family: Droid Serif"><span style="font-size: 18pt"><div style="text-align: left">Learn about the pandas Series object and its basic utilities</div></span></span> </li>
+<li style="list-style-type: none"><span style="font-family: Droid Serif"><span style="font-size: 18pt"><div style="text-align: left">Write code to create several Series objects</div></span></span> </li>
+<li style="list-style-type: none"/>
+</ul>
+<hr/><ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+</ul>
+1-D data <br/>
+Similar to NumPy, pandas frequently deals with 1-D and 2-D data. However, we use two separate objects to deal with 1-D and 2-D data in pandas. For 1-D data, we use the pandas.Series objects, which we'll refer to simply as a Series.<br/>
+<br/>
+A Series is created through the pd.series constructor, which takes in no required arguments but does have a variety of keyword arguments.<br/>
+<br/>
+The first keyword argument is data, which specifies the elements of the Series. If data is not set, pd.Series returns an empty Series. Since the data keyword argument is almost always used, we treat it like a regular first argument (i.e. skip the data= prefix).<br/>
+<br/>
+Similar to the np.array constructor, pd.series also takes in the dtype keyword argument for manual casting.<br/>
+<br/>
+<img src="image.png"/>   <img height="439" src="image 2.png" width="200"/><br/>
+<br/>
+In our examples, we initialized each Series with its values by setting the first argument using a scalar, list, or NumPy array. Note that pd.Series upcasts values in the same way as np.array. Furthermore, since Series objects are 1-D, the ser variable represents a Series with lists as elements, rather than a 2-D matrix.<br/>
+<hr/><br/>
+Index <br/>
+<br/>
+In the previous examples, you may have noticed the zero-indexed integers to the left of the elements in each Series. These integers are collectively referred to as the indexof a series, each individual index element is referred to as a label.<br/>
+<br/>
+The default index is integers from 0 to n-1, where n is the number of elements in the Series. However, we can specify a custom index via the index keyword argument of pd.Series<br/>
+<br/>
+<img src="image 3.png"/> <img src="image 4.png"/><br/>
+<br/>
+The index keyword argument needs to be a list or array with the same length as the data argument for pd.Series.The values in the index  list can be any hashable type (e.g. integer, float, string).<br/>
+<hr/><br/>
+Dictionary input <br/>
+<br/>
+Another way to set the index of a Series is by using a Python dictionary for the data argument.The keys of the dictionary represent the index of the Series, while each individual key is the label for its corresponding value.<br/>
+<br/>
+The code below shows how to use pd.Series with a Python dictionary as the first argument. In our example, we set 'a', 'b', 'c' as the Series index, with corresponding values1,2 and 3<br/>
+<br/>
+<img src="image 5.png"/>     <img src="image 6.png"/><br/>
+<hr/><br/>
+<img src="image 7.png"/><br/>
+<hr/><br/>
+<img src="image 8.png"/><br/>
+<hr/><br/>
+<br/>
+<img src="image 9.png"/><br/>
+<hr/><br/>
+<img src="image 10.png"/><br/>
+</body></html>

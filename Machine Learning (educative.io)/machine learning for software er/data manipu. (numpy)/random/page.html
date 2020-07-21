@@ -2,89 +2,86 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>Random</title>
-</head><body><b><span style="font-size: 16pt">Chapter Goals:</span></b><ul><span style="font-size: 13pt"><li style="list-style-type: none"><div style="text-align: left"><span style="font-family: Droid Serif">Learn about random operations in NumPy</span></div> </li>
-<li style="list-style-type: none"><div style="text-align: left"><span style="font-family: Droid Serif">Write code using the</span></div> <span style="color: #ff0000"><span style="background-color: #ffcc99">np.rondom</span></span><div style="text-align: left"><span style="font-family: Droid Serif">submodule</span></div> </li>
+</head><body><b><span style="font-size: 16pt">Chapter Goals:</span></b><ul><span style="font-size: 13pt"><li style="list-style-type: none"><span style="font-family: Droid Serif"><div style="text-align: left">Learn about random operations in NumPy</div></span> </li>
+<li style="list-style-type: none"><span style="font-family: Droid Serif"><div style="text-align: left">Write code using the</div></span> <span style="background-color: #ffcc99"><span style="color: #ff0000">np.rondom</span></span><span style="color: #ff0000"/><span style="font-family: Droid Serif"><div style="text-align: left">submodule</div></span> </li>
 <li style="list-style-type: none"/>
 </span><li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
 <li style="list-style-type: none"/>
 <span style="font-size: 13pt"><li style="list-style-type: none"/>
 </span></ul>
-<b><span style="font-size: 16pt">Random Integers</span></b><ul><span style="font-size: 13pt"><li style="list-style-type: none">Similar to the Python <span style="color: #ff0000"><span style="background-color: #ffcc99">rondom</span></span>module, NumPy has its own submodule for pseudo-random number generation called </li>
-</span><li style="list-style-type: none"><span style="font-size: 13pt"><span style="color: #ff0000"><span style="background-color: #ffcc99">np.rondom</span></span>It provides all the necessary randomized operations and extends it to multi-dimensional arrays. To generate pseudo-random integers, we use the <div style="text-align: left"><span style="font-family: Droid Serif"><span style="color: #00007f"><span style="background-color: #e5e5e5">np.random.randint</span></span></span></div>function.</span></li>
+<span style="font-size: 16pt"><b>Random Integers</b></span><ul><span style="font-size: 13pt"><li style="list-style-type: none">Similar to the Python <span style="background-color: #ffcc99"><span style="color: #ff0000">rondom</span></span><span style="color: #ff0000"/>module, NumPy has its own submodule for pseudo-random number generation called </li>
+</span><li style="list-style-type: none"><span style="font-size: 13pt"><span style="background-color: #ffcc99"><span style="color: #ff0000">np.rondom</span></span><span style="color: #ff0000"/>It provides all the necessary randomized operations and extends it to multi-dimensional arrays. To generate pseudo-random integers, we use the <span style="background-color: #e5e5e5"><span style="color: #00007f"><span style="font-family: Droid Serif"><div style="text-align: left">np.random.randint</div></span></span></span><span style="color: #00007f"><span style="font-family: Droid Serif"><div style="text-align: left"/></span></span>function.</span></li>
 <li style="list-style-type: none"><span style="font-size: 13pt"/></li>
 </ul>
-<ul><img src="image.png"/>  </ul>
-<img src="image 2.png"/><br/>
-<span style="font-size: 13pt"><ul>The <span style="background-color: #ffcc99"><span style="color: #ff0000">np.rondom.randint</span></span></ul>
- function takes in a single required argument, which actually depends on the <ul><span style="color: #ff0000"><span style="background-color: #ffcc99">high</span></span></ul>
-keyword argument. If<ul><span style="color: #ff0000"><span style="background-color: #ffcc99">high=None</span></span></ul>
- (which is the default value), then the required argument represents the upper (exclusive) end of the range, with the lower end being 0. Specifically, if the required argument is n,then the random integer is chosen uniformly from the range [0,n)<br/>
-</span><ul><span style="font-size: 13pt"><li style="list-style-type: none">If <span style="color: #ff0000"><span style="background-color: #ffcc99">high</span></span>is not <span style="background-color: #ffcc99"><span style="color: #ff0000">None</span></span><span style="color: #ff0000"/>then the required argument will represent the lower (inclusive) end of the range, while <span style="color: #ff0000"><span style="background-color: #ffcc99">high</span></span> represents the upper (exclusive) end.</li>
-<li style="list-style-type: none"/>
-<li style="list-style-type: none">The <span style="background-color: #ffcc99"><span style="color: #ff0000">size</span></span>keyword argument specifies the size of the output array, where each integer in the array is randomly drawn from the specified range. As a default, <span style="color: #ff0000"><span style="background-color: #ffcc99">np.rondom.randint</span></span> returns a single integer.</li>
+<ul><li style="list-style-type: none"><img src="image.png"/>  <img src="image 2.png"/></li>
+<span style="font-size: 13pt"><li style="list-style-type: none">The <span style="color: #ff0000"><span style="background-color: #ffcc99">np.rondom.randint</span></span> function takes in a single required argument, which actually depends on the <span style="background-color: #ffcc99"><span style="color: #ff0000">high</span></span><span style="color: #ff0000"/>keyword argument. If <span style="background-color: #ffcc99"><span style="color: #ff0000">high=None</span></span> (which is the default value), then the required argument represents the upper (exclusive) end of the range, with the lower end being 0. Specifically, if the required argument is n,then the random integer is chosen uniformly from the range [0,n)</li>
 </span></ul>
-<ul><li style="list-style-type: none"><hr/></li>
-</ul>
-<span style="font-size: 13pt"><br/>
-</span><b><span style="font-size: 16pt">Utility Function<br/>
-</span><span style="font-size: 13pt"/></b><span style="font-size: 13pt"><ul>Some fundamental utility functions from the <span style="background-color: #ffcc99"><span style="color: #ff0000">np.rondom</span></span> module are <span style="background-color: #e5e5e5"><span style="color: #00007f"><span style="font-family: Droid Serif"><div style="text-align: left">np.random.seed</div></span></span></span><span style="color: #00007f"><span style="font-family: Droid Serif"><div style="text-align: left"/></span></span><span style="font-family: Droid Serif"><div style="text-align: left">and<span style="color: #00007f"><span style="background-color: #e5e5e5">np.random.shuffle</span>. </span></div></span></ul>
-We use the <ul><div style="text-align: left"><span style="font-family: Droid Serif"><span style="color: #ff0000"><span style="background-color: #ffcc99">np.random.seed</span><span style="background-color: #ffffff"/></span><span style="background-color: #ffffff">function to set the <a href="https://en.wikipedia.org/wiki/Random_seed">random seed</a></span></span></div></ul>
-, which allows us to control the outputs of the pseudo-random functions. The function takes in a single integer as an argument, representing the random seed.</span><ul><span style="font-size: 13pt"><li style="list-style-type: none"><div style="text-align: left"><span style="background-color: #ffffff"><span style="font-family: Droid Serif"/></span><span style="font-family: Droid Serif"><span style="color: #00007f"/></span></div></li>
-<div style="text-align: left"><span style="font-family: Droid Serif"><span style="color: #00007f"><li style="list-style-type: none"/>
-</span></span></div></span></ul>
-<b><span style="font-size: 16pt"/></b><ul><span style="font-size: 13pt"><li style="list-style-type: none">The code below uses <span style="background-color: #ffcc99"><div style="text-align: left"><span style="color: #ff0000"><span style="font-family: Droid Serif">np.random.seed</span></span></div></span> with the same random seed. Note how the outputs of the random functions in each subsequent run are identical when we set the same random seed.</li>
+<ul><span style="font-size: 13pt"><li style="list-style-type: none">If <span style="background-color: #ffcc99"><span style="color: #ff0000">high</span></span>is not <span style="color: #ff0000"><span style="background-color: #ffcc99">None</span></span>then the required argument will represent the lower (inclusive) end of the range, while <span style="background-color: #ffcc99"><span style="color: #ff0000">high</span></span> represents the upper (exclusive) end.</li>
 <li style="list-style-type: none"/>
+<li style="list-style-type: none">The <span style="color: #ff0000"><span style="background-color: #ffcc99">size</span></span>keyword argument specifies the size of the output array, where each integer in the array is randomly drawn from the specified range. As a default, <span style="background-color: #ffcc99"><span style="color: #ff0000">np.rondom.randint</span></span> returns a single integer.</li>
 </span></ul>
-<ul><img src="image 3.png"/>   </ul>
-<img src="image 4.png"/><br/>
-<span style="font-size: 13pt"><ul><li style="list-style-type: none">The <span style="font-family: Droid Serif"><span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left">np.random.shuffle</div></span></span></span> function allows us to randomly shuffle an array. Note that the shuffling happens in place (i.e. no return value), and shuffling multi-dimensional arrays only shuffles the first dimension.</li>
-</ul>
-</span><ul><span style="font-size: 13pt"><li style="list-style-type: none">The code below shows example usages of <div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000"><span style="font-family: Droid Serif">np.random.shuffle</span></span></span></div> Note that only the rows of <div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000"><span style="font-family: Droid Serif">matrix</span></span></span></div> are shuffled (i.e. shuffling along first dimension only).</li>
-</span></ul>
-<ul><img src="image 5.png"/>    </ul>
-<img src="image 6.png"/><br/>
-<ul><li style="list-style-type: none"><hr/></li>
+<ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
 <li style="list-style-type: none"/>
 </ul>
-<span style="font-size: 16pt"><b>Distribution</b></span><ul><span style="font-size: 13pt"><li style="list-style-type: none">Using <div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000"><span style="font-family: Droid Serif">np.random</span></span></span></div> we can also draw samples from probability distributions. For example we can use <span style="background-color: #e5e5e5"><div style="text-align: left"><span style="font-family: Droid Serif"><span style="color: #00007f">np.random.uniform</span></span></div></span><div style="text-align: left"><span style="font-family: Droid Serif"><span style="color: #00007f"/></span></div>to draw pseudo-random real numbers from a <a href="https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)">uniform distribution<div style="text-align: left"><span style="font-family: Droid Serif"><span style="color: #00007f">.</span></span></div></a></li>
-<a href="https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)"><div style="text-align: left"><span style="font-family: Droid Serif"><span style="color: #00007f"><li style="list-style-type: none"/>
-</span></span></div></a></span></ul>
-<ul><img src="image 7.png"/> </ul>
-<img src="image 8.png"/><br/>
-<ul><li style="list-style-type: none"><span style="font-size: 13pt">The function <span style="font-family: Droid Serif"><span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left">np.random.uniform</div></span></span></span>  actually has no required arguments. The keyword arguments, <span style="font-family: Droid Serif"><span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left">low</div></span></span></span> and <div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000"><span style="font-family: Droid Serif">high</span></span></span></div>, represent the inclusive lower end and exclusive upper end from which to draw random samples. Since they have default values of 0.0 and 1.0, respectively, the default outputs of <span style="font-family: Droid Serif"><span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left">np.random.uniform</div></span></span></span> come from the range [0.0, 1.0).</span></li>
-<li style="list-style-type: none"/>
-</ul>
-<span style="font-size: 13pt"><ul>The <div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000"><span style="font-family: Droid Serif">size</span></span></span></div></ul>
- keyword argument is the same as the one for <ul><span style="background-color: #ffcc99"><span style="color: #ff0000">np.rondom.randint</span></span> </ul>
-, i.e. it represents the output size of the array.<br/>
-<br/>
-<ul>Another popular distribution we can sample from is the <a href="https://en.wikipedia.org/wiki/Normal_distribution">normal gaussian distribution</a></ul>
- The function we use is </span><ul><span style="font-size: 13pt"><li style="list-style-type: none"><span style="background-color: #e5e5e5"><span style="color: #00007f"><span style="font-family: Droid Serif"><div style="text-align: left">np.random.normal</div></span></span></span><span style="color: #00007f"><span style="font-family: Droid Serif"><div style="text-align: left"/></span></span></li>
+<span style="font-size: 13pt"/><ul><span style="font-size: 16pt"><b><li style="list-style-type: none">Utility Function</li>
+</b></span><li style="list-style-type: none"><span style="font-size: 13pt">Some fundamental utility functions from the <span style="color: #ff0000"><span style="background-color: #ffcc99">np.rondom</span></span> module are <div style="text-align: left"><span style="font-family: Droid Serif"><span style="color: #00007f"><span style="background-color: #e5e5e5">np.random.seed</span></span>and<span style="color: #00007f"><span style="background-color: #e5e5e5">np.random.shuffle</span>. </span></span></div>We use the <span style="background-color: #ffcc99"><span style="color: #ff0000"><span style="font-family: Droid Serif"><div style="text-align: left">np.random.seed</div></span></span></span><span style="color: #ff0000"><span style="font-family: Droid Serif"><div style="text-align: left"><span style="background-color: #ffffff"/></div></span></span><span style="font-family: Droid Serif"><div style="text-align: left"><span style="background-color: #ffffff">function to set the <a href="https://en.wikipedia.org/wiki/Random_seed">random seed</a></span></div></span>, which allows us to control the outputs of the pseudo-random functions. The function takes in a single integer as an argument, representing the random seed.</span></li>
+<span style="font-size: 13pt"><li style="list-style-type: none"><span style="font-family: Droid Serif"><span style="background-color: #ffffff"><div style="text-align: left"/></span></span></li>
 <span style="color: #00007f"><span style="font-family: Droid Serif"><div style="text-align: left"><li style="list-style-type: none"/>
-<li style="list-style-type: none"/>
-<li style="list-style-type: none"/>
 </div></span></span></span></ul>
- 	<img src="image 9.png"/> <img src="image 10.png"/><br/>
-<span style="font-size: 13pt"><ul>Like <span style="font-family: Droid Serif"><span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left">np.random.uniform</div></span></span></span>  and  <span style="font-family: Droid Serif"><span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left">np.random.normal</div></span></span></span></ul>
- has no required arguments. The <ul><div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000"><span style="font-family: Droid Serif">loc</span></span></span><span style="font-family: Droid Serif">and <span style="background-color: #ffcc99"><span style="color: #ff0000">scale </span></span></span></div></ul>
- keyword arguments represent the mean and standard deviation, respectively, of the normal distribution we sample from.<br/>
-</span><ul><span style="font-size: 13pt">Some more distributions at <a href="https://docs.scipy.org/doc/numpy-1.14.1/reference/routines.random.html">Link</a></span></ul>
-<ul><li style="list-style-type: none"><hr/></li>
+<ul><span style="font-size: 13pt"><li style="list-style-type: none">The code below uses <span style="font-family: Droid Serif"><span style="color: #ff0000"><div style="text-align: left"><span style="background-color: #ffcc99">np.random.seed</span></div></span></span> with the same random seed. Note how the outputs of the random functions in each subsequent run are identical when we set the same random seed.</li>
+<li style="list-style-type: none"/>
+</span><li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image 3.png"/>   <img src="image 4.png"/></li>
+<span style="font-size: 13pt"><li style="list-style-type: none">The <div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000"><span style="font-family: Droid Serif">np.random.shuffle</span></span></span></div> function allows us to randomly shuffle an array. Note that the shuffling happens in place (i.e. no return value), and shuffling multi-dimensional arrays only shuffles the first dimension.</li>
+</span></ul>
+<ul><span style="font-size: 13pt"><li style="list-style-type: none">The code below shows example usages of <span style="font-family: Droid Serif"><span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left">np.random.shuffle</div></span></span></span> Note that only the rows of <span style="font-family: Droid Serif"><span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left">matrix</div></span></span></span> are shuffled (i.e. shuffling along first dimension only).</li>
+</span></ul>
+<ul><li style="list-style-type: none"><img src="image 5.png"/>    <img src="image 6.png"/></li>
+</ul>
+<ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+</ul>
+<b><span style="font-size: 16pt">Distribution</span></b><ul><span style="font-size: 13pt"><li style="list-style-type: none">Using <span style="font-family: Droid Serif"><span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left">np.random</div></span></span></span> we can also draw samples from probability distributions. For example we can use <span style="color: #00007f"><span style="font-family: Droid Serif"><div style="text-align: left"><span style="background-color: #e5e5e5">np.random.uniform</span></div></span></span>to draw pseudo-random real numbers from a <a href="https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)">uniform distribution<span style="color: #00007f"><span style="font-family: Droid Serif"><div style="text-align: left">.</div></span></span></a></li>
+<span style="color: #00007f"><span style="font-family: Droid Serif"><div style="text-align: left"><a href="https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)"><li style="list-style-type: none"/>
+</a></div></span></span></span></ul>
+<ul><li style="list-style-type: none"><img src="image 7.png"/> <img src="image 8.png"/></li>
+</ul>
+<ul><li style="list-style-type: none"><span style="font-size: 13pt">The function <div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000"><span style="font-family: Droid Serif">np.random.uniform</span></span></span></div>  actually has no required arguments. The keyword arguments, <div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000"><span style="font-family: Droid Serif">low</span></span></span></div> and <span style="font-family: Droid Serif"><span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left">high</div></span></span></span>, represent the inclusive lower end and exclusive upper end from which to draw random samples. Since they have default values of 0.0 and 1.0, respectively, the default outputs of <div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000"><span style="font-family: Droid Serif">np.random.uniform</span></span></span></div> come from the range [0.0, 1.0).</span></li>
+<li style="list-style-type: none"/>
+<span style="font-size: 13pt"><li style="list-style-type: none">The <span style="font-family: Droid Serif"><span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left">size</div></span></span></span> keyword argument is the same as the one for <span style="color: #ff0000"><span style="background-color: #ffcc99">np.rondom.randint</span></span> , i.e. it represents the output size of the array.</li>
+</span></ul>
+<span style="font-size: 13pt"><br/>
+</span><ul><span style="font-size: 13pt"><li style="list-style-type: none">Another popular distribution we can sample from is the <a href="https://en.wikipedia.org/wiki/Normal_distribution">normal gaussian distribution</a> The function we use is <div style="text-align: left"><span style="font-family: Droid Serif"><span style="color: #00007f"><span style="background-color: #e5e5e5">np.random.normal</span></span></span></div></li>
+<div style="text-align: left"><span style="font-family: Droid Serif"><span style="color: #00007f"><li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+</span></span></div></span></ul>
+ 	<img src="image 9.png"/> <img src="image 10.png"/><ul><span style="font-size: 13pt"><li style="list-style-type: none">Like <div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000"><span style="font-family: Droid Serif">np.random.uniform</span></span></span></div>  and  <div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000"><span style="font-family: Droid Serif">np.random.normal</span></span></span></div> has no required arguments. The <span style="font-family: Droid Serif"><span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left">loc</div></span></span><div style="text-align: left">and <span style="color: #ff0000"><span style="background-color: #ffcc99">scale </span></span></div></span> keyword arguments represent the mean and standard deviation, respectively, of the normal distribution we sample from.</li>
+</span></ul>
+<ul><li style="list-style-type: none"><span style="font-size: 13pt">Some more distributions at <a href="https://docs.scipy.org/doc/numpy-1.14.1/reference/routines.random.html">Link</a></span></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
 </ul>
 <br/>
-<span style="font-size: 16pt"><b>Custom Sampling</b></span><span style="font-size: 13pt"><ul>While NumPy provides built-in distributions to sample from, we can also sample from a custom distribution with the <div style="text-align: left"><span style="font-family: Droid Serif"><span style="color: #00007f"><span style="background-color: #e5e5e5">np.random.choice</span></span></span></div></ul>
- function.<br/>
-</span><ul><li style="list-style-type: none"><img src="image 11.png"/>  <img src="image 12.png"/></li>
+<b><span style="font-size: 16pt">Custom Sampling</span></b><ul><span style="font-size: 13pt"><li style="list-style-type: none">While NumPy provides built-in distributions to sample from, we can also sample from a custom distribution with the <span style="background-color: #e5e5e5"><span style="color: #00007f"><span style="font-family: Droid Serif"><div style="text-align: left">np.random.choice</div></span></span></span> function.</li>
+</span></ul>
+<ul><li style="list-style-type: none"><img src="image 11.png"/>  <img src="image 12.png"/></li>
 <li style="list-style-type: none"/>
-<span style="font-size: 13pt"><li style="list-style-type: none">The required argument for <span style="font-family: Droid Serif"><span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left">np.random.choice</div></span></span></span> is the custom distribution we sample from. The <span style="font-family: Droid Serif"><div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000">p</span></span></div></span>must sum to 1.</li>
+<span style="font-size: 13pt"><li style="list-style-type: none">The required argument for <div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000"><span style="font-family: Droid Serif">np.random.choice</span></span></span></div> is the custom distribution we sample from. The <span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left"><span style="font-family: Droid Serif">p</span></div></span></span>must sum to 1.</li>
 <li style="list-style-type: none"><ul><li style="list-style-type: none"/>
 </ul>
 </li>
-<li style="list-style-type: none">In the example, we set <span style="font-family: Droid Serif"><div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000">p</span></span></div></span>such that <span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left"><span style="font-family: Droid Serif">'red'</span></div></span></span>has probability of 0.8 of being choosen, <span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left"><span style="font-family: Droid Serif">'blue'</span></div></span></span>has probability of 0.19 and <span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left"><span style="font-family: Droid Serif">'green'</span></div></span></span>has probability of 0.01. When <span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left"><span style="font-family: Droid Serif">p</span></div></span></span> is not set, the probabilities are equal for each element in the distribution (and sum to 1). </li>
+<li style="list-style-type: none">In the example, we set <span style="color: #ff0000"><span style="background-color: #ffcc99"><div style="text-align: left"><span style="font-family: Droid Serif">p</span></div></span></span>such that <span style="font-family: Droid Serif"><div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000">'red'</span></span></div></span>has probability of 0.8 of being choosen, <span style="font-family: Droid Serif"><div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000">'blue'</span></span></div></span>has probability of 0.19 and <span style="font-family: Droid Serif"><div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000">'green'</span></span></div></span>has probability of 0.01. When <span style="font-family: Droid Serif"><div style="text-align: left"><span style="background-color: #ffcc99"><span style="color: #ff0000">p</span></span></div></span> is not set, the probabilities are equal for each element in the distribution (and sum to 1). </li>
 <li style="list-style-type: none"/>
 </span></ul>
-<hr/><ul><li style="list-style-type: none"><span style="font-size: 13pt"/></li>
+<hr/><ul><li style="list-style-type: none"/>
 <span style="font-size: 13pt"><li style="list-style-type: none"/>
 </span><li style="list-style-type: none"><img height="260" src="image 13.png" width="800"/></li>
 <li style="list-style-type: none"/>

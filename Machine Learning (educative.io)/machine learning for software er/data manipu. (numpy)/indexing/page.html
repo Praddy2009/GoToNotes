@@ -1,0 +1,60 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Indexing</title>
+</head><body><span style="font-size: 16pt"><b>Chapter Goals:</b></span><ul><span style="font-size: 13pt"><li style="list-style-type: none"><div style="text-align: left"><span style="font-family: Droid Serif">Learn about indexing arrays in NumPy</span></div> </li>
+</span><li style="list-style-type: none"><span style="font-size: 13pt"><div style="text-align: left"><span style="font-family: Droid Serif">Write code for indexing and slicing arrays</span></div> </span></li>
+</ul>
+<span style="font-size: 13pt"><hr/></span><b><span style="font-size: 16pt">Array accessing <br/>
+</span></b><span style="font-size: 13pt"/><ul><span style="font-size: 13pt"><li style="list-style-type: none">Accessing NumPy arrays is identical to accessing Python lists. For multi-dimensional arrays, it is equivalent to accessing Python lists of lists.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image.png"/>  <img src="image 2.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+</span></ul>
+<span style="font-size: 16pt"><b>Slicing </b></span><span style="font-size: 13pt"/><ul><span style="font-size: 13pt"><li style="list-style-type: none"/>
+<li style="list-style-type: none">NumPy arrays also support slicing. Similar to Python, we use the colon operator (i.e. arr[:] ) for slicing. We can also use negative indexing to slice in the backwards direction.</li>
+<li style="list-style-type: none"><img src="image 3.png"/> <img src="image 4.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">For multi-dimensional arrays, we can use a comma to separate slices across each dimension.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image 5.png"/> <img src="image 6.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+</span></ul>
+<b><span style="font-size: 16pt">Argmin and argmax</span></b><span style="font-size: 13pt"> </span><span style="font-size: 13pt"><ul><li style="list-style-type: none"/>
+<li style="list-style-type: none">In addition to accessing and slicing arrays, it is useful to figure out the actual indexes of the minimum and maximum elements. To do this, we use the np.argmin and np.argmax functions.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">The code below shows example usages of np.argmin and np.argmax.Note that the index of element -6 is the index 5 in the flattended version of arr.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image 7.png"/> <img src="image 8.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">The np.argmin and np.argmax functions take the same arguments. The required argument is the input array and the axis keyword argument specifies which dimension to apply the operation on.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image 9.png"/> <img src="image 10.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">In our example, using</li>
+<li style="list-style-type: none">axis=0 : meant the function found the index of the minimum row element for each column.</li>
+<li style="list-style-type: none">axis=1 : the function found the index of the minimum column element for each row.</li>
+<li style="list-style-type: none">axis=-1 : means we apply the function across the last dimension. In this case, axis=-1 is equivalent to axis=1.</li>
+<li style="list-style-type: none"/>
+</ul>
+<hr/></span><ul><span style="font-size: 13pt"><li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="257" src="image 11.png" width="650"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="408" src="image 12.png" width="650"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="259" src="image 13.png" width="600"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="138" src="image 14.png" width="550"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+</span></ul>
+</body></html>

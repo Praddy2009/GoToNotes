@@ -1,0 +1,78 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Filtering</title>
+</head><body><b><span style="font-size: 16pt">Chapter Goals:</span></b><ul><span style="font-size: 13pt"><li style="list-style-type: none"><div style="text-align: left"><span style="font-family: Droid Serif">Learn how to filter data in NumPy</span></div> </li>
+</span><li style="list-style-type: none"><span style="font-size: 13pt"><div style="text-align: left"><span style="font-family: Droid Serif">Write code for filtering NumPy arrays</span></div> </span></li>
+</ul>
+<hr/><span style="font-size: 16pt"><b><br/>
+</b></span><span style="font-size: 16pt"><b>Filtering data </b></span><span style="font-size: 13pt"/><ul><span style="font-size: 13pt"><li style="list-style-type: none"/>
+<li style="list-style-type: none">Sometimes we have data that contains values we don't want to use. For example, when tracking the best hitters in baseball, we may want to only use the batting average data above .300. In this case, we should filter the overall data for only the values that we want.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">The key to filtering data is through basic relation operations, e.g. ==, &gt;, etc. In NumPy, we can apply basic relation operations element-wise on arrays.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">In the example below ~ operation represents a boolean negation, i.e. it flips each truth value in the array.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image.png"/> <img src="image 2.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Something to note is that np.nan  can't be used with any relation operation. Instead, we use np.isnan to filter for the location of np.nan</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image 3.png"/> <img src="image 4.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+</span></ul>
+<b><span style="font-size: 16pt">Filtering in NumPy </span></b><span style="font-size: 13pt"/><ul><span style="font-size: 13pt"><li style="list-style-type: none"/>
+<li style="list-style-type: none">The np.where function takes in a required first argument, which is a boolean array where True represents the locations of the elements we want to filter for. When the function is applied with only the first argument, it returns a tuple of 1-D arrays.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">The tuple will have size equal to the number of dimensions in the data, and each array represents the True </li>
+<li style="list-style-type: none"> indices for the corresponding dimension. Note that the arrays in the tuple will all have the same length, equal to the number of True elements in the input argument.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image 5.png"/> <img src="image 6.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">The interesting thing about np.where is that it must be applied with exactly 1 or 3 arguments. When we use 3 arguments, the first argument is still the boolean array. However, the next two arguments represent the True replacement values and the False replacement values, respectively. The output of the function now becomes an array with the same shape as the first argument.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image 7.png"/> <img src="image 8.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Note that our second and third arguments necessarily had the same shape as the first argument. However, if we wanted to use a constant replacement value, e.g. -1 we could incorporate <a href="https://numpy.org/doc/stable/user/basics.broadcasting.html">broadcasting</a>. Rather than using an entire array of the same value, we can just use the value itself as an argument.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image 9.png"/><img src="image 10.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+</span></ul>
+<b><span style="font-size: 16pt">Axis-wise filtering </span></b><span style="font-size: 13pt"/><ul><span style="font-size: 13pt"><li style="list-style-type: none"/>
+<li style="list-style-type: none">If we wanted to filter based on rows or columns of data, we could use the np.any and np.all functions. Both functions take in the same arguments, and return a single boolean or a boolean array. The required argument for both functions is a boolean array.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image 11.png"/> <img src="image 12.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">The np.any function is equivalent to performing a logical OR ( || ) while the np.all function is equivalent to a logical AND ( &amp;&amp; ) on the first argument. np.any returns true if even one of the elements in the array meets the condition and np.all returns true only if all the elements meet the condition. When only a single argument is passed in, the function is applied across the entire input array, so the returned value is a single boolean.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">However, if we use a multi-dimensional input and specify the axis keyword argument, the returned value will be an array. The axis argument has the same meaning as it did for np.argmin and np.argmax from the previous chapter. using axis=0 means the function finds the index of the minimum row element for each column.When we used axis=1, the function finds the index of the minimum column elemnt for each row.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Setting axis to -1 ust means we apply the function across the last dimension.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image 13.png"/> <img src="image 14.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">We can use np.any and np.all in tandem wit np.where to filter for entire rows or columns of data.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">In the code example below, we use np.any to obtain a boolean array representing the rows that have at least one positive number. We then use the boolean array as the input to np.where, which gives us the actual indices of the rows with at least one positive number.</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="365" src="image 15.png" width="600"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img src="image 16.png"/> <img src="image 17.png"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"><img height="178" src="image 18.png" width="550"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"><img height="238" src="image 19.png" width="550"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"><img height="167" src="image 20.png" width="550"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="351" src="image 21.png" width="550"/></li>
+</span></ul>
+</body></html>
