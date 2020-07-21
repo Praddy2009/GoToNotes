@@ -1,0 +1,63 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Data Types</title>
+</head><body><br/>
+<span style="font-size: 15pt">Data type specifies the type of data that will be stored in the column.<br/>
+</span><ul><span style="font-size: 19pt"><li><span style="background-color: #ffff99"><span style="font-family: Sylfaen"><b>CHAR(n)</b></span></span></li>
+</span><span style="font-family: Sylfaen"><b><li style="list-style-type: none"><ul><span style="font-size: 16pt"><li>Fixed length a<span style="background-color: #ffffff">lphanumaric, 1 char (min) , 2000 char (max)</span></li>
+<span style="background-color: #ffffff"><li>If string of smaller length is stored, it is padded with spaces at the end</li>
+</span></span></ul>
+</li>
+</b></span></ul>
+<span style="font-family: Sylfaen"><b><span style="background-color: #ffff99"><span style="font-size: 19pt"/></span></b></span><ul><span style="font-family: Sylfaen"><b><span style="background-color: #ffff99"><li><span style="font-size: 19pt">VARCHAR(n)/VARCHAR2(N)</span></li>
+</span></b></span><li style="list-style-type: none"><ul><span style="font-family: Sylfaen"><b><li><span style="background-color: #ffffff"><span style="font-size: 16pt">Variable length alphanumaric, 1 char (min) , 4000 char (max)</span></span></li>
+<span style="background-color: #ffffff"><span style="font-size: 16pt"><li>If data is smaller than the specified size,only the data value is stored, no padding is done</li>
+</span></span></b></span></ul>
+</li>
+</ul>
+<span style="font-size: 15pt"/><ul><span style="font-size: 19pt"><li><span style="font-family: Sylfaen"><b><span style="background-color: #ffff99">DATE</span></b></span></li>
+</span><span style="font-family: Sylfaen"><b><li style="list-style-type: none"><ul><li><span style="font-size: 16pt">Stores date and time<span style="background-color: #ffffff">, January 1 4712 B.C. (min) , December 31, 9999 (max)</span></span></li>
+<span style="font-size: 16pt"><span style="background-color: #ffffff"><li>Default format DD-MON-YY also DD-MON-YYYY</li>
+</span></span></ul>
+</li>
+</b></span></ul>
+<span style="font-family: Sylfaen"><b><span style="font-size: 19pt"><span style="background-color: #ffff99"/></span></b></span><ul><span style="font-family: Sylfaen"><b><span style="font-size: 19pt"><span style="background-color: #ffff99"><li>Number(precision, scale)/NUMERIC(p,d)</li>
+</span></span></b></span><li style="list-style-type: none"><ul><span style="font-family: Sylfaen"><b><li><span style="background-color: #ffffff"><span style="font-size: 16pt">Floating point number/ Integer number</span></span></li>
+<span style="background-color: #ffffff"><span style="font-size: 16pt"><li>Precision is total no of significant digit (between 1 to 38 ). Scale is the number of digit to the right of the decimal point</li>
+<li>If neither precision nor scale is specified the stored up to 38 digits</li>
+</span></span></b></span></ul>
+</li>
+</ul>
+<span style="font-size: 15pt"/><ul><li><span style="font-family: Sylfaen"><b><span style="background-color: #ffff99"><span style="font-size: 19pt">INTEGER</span></span><span style="font-size: 16pt"><span style="background-color: #ffffff"/></span></b></span></li>
+<span style="font-family: Sylfaen"><b><span style="font-size: 16pt"><span style="background-color: #ffffff"><li style="list-style-type: none"><ul><li>Integer Number</li>
+</ul>
+</li>
+</span></span></b></span></ul>
+<span style="font-family: Sylfaen"><b><span style="font-size: 16pt"><span style="background-color: #ffffff"><span style="font-size: 19pt"><span style="background-color: #ffff99"/></span></span><ul><li><span style="font-size: 19pt"><span style="background-color: #ffff99">LONG<span style="background-color: #ffffff"/></span></span></li>
+<span style="background-color: #ffffff"><li style="list-style-type: none"><ul><li>Stores vriable length character string containing up to 2GB</li>
+<li>Similar to Varchar</li>
+<li>Can be only one long data type per table</li>
+</ul>
+</li>
+</span></ul>
+<span style="background-color: #ffffff"><span style="font-size: 19pt"><span style="background-color: #ffff99"/></span></span><ul><span style="font-size: 19pt"><span style="background-color: #ffff99"><li>RAW<span style="background-color: #ffffff"/></li>
+</span></span><span style="background-color: #ffffff"><li style="list-style-type: none"><ul><li>Stores binary data such as digitized picture or image. 2000 bytes max</li>
+</ul>
+</li>
+</span></ul>
+<span style="background-color: #ffffff"><span style="background-color: #ffff99"><span style="font-size: 19pt"/></span></span><ul><span style="background-color: #ffff99"><span style="font-size: 19pt"><li>LONG RAW<span style="background-color: #ffffff"/></li>
+</span></span><span style="background-color: #ffffff"><li style="list-style-type: none"><ul><li>Higher range of RAW. 2GB max</li>
+<li>Can be only one long Raw data type per table</li>
+</ul>
+</li>
+</span></ul>
+<span style="background-color: #ffffff"><span style="font-size: 19pt"><span style="background-color: #ffff99"/></span></span></span></b></span><ul><span style="font-family: Sylfaen"><b><span style="font-size: 16pt"><span style="font-size: 19pt"><span style="background-color: #ffff99"><li>LOB(Large Object)<span style="background-color: #ffffff"/></li>
+</span></span></span></b></span><li style="list-style-type: none"><ul><span style="font-family: Sylfaen"><b><span style="font-size: 16pt"><span style="background-color: #ffffff"><li>Stores large volume of data</li>
+<li>BLOB: Binary data such as audio video clips up to 4GB</li>
+</span></span></b><span style="font-size: 16pt"><span style="background-color: #ffffff"><li>CLOB<b>: Character data upto 4GB</b></li>
+<li>BFILE<b>: Stores references to a binary file that is external to database and is maintained by OS</b></li>
+</span></span></span></ul>
+</li>
+</ul>
+</body></html>

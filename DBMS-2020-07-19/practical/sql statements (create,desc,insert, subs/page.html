@@ -1,0 +1,75 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>SQL Statements (create,desc,insert, Subs var)</title>
+</head><body><ul><span style="font-size: 17pt"><li><span style="background-color: #ffff99"><b><span style="font-family: Sylfaen">CREATE TABLE</span></b></span></li>
+<li style="list-style-type: none"><ul><b><span style="font-family: Sylfaen"><li style="list-style-type: none">Its used for table creation</li>
+</span></b></ul>
+</li>
+<b><span style="font-family: Sylfaen"><li style="list-style-type: none"/>
+<li style="list-style-type: none"><span style="background-color: #99ffff">Syntax:</span><span style="background-color: #ffffff">create table <span style="color: #ff0000">table_name</span><span style="color: #000000">(</span><span style="color: #ff0000">column datatype</span><span style="color: #000000">, </span><span style="color: #ff0000">column datatype</span><span style="color: #000000">, </span><span style="color: #ff0000">... column datatype</span><span style="color: #000000">);</span></span></li>
+<span style="background-color: #ffffff"><span style="color: #000000"><li style="list-style-type: none"/>
+</span></span></span></b></span></ul>
+   <img height="165" src="image.png" width="600"/><br/>
+<hr/><ul><li><b><span style="font-family: Sylfaen"><span style="background-color: #ffff99"><span style="font-size: 18pt">DESCRIBE TABLE</span></span></span></b></li>
+<li style="list-style-type: none"><ul><span style="font-family: Sylfaen"><b><span style="font-size: 17pt"><li style="list-style-type: none">Its used for viewing table structure. </li>
+<li style="list-style-type: none"/>
+</span></b></span></ul>
+</li>
+<span style="font-family: Sylfaen"><b><span style="font-size: 17pt"><li style="list-style-type: none"><span style="background-color: #99ffff">Syntax:</span><span style="background-color: #ffffff">describe <span style="color: #ff0000">table_name</span><span style="color: #000000">;     OR  desc </span><span style="color: #ff0000">table_name</span><span style="color: #000000">;</span></span></li>
+<span style="color: #000000"><span style="background-color: #ffffff"><li style="list-style-type: none"/>
+</span></span></span></b></span></ul>
+   <img src="image 2.png"/><br/>
+<hr/><br/>
+<ul><li><span style="font-family: Sylfaen"><b><span style="background-color: #ffff99"><span style="font-size: 18pt">INSERT</span></span></b></span></li>
+<li style="list-style-type: none"><ul><b><span style="font-family: Sylfaen"><span style="font-size: 17pt"><li style="list-style-type: none">Its used to insert a new row/record into table. </li>
+<li style="list-style-type: none"/>
+</span></span></b></ul>
+</li>
+<b><span style="font-family: Sylfaen"><span style="font-size: 17pt"><li style="list-style-type: none"><span style="background-color: #99ffff">Syntax:</span><span style="background-color: #ffffff">insert into <span style="color: #ff0000">table_name</span><span style="color: #000000">(<span style="color: #ff0000">column1</span></span>,<span style="color: #000000"><span style="color: #ff0000">column2</span></span>) values(<span style="color: #000000"><span style="color: #ff0000">value1</span></span>,<span style="color: #000000"><span style="color: #ff0000">value2</span></span>)<span style="color: #000000">;</span></span></li>
+<span style="background-color: #ffffff"><span style="color: #000000"><li style="list-style-type: none"/>
+<li style="list-style-type: none">Note: Column names are optional</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none">Numeric data is not enclosed within quotes, while character and date values are enclosed within quotes</li>
+<li style="list-style-type: none"/>
+</ul>
+</li>
+</ul>
+</li>
+<li style="list-style-type: none">Entering Null values</li>
+</span></span></span></span></b><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><span style="font-family: Sylfaen"><span style="font-size: 17pt"><span style="background-color: #ffffff"><li style="list-style-type: none"><span style="color: #00007f">Implicit method : </span><span style="color: #000000">Column name is omitted from the column list in the INSERT statement</span></li>
+</span></span></span><li style="list-style-type: none"><span style="font-family: Sylfaen"><span style="font-size: 17pt"><span style="background-color: #ffffff"><span style="color: #00007f">Explicit method :</span><span style="color: #000000">Here, the NULL value is used as a value for column</span></span></span></span></li>
+<li style="list-style-type: none"/>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr/><br/>
+<ul><li><span style="background-color: #ffff99"><b><span style="font-family: Sylfaen"><span style="font-size: 18pt">Substitution variables(Only for SQL*Plus)</span></span></b></span></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none"><b><span style="font-size: 17pt"><span style="font-family: Sylfaen">It enable us to create an interactive SQL script, which prompts you to create a value for substitution variable</span></span></b>.</li>
+<li style="list-style-type: none"><b><span style="font-size: 17pt"><span style="font-family: Sylfaen">In cmd version, &quot;</span></span></b><span style="font-size: 17pt"><span style="font-family: Sylfaen">&amp;&quot;<b>character is used before the substitution variable</b></span></span>.</li>
+<li style="list-style-type: none"><b><span style="font-size: 17pt"><span style="font-family: Sylfaen">In graphical version, &quot;</span></span></b><span style="font-size: 17pt"><span style="font-family: Sylfaen">:&quot;<b>character is used</b></span></span>.</li>
+<li style="list-style-type: none"><span style="font-size: 15pt">Substitution variables for characters and date columns are enclosed within pair of single quotes</span></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="178" src="image 3.png" width="550"/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="208" src="image 4.png" width="650"/></li>
+<li style="list-style-type: none">  Visit for more : <a href="https://blogs.oracle.com/opal/sqlplus-101-substitution-variables">https://blogs.oracle.com/opal/sqlplus-101-substitution-variables</a> </li>
+</ul>
+</li>
+</ul>
+<hr/><ul><li><span style="font-size: 18pt"><span style="font-family: Sylfaen"><b><span style="background-color: #ffff99">TIME INSEERTION</span></b></span></span></li>
+<li style="list-style-type: none"><ul><span style="font-size: 17pt"><span style="font-family: Sylfaen"><b><li style="list-style-type: none">To insert time as value in table.</li>
+<li style="list-style-type: none"/>
+</b></span></span></ul>
+</li>
+<span style="font-size: 17pt"><span style="font-family: Sylfaen"><b><li style="list-style-type: none"><span style="background-color: #99ffff">Syntax:</span><span style="background-color: #ffffff">insert into <span style="color: #ff0000">table_name</span><span style="color: #000000">(<span style="color: #ff0000">column1</span></span>) values(to_date( '<span style="color: #ff0000">12-JAN-1990 10:34:45 P.M.</span>', 'DD-MON-YYYY HH:MI:SS P.M.'<span style="color: #000000"><span style="color: #ff0000"/></span>))<span style="color: #000000">;</span></span></li>
+<span style="color: #000000"><span style="background-color: #ffffff"><li style="list-style-type: none"/>
+<li style="list-style-type: none">Note: If time not mentioned then 12:00 A.M. is by default</li>
+</span></span><li style="list-style-type: none"><span style="color: #000000"><span style="background-color: #ffffff">If date not mentioned then date is set to first of current month</span></span></li>
+<li style="list-style-type: none"/>
+</b></span></span></ul>
+<span style="font-family: Sylfaen"><b><hr/><ul><span style="font-size: 17pt"><li style="list-style-type: none"/>
+</span></ul>
+<span style="background-color: #ffff99"><span style="font-size: 18pt"><br/>
+</span></span></b></span></body></html>

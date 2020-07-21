@@ -1,0 +1,40 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Bad DB Design/ Concept of Anomalies</title>
+</head><body><br/>
+<b><span style="font-size: 15pt">Complete cycle of providing DB Solution<br/>
+<br/>
+</span></b><span style="font-size: 12pt"><b>Step 1: Requirment Analysis : </b>Characterize fully the data requirements of the prospective database users, which usually involves the textual descriptions<br/>
+<b><br/>
+</b><b>Step 2: ER Model : </b>Choose ER model to translate these requirements into a conceptual schema of the database<br/>
+<br/>
+<b>Step 3: Logical Design Phase : </b>Map the high level conceptual schema onto the implementation data model of the database system that will be used.<br/>
+<br/>
+<b>Step 4: Physical Design Phase : </b>Specify the physical features of the database.<br/>
+<hr/><br/>
+In designing a database the major pitfalls are:<br/>
+<ul><li><b>Redundancy: </b>Repetition of information</li>
+</ul>
+<ul><li><b>Incompleteness: </b>Certain aspects of the enterprise may not be modeled due to difficulty or complexity.</li>
+</ul>
+<hr/><br/>
+</span><b><span style="font-size: 15pt">Database Anomalies<br/>
+</span></b><span style="font-size: 12pt">These are the problems in relations that occur due to <b>redundancy </b>in the<b/>relations.These anomalies affect the process of inserting, deleting and updating data in the relations.<br/>
+<br/>
+                         <img height="224" src="image.png" width="450"/><br/>
+</span><ul><li><b><span style="font-size: 12pt">Insertion Anomaly:</span><span style="font-size: 13pt"><span style="font-family: sans"/></span></b><span style="font-size: 13pt"><span style="font-family: sans">It is the anomaly in which the user cannot insert a fact about an entity until he/she has an additional fact about another entity. In other words, there are circumstances in which certain facts can not be recorded at all.</span></span></li>
+<li style="list-style-type: none"><span style="font-size: 12pt">Ex:</span><span style="font-size: 12pt"><span style="font-family: sans">We cannot record a new prof details without assigning a course to him  </span></span></li>
+</ul>
+<ul><li><b><span style="font-size: 12pt">Deletion Anomaly:</span><span style="font-family: sans"><span style="font-size: 13pt"/></span></b><span style="font-family: sans"><span style="font-size: 13pt"><div style="text-align: justify"><span style="font-family: Times New Roman">It is the anomaly in which the deletion of facts about an entity automatically deleted the fact of another entity.</span></div>  </span></span></li>
+<li style="list-style-type: none"><span style="font-size: 12pt">Ex:</span><span style="font-family: sans"><span style="font-size: 13pt">If </span><span style="font-size: 12pt">we want to delete the information about course 293, automatically the information of prof Sachin will be deleted which is not our interest. </span></span><span style="font-size: 13pt"> <span style="font-family: sans"/></span></li>
+<span style="font-family: sans"><span style="font-size: 13pt"><li style="list-style-type: none"/>
+</span></span><li><span style="font-size: 12pt"><b>Updation Anomaly:</b></span><span style="font-size: 13pt"><span style="font-family: sans"><div style="text-align: justify">It is the anomaly in which the modification in the value of specific attribute requires modification in all records in which that value occurs. In other words, the same data can be expressed in multiple rows. Therefore, updates to the table may result in logical inconsistencies.   <span style="font-family: Times New Roman">.</span></div>  </span></span></li>
+<li style="list-style-type: none"><span style="font-size: 12pt">Ex:</span><div style="text-align: justify"><span style="font-family: Times New Roman"><span style="font-size: 13pt"/></span><span style="font-size: 12pt"><span style="font-family: sans">If the updation to the phone_no of Mahesh is done in a single row only, then the updation process will put the database in an inconsistent state so that the phone_no of Mahesh will give conflicting answers.</span></span></div><span style="font-size: 12pt"><span style="font-family: sans"/></span></li>
+<span style="font-size: 12pt"><span style="font-family: sans"><li style="list-style-type: none"/>
+</span></span></ul>
+<span style="font-size: 12pt"><span style="font-family: sans"><hr/><br/>
+</span></span>DO 11 to 15<ul><span style="font-size: 12pt"><span style="font-family: sans"><li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+</span></span></ul>
+</body></html>

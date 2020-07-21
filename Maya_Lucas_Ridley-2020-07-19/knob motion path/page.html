@@ -1,0 +1,67 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Knob Motion Path</title>
+</head><body><br/>
+Objective : To make a object Follow a path<br/>
+<br/>
+<b>Step1</b>: Create the Object (Say a cylinder). Give it a cap<br/>
+<br/>
+Note: Two ways to delete the edges:<br/>
+<br/>
+<b>Method 1</b>: Select the Edges &amp; Press Delete			<br/>
+<br/>
+<img height="300" src="image.png" width="300"/><br/>
+<br/>
+<b>Method 2: </b>Select the edges. <b>Shift+Left Click </b>---<b>&gt;</b>Delete Edge<br/>
+<img height="324" src="image 2.png" width="300"/>   <img height="335" src="image 3.png" width="300"/><br/>
+<br/>
+<br/>
+<b>Step 2: </b>Create a loop at the center of the height<br/>
+<br/>
+<img height="353" src="image 4.png" width="350"/><br/>
+<br/>
+<b>Step 3:</b>Convert the middle loop (Polygon Edges to curve)<br/>
+Select edge-&gt; Modify-&gt;Convert-&gt;Polygon Edges to Curve -&gt; Degree Select Linear-&gt;Convert<br/>
+<img height="603" src="image 5.png" width="700"/><br/>
+<br/>
+<b>Step 4</b>: Create the Model to follow the line<br/>
+<img height="336" src="image 6.png" width="350"/><br/>
+<br/>
+<b>Step 5: </b>Switch to<b>Animation Mode<br/>
+</b>First select the PolyToCurve1(i.e Path) the shift select the pCylinder2(Object)<br/>
+<b>Constrain</b>-&gt; <b>Motion Path</b>-&gt; <b>Attach to Motion Path<br/>
+</b><b><br/>
+</b><b>Now if we scrub the time line object will move only on the path</b><br/>
+<br/>
+<img height="393" src="image 7.png" width="750"/><br/>
+<br/>
+<b>Step 6:</b>Now we will make the speed of the object Uniform<br/>
+<br/>
+<img height="98" src="image 8.png" width="650"/><br/>
+<br/>
+We will go to <b>Windows </b>-<b>&gt; Animation </b>-<b>&gt;Graph Editor<br/>
+</b><b><br/>
+</b><img src="image 9.png"/><br/>
+<br/>
+Select both the nodes and straighten it<br/>
+<br/>
+<img src="image 10.png"/> <img src="image 11.png"/><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<b>Step 7: </b>Now we will create Animation Snapshot<br/>
+<br/>
+<img src="image 12.png"/><br/>
+<br/>
+Take the default values set 2 in increment<br/>
+Select the object(Cylinder in this case) and press apply<br/>
+<img src="image 13.png"/><br/>
+<br/>
+<b>Step 8: </b>To Lock the Changes Delete the History<br/>
+Edit -&gt; Delete By Type -&gt; History<br/>
+<br/>
+<br/>
+</body></html>

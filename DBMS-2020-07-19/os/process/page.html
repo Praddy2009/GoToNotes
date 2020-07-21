@@ -1,0 +1,149 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Process</title>
+</head><body><b><span style="font-size: 17pt">What is a Process?<br/>
+</span></b><span style="font-size: 16pt">A program in execution. It's an active entity.<br/>
+<br/>
+</span><span style="font-size: 17pt"><b>How to create Process?<br/>
+</b></span><span style="font-size: 16pt">A program becomes process when executable file consiting the program is loaded in the memory<b>.<br/>
+</b>Parent process create child process, which in turn create other processes, forming a tree process.  <br/>
+  <img height="180" src="image 6.png" width="350"/><b><br/>
+</b></span><b><hr/></b><br/>
+<span style="font-size: 17pt"><b>Process States<br/>
+<ul><li style="list-style-type: none"><img height="216" src="image.png" width="500"/> <img height="115" src="image 2.png" width="400"/></li>
+<li style="list-style-type: none"/>
+</ul>
+<hr/><br/>
+</b></span><span style="font-size: 17pt"><b>Process Control Block</b></span><ul><li><span style="font-size: 16pt">It's a data structure maintained by the OS for every process.</span></li>
+<span style="font-size: 16pt"><li>Keeps track of information needed to track process.</li>
+<li>PCB is identified by an integer process id (PID)</li>
+</span><li><span style="font-size: 16pt">A PCB contains many information about the process</span>.</li>
+</ul>
+<ul><li style="list-style-type: none"><ul><span style="font-size: 13pt"><li><b>Process State :</b>Running, waiting, etc</li>
+<li><b>Program Counter : </b>Location of instruction to next execute</li>
+<li><b>CPU registers : </b>Contents of all process-centric registers</li>
+<li><b>CPU scheduling information : </b>priorities, scheduling key pointer</li>
+<li><b>Memory Management information: </b>Memory allocated to the process</li>
+<li><b>Accounting information: </b>CPU used, clock time elapsed since start, time limits</li>
+</span><li><span style="font-size: 13pt"><b>I/O status information: </b>I/O devices allocated to process, list of open files.</span></li>
+</ul>
+</li>
+</ul>
+<span style="font-size: 17pt"><b><br/>
+Working of PCB<br/>
+    <img height="365" src="image 3.png" width="450"/><br/>
+<hr/><br/>
+Scheduling queues <br/>
+</b></span><span style="font-size: 16pt">Various quesus are made of processes</span><ul><span style="font-size: 16pt"><li><b>Job Queue</b>: Set of all processes in the system.</li>
+<li><b>Ready queue: </b>set of all processes residing in main memory, ready and waiting to execute</li>
+<li><b>Device queue: </b>Set of processes waiting for an I/O device</li>
+</span><li><span style="font-size: 16pt">Processes migrate among the various queues</span></li>
+</ul>
+<b><span style="font-size: 17pt"><hr/><br/>
+Process Scheduling(Queueing diagram)<br/>
+<br/>
+        <img height="322" src="image 4.png" width="550"/><br/>
+<hr/><br/>
+Process Shedulers<br/>
+</span></b><ul><li><b><span style="font-size: 15pt">Short-term Schedulers</span></b><span style="font-size: 16pt">: </span></li>
+<li style="list-style-type: none"><ul><span style="font-size: 16pt"><li>Selects which process should be executed next and allocates the CPU.</li>
+<li>Sometimes the only scheduler in a system.</li>
+<li>Short term scheduler is invoked frequently. (Must be fast)</li>
+</span></ul>
+</li>
+</ul>
+<ul><li><b><span style="font-size: 15pt">Long-term Schedulers</span><span style="font-size: 16pt">: </span></b></li>
+<li style="list-style-type: none"><ul><span style="font-size: 16pt"><li>Selects which processes should be brought in to the ready queue</li>
+<li>Controls the degree of multiprogramming</li>
+<li>Invoked infrequently. (May be slow)</li>
+</span></ul>
+</li>
+<span style="font-size: 16pt"><li><b><span style="font-size: 15pt">Medium-term Schedulers</span>: </b></li>
+<li style="list-style-type: none"><ul><li>It ca be added if degree of multiple programming needs to decrease</li>
+<li style="list-style-type: none"><ul><li>Remove process from memory, store on disk, bring back in from disk to continue the execution: <b>swapping</b></li>
+</ul>
+</li>
+</ul>
+</li>
+</span></ul>
+<span style="font-size: 16pt">              <img height="205" src="image 5.png" width="550"/><hr/><br/>
+<b>Context Switching<br/>
+</b>Switching the CPU to another process requires saving the state(context) of old process and loading the saved state for new process is calles Context Switching.<br/>
+<br/>
+<b>Steps:</b><ul><li style="list-style-type: none"><ul><li>Saving the context of current process including program and other register.</li>
+<li>Update the PCB of currently running process like state.</li>
+<li>Move the PCB of this process to the appropriate queue</li>
+<li>Select another process for execution and update PCB for it</li>
+<li>Restore the content.</li>
+</ul>
+</li>
+</ul>
+<hr/><br/>
+<b>Scheduling Criteria</b><br/>
+<br/>
+<img height="215" src="image 7.png" width="850"/><br/>
+<hr/><br/>
+<img height="344" src="image 8.png" width="700"/><br/>
+<hr/><br/>
+<b>Scheduling Algorithm</b><br/>
+<br/>
+</span><span style="font-size: 14pt"><b>Pre-Emptive</b></span><span style="font-size: 16pt">: </span><span style="font-size: 12pt">(Can be preempt in between)</span><ul><li><span style="font-size: 16pt">SRTF, LRTF, Round Robin ,Priority based</span></li>
+</ul>
+<span style="font-size: 16pt"><br/>
+</span><b><span style="font-size: 14pt">Non Pre-Emptive</span></b><span style="font-size: 16pt">: </span><span style="font-size: 12pt">(Can't be preempt in between)</span><ul><li style="list-style-type: none"><span style="font-size: 16pt">FCFS, SJF, LJF, HRRN</span></li>
+<span style="font-size: 16pt"><li style="list-style-type: none"/>
+</span></ul>
+<span style="font-size: 16pt"><hr/><br/>
+<img height="340" src="image 9.png" width="750"/><br/>
+<hr/><br/>
+<img height="363" src="image 10.png" width="700"/><br/>
+<hr/>HRRN<br/>
+<br/>
+<img height="333" src="image 14.png" width="600"/><hr/><br/>
+SRTF<br/>
+<br/>
+<img height="319" src="image 11.png" width="650"/><br/>
+<hr/><br/>
+<img height="305" src="image 12.png" width="650"/><br/>
+<hr/><br/>
+<img height="345" src="image 13.png" width="600"/><br/>
+</span><hr/><span style="font-size: 17pt"><b><br/>
+Performance analysis of Scheduling Algos<br/>
+<br/>
+</b><span style="font-size: 13pt">It can be done in 3 ways<br/>
+<ul><li><b>Deterministic Model :</b></li>
+<li style="list-style-type: none"><ul><li>It does the algorithmic analysis of the scheduling algorithm.</li>
+<li>We apply all the algos on a specific problem and calculate the avg. waiting time for each.</li>
+<li>The algo with less average time is the fastest algo</li>
+</ul>
+</li>
+</ul>
+<ul><li><b>Queue Model : </b></li>
+<li style="list-style-type: none"><ul><li>It does the mathematical analysis of the system on 3 parameters</li>
+<li style="list-style-type: none"><ul><li>Average length of queue</li>
+<li>Average arrival time</li>
+<li>Average waiting time</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</span><ul><span style="font-size: 13pt"><li><b>Simulation : </b></li>
+</span><li style="list-style-type: none"><ul><span style="font-size: 13pt"><li>It's based on software programming approach</li>
+<li>We caliculate the performance of the system by implementing specific program for each algo.</li>
+</span></ul>
+</li>
+</ul>
+<hr/><ul><b><li style="list-style-type: none"/>
+</b></ul>
+<b>Multilevel feedback queue<br/>
+<br/>
+<img height="70" src="image 16.png" width="800"/><br/>
+<br/>
+<img height="387" src="image 15.png" width="650"/><br/>
+<br/>
+<hr/><br/>
+<br/>
+<br/>
+</b></span></body></html>

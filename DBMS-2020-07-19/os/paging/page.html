@@ -1,0 +1,71 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Paging</title>
+</head><body><b><span style="font-size: 16pt">Paging</span></b><ul><span style="font-size: 13pt"><li>Non Contiguous Memory Allocation. i.e allows the physical address space of a process to be non contiguous.</li>
+<li>Local Address space(process) is divided into equal size called <b>pages</b></li>
+<li>Physical Address space(RAM) is divided into equal size known as <b>frames</b></li>
+</span></ul>
+<ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><span style="font-size: 13pt"><li style="list-style-type: none"><b>   Page Size = Frame Size</b></li>
+</span></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br/>
+<br/>
+     <img height="304" src="image.png" width="500"/><br/>
+<br/>
+<img height="424" src="image 2.png" width="900"/><br/>
+<br/>
+<img src="image 7.png"/><br/>
+<hr/><br/>
+<b><span style="font-size: 16pt">Paging implementation with Translation look-aside buffers(TLB's)</span></b><br/>
+<br/>
+<span style="font-size: 13pt">Now abhi tak ham log jo Logical -&gt; Physical address conversion kar rahe the to usme we were using page table which itself is stored in main memory. So iski wajah se time zyada lag raha tha.<br/>
+<b>For example</b>each bit ke liye ham memory ko two times access kar rahe the (  1) Page table dekhne ke liye 2)Physical address se value lane ke liye )<br/>
+<br/>
+To is process ko <b>fast</b>karne ke liye we are using Cache Memory(Translation look aside buffers). So now page table will be stored in Cache/TLB<br/>
+<br/>
+                <img height="384" src="image 3.png" width="550"/>  Total time: HIT(TLB+X)+MISS(TLB+X+X)<br/>
+<br/>
+To sab se pehle TLB me dekhte hai frame number agar mil jata hai to <b>Frame Hit</b>hota hai<br/>
+Warna <b>Frame Miss </b>hota hai then ham log page table stored in RAM pe jana padega aur wanha se lena padega<br/>
+<br/>
+<img height="477" src="image 4.png" width="800"/><br/>
+<hr/><br/>
+<br/>
+</span><span style="font-size: 16pt"><b>Inverted Paging</b></span><br/>
+<br/>
+<span style="font-size: 13pt">&gt;We know that for each process(Say P1,P2...) we have to maintain page table(T1,T2...) for the ease of address transformation<br/>
+&gt;And if the process is in main memory then its page table need to be stored in the main memory at the same time. i.e lets say for 10 process which are currently running in main memory we have store 10 page table and we know that main memory is limited and here instead of storng data we are storing page table in main memory which can be said as misuse of memory.<br/>
+<br/>
+&gt;To solve this issues we use Inverted Paging<br/>
+&gt;Here the idea is to create a single/global page table for all the process<br/>
+&gt;Only problem here is searching time<br/>
+<br/>
+       <img height="297" src="image 5.png" width="500"/><br/>
+<hr/></span><b><span style="font-size: 16pt"><br/>
+</span></b><b><span style="font-size: 16pt">Hierarchical/Multilevel Paging</span></b><br/>
+<br/>
+<span style="font-size: 13pt">&gt;Multilevel paging is a paging scheme which consists of two or more levels of page tables in a hierarchical manner.<br/>
+&gt;The entries of the level 1 page table are pointers to a level 2 page table and entries of the level 2 page tables are pointer to a level 3 page table &amp; so on.<br/>
+<br/>
+        <img height="336" src="image 6.png" width="600"/><br/>
+<hr/><br/>
+<br/>
+<br/>
+</span><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body></html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>expanded</key><true/>
+  <key>title</key><string>Normalization</string>
+  <key>nodeid</key><string>c8d622b3-77c2-4b5f-9414-d96f1814d9d8</string>
+  <key>modified_time</key><integer>1590258663</integer>
+  <key>expanded2</key><true/>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1590256498</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>order</key><integer>12</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

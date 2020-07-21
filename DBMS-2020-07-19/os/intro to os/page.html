@@ -1,0 +1,166 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Intro to OS</title>
+</head><body><br/>
+<span style="font-size: 17pt"><b>What is an OS?<br/>
+</b></span><span style="font-size: 16pt">A program that acts as an intermediary between a user of a computer and the computer hardware</span><span style="font-size: 17pt"><b><br/>
+</b></span><br/>
+<br/>
+<span style="font-size: 17pt"><b>What OS do?<br/>
+</b></span><span style="font-size: 16pt">It depends on the point of view - <b>User, System</b></span><b><span style="font-size: 17pt"><br/>
+</span></b><ul><li><span style="font-size: 16pt">OS is a resource allocator</span></li>
+<li style="list-style-type: none"><ul><span style="font-size: 16pt"><li style="list-style-type: none">Manages all resources</li>
+<li style="list-style-type: none">Decides between conflicting requests for efficient and fair resource use</li>
+<li style="list-style-type: none"/>
+</span></ul>
+</li>
+<span style="font-size: 16pt"><li>OS is a control program</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Controls execution of programs to prevent errors and improper use of the computer</li>
+<li style="list-style-type: none"/>
+</ul>
+</li>
+</span></ul>
+<span style="font-size: 16pt"><hr/></span><span style="font-size: 17pt"><b><br/>
+OS Structure<br/>
+</b></span><ul><span style="font-size: 17pt"><b><li>Monolithic</li>
+</b></span><li style="list-style-type: none"><ul><li><span style="font-size: 16pt">Entire OS resides in the main memory<b>.</b></span></li>
+<span style="font-size: 16pt"><li>Most work is done via System Calls(It generates an interrupt and the executing program is suspended, control is transferred to the OS. Program continues when the system call service completes).</li>
+</span></ul>
+</li>
+</ul>
+<span style="font-size: 17pt"><b><br/>
+</b></span>       <img height="208" src="image 9.png" width="350"/>                <img height="193" src="image 10.png" width="300"/><br/>
+<ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li><span style="font-size: 17pt"><b>Layred</b></span></li>
+<li style="list-style-type: none"><ul><li><span style="font-size: 16pt">Entire OS is devided into number of layers(levels), providing different functionalities.</span></li>
+<li><span style="font-size: 16pt">A layer can only use the services provided by layer in a level below</span></li>
+</ul>
+</li>
+</ul>
+<br/>
+       <img height="112" src="image 11.png" width="350"/>          <img height="123" src="image 12.png" width="400"/> <br/>
+<ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<span style="font-size: 17pt"><li><b>Microkernel OS</b></li>
+</span><li style="list-style-type: none"><ul><li><span style="font-size: 16pt">Moves as much functionality as possible from user space into kernal space.</span></li>
+<span style="font-size: 16pt"><li>Only few essential functions resides in the kernal</li>
+<li>Communication takes place between user modules using <b>message passing</b>. </li>
+</span></ul>
+</li>
+</ul>
+<ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<span style="font-size: 17pt"><li><b>Virtual Machines</b></li>
+</span><li style="list-style-type: none"><ul><li><span style="font-size: 16pt">It takes layred and microkernal approach to its logical conclusion.</span></li>
+<span style="font-size: 16pt"><li>It treats hardware and the OS kernal as though they were all hardware.</li>
+</span><li><span style="font-size: 16pt">The OS host creates the illusion that a process has its own processor and (virtual memory).Each guest is provided with a (virtual)copy of underlying computer. </span></li>
+</ul>
+</li>
+</ul>
+<hr/><b><span style="font-size: 17pt"><br/>
+</span></b><b><span style="font-size: 17pt">Types of OS?</span></b><ul><b><span style="font-size: 17pt"><li style="list-style-type: none"/>
+<li>Batch Processing OS</li>
+</span></b><li style="list-style-type: none"><ul><span style="font-size: 16pt"><li>Its a technique in which OS collects the program and data together in a <b>batch</b>before processing starts.</li>
+<li>The OS defines a job which has predefined sequence commands, programs and data as a single unit.</li>
+<li>The OS keeps a number of similar jobs in a memory and executes them without any manual intervention</li>
+<li>Jobs are processed in the order of submission</li>
+<li>When a job is complete , its memory is released for next job</li>
+</span></ul>
+</li>
+</ul>
+<span style="font-size: 16pt"><br/>
+</span>       <img height="215" src="image.png" width="450"/><br/>
+<ul><li style="list-style-type: none"><ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+</ul>
+</li>
+</ul>
+<ul><span style="font-size: 17pt"><li><b>Multiprogramming OS</b></li>
+</span><li style="list-style-type: none"><ul><span style="font-size: 16pt"><li>Its a technique to execute number of programs simultaneously by a single processor.</li>
+<li>Number of processes reside in the main memory at a time.</li>
+<li>The OS picks and begins to execute one of the jobs in the main memory</li>
+<li>If any I/O wait happened in a process, then CPU switches from that job to another job. Hence CPU is not Idle at any time</li>
+</span></ul>
+</li>
+</ul>
+        <img src="image 2.png"/><img height="143" src="image 3.png" width="450"/><br/>
+<ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+</ul>
+<ul><li><b><span style="font-size: 17pt">Multitasking OS</span></b></li>
+<li style="list-style-type: none"><ul><li><span style="font-size: 16pt">Its similar to multiprogramming.</span></li>
+<span style="font-size: 16pt"><li>Here the working is done by context switching and time sharing technique.</li>
+<li>Each program is given a time quanta to execute and when this quanta is finished immediately context switching occurs and CPU start execution of next process.</li>
+</span></ul>
+</li>
+</ul>
+       <img height="288" src="image 4.png" width="400"/><ul><li style="list-style-type: none"><ul><li><span style="font-size: 16pt">Here due to time quanta an illusion is created that multiple tasks are simultaneously executed but in real only one task is been executed at a time</span></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"/>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+</ul>
+<ul><span style="font-size: 17pt"><li><b>Multithreading OS</b></li>
+</span><li style="list-style-type: none"><ul><li><span style="font-size: 16pt">Here a single program divides into sub programs &amp; a thread is alloted to them for processing</span></li>
+<span style="font-size: 16pt"><li>Thread can be considered as child processes that share the parent process resources but executes independently.</li>
+</span></ul>
+</li>
+</ul>
+       <img height="304" src="image 5.png" width="450"/><ul><li style="list-style-type: none"><ul><span style="font-size: 16pt"><li>While working with one program on our system we lauch another program a new thread is created for the program we lanunched the for the program we were interacting with previously.</li>
+</span></ul>
+</li>
+<span style="font-size: 16pt"><li style="list-style-type: none"/>
+</span><li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<span style="font-size: 17pt"><li><b>MultiProcessing OS</b></li>
+</span><li style="list-style-type: none"><ul><span style="font-size: 16pt"><li>It uses more than one processor in a single computer system to execute multiple programs.</li>
+</span><li><span style="font-size: 16pt">Here each process can be assigned to a different processor for its execution</span>	</li>
+</ul>
+</li>
+</ul>
+        <img src="image 6.png"/><br/>
+<ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<span style="font-size: 17pt"><li><b>Distributed OS</b></li>
+</span><li style="list-style-type: none"><ul><span style="font-size: 16pt"><li>It's a software over a collection of independent,networked, communicating, and physically seperate computational nodes.</li>
+<li>They handle jobs which are serviced by multiple CPU's</li>
+</span></ul>
+</li>
+</ul>
+<span style="font-size: 16pt">     <img height="377" src="image 7.png" width="400"/><br/>
+</span><ul><span style="font-size: 16pt"><li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+</span><li><b><span style="font-size: 17pt">Network OS</span></b></li>
+<li style="list-style-type: none"><ul><li><span style="font-size: 16pt">It runs on a server.</span></li>
+<span style="font-size: 16pt"><li>It provides capability to manage users, data groups and other networking stuffs.</li>
+<li>It allow shared access of files, printers, security and other networking functions over a small private network.</li>
+</span></ul>
+</li>
+</ul>
+            <img height="337" src="image 8.png" width="400"/><br/>
+<ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+</ul>
+<ul><li><span style="font-size: 17pt"><b>Real-time OS</b></span></li>
+<li style="list-style-type: none"><ul><span style="font-size: 16pt"><li>It is used when there are time requirements are vey strict like missile systems,air traffic control system, robots etc.</li>
+</span></ul>
+</li>
+</ul>
+<span style="font-size: 16pt"><hr/></span></body></html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Data Models</title>
+</head><body><b><span style="font-family: Sylfaen"><span style="font-size: 18pt"><br/>
+</span></span><span style="font-size: 18pt"><span style="font-family: Sylfaen">Data Model</span><br/>
+</span></b><span style="font-size: 12pt">It is a collection of conceptual tools for describing data, data relationships, data semantics and consistency constraints<b>.<br/>
+</b><b>That means a data model provides a way to describe the design of database<br/>
+<br/>
+</b></span><b><span style="font-family: Sylfaen"><span style="font-size: 18pt">Some terms of Data Model<br/>
+</span></span></b><ul><li><span style="font-size: 12pt"><b>Entity</b>: An entity can be a real-world object, either animate or inanimate, that can be easily identifiable</span>.</li>
+</ul>
+<ul><li><span style="font-size: 12pt"><b>Entity Set</b>: It's the collection of similar type of entities</span>.</li>
+</ul>
+<ul><li><span style="font-size: 12pt"><b>Attribute</b>: These are the properties of entities</span>.</li>
+</ul>
+<ul><li><span style="font-size: 12pt"><b>Constraints</b>: Constraints are restriction placed on the data</span>.</li>
+</ul>
+<br/>
+    <img height="260" src="image.png" width="400"/><br/>
+<hr/><br/>
+<br/>
+<b><span style="font-size: 18pt"><span style="font-family: Sylfaen">1)Hierarchical Model</span><br/>
+</span></b><span style="font-size: 12pt"><br/>
+It organizes data into a tree like structure, with a single root,to which all the other data is linked. <br/>
+The hierarchy starts from the root data, and expands like a tree, adding child nodes to the parent nodes<b>.<br/>
+</b></span><span style="font-size: 12pt"><b>One to many relationship</b>&amp; <b>tree like structure</b></span><b>.<br/>
+</b><b><img height="180" src="image 2.png" width="450"/><br/>
+<br/>
+  <img height="270" src="image 3.png" width="450"/><br/>
+<br/>
+<br/>
+<span style="font-size: 18pt"><span style="font-family: Sylfaen">2)Network Model</span><br/>
+</span></b><span style="font-size: 12pt">It organizes data more like a graph and are allowed to have more than one parent node. <br/>
+<b>Many to many data relationships </b>&amp;<b>Graph<br/>
+</b><b><br/>
+</b></span><b><img src="image 4.png"/><br/>
+<br/>
+  <img height="303" src="image 5.png" width="450"/><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<span style="font-size: 18pt"><span style="font-family: Sylfaen">3)Relational Model</span><br/>
+</span></b><span style="font-size: 12pt">It organizes data in <b>two dimensional table</b>and relationship is maintained by storing a common field</span>.<ul><span style="font-family: Sylfaen"><b><li style="list-style-type: none"><span style="font-size: 14pt">Some terms of Relational Model</span></li>
+</b></span></ul>
+<ul><li style="list-style-type: none"><ul><li><b><span style="font-size: 12pt">Domain: </span></b><span style="font-size: 12pt">Set of values that the attribute can take</span>.</li>
+<li><span style="font-size: 12pt"><b>Attribute: </b>Name of a column in particular table</span><b>.</b></li>
+<li><b><span style="font-size: 12pt">Relational Instance: </span></b><span style="font-size: 12pt">They are represented by a finite set of tuples</span><b>.</b></li>
+<li><b><span style="font-size: 12pt">Relational Schema: </span></b><span style="font-size: 12pt">It contains the name of the relation and name of all columns or attributes</span><b>.</b></li>
+<li><b><span style="font-size: 12pt">Relational Key: </span></b><span style="font-size: 12pt">In relational key, each row has one or more attributes. It can identify the row in the relation uniquely</span><b>.</b></li>
+</ul>
+</li>
+</ul>
+<b><br/>
+       <img height="334" src="image 6.png" width="550"/><br/>
+<br/>
+<span style="font-size: 18pt"><span style="font-family: Sylfaen">4)Entity-Relational(ER) Model</span><br/>
+</span></b><span style="font-size: 12pt">It develops the conceptual design for the database</span>.<br/>
+<span style="font-size: 12pt">In ER model the database is portrayed as a <b>diagram</b>called an entity relationship daiagram</span><b>.<br/>
+</b><b><br/>
+<img height="177" src="image 7.png" width="350"/><br/>
+<br/>
+  <img height="206" src="image 8.png" width="450"/><br/>
+<br/>
+<span style="font-size: 18pt"><span style="font-family: Sylfaen">5)Object-Oriented(OO) Model</span><br/>
+</span></b><span style="font-size: 12pt">Here, both data and their relationships are contained in a single structure called an <b>object</b></span>.<br/>
+<span style="font-size: 12pt">Objects that share similar characteristics are grouped in classes</span>.<br/>
+<b><br/>
+       <img height="126" src="image 9.png" width="100"/><br/>
+<br/>
+       <img height="220" src="image 10.png" width="500"/><br/>
+<br/>
+<br/>
+<span style="font-size: 18pt"><span style="font-family: Sylfaen">6)Object-Relational(OR) Model</span><br/>
+</span></b><span style="font-size: 12pt">The OO model works poorly when accessing more than one data item. The OR model is best suited for retrieval of groups of data,but can also be used to access unique data items fairly efficiently</span><b><br/>
+</b><b><br/>
+   <img height="186" src="image 11.png" width="400"/><br/>
+<span style="font-size: 18pt"><span style="font-family: Sylfaen">7)Semi-Structured Model</span></span><br/>
+</b><span style="font-family: Times New Roman"><div style="text-align: justify"><span style="font-size: 14pt">It permits the specification of data where individual data items of the same type may have different sets of attributes. <br/>
+</span></div></span><span style="font-size: 14pt"><span style="font-family: Times New Roman"><div style="text-align: justify">The XML (Extensible Markup Language) is widely used to represent semi-structured data. It supports unstructured data.</div></span><b><br/>
+</b></span><b><br/>
+<br/>
+<br/>
+<br/>
+</b><br/>
+<br/>
+</body></html>

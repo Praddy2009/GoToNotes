@@ -1,0 +1,44 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Normalization</title>
+</head><body><b><span style="font-size: 15pt">Normalization</span></b><br/>
+<span style="font-size: 12pt">It's the process of decomposing or breaking a relation schema R into fragments (i.e. smaller schemas) R1, R2, ... Rn such that the following conditions :<br/>
+<ul><li><b>Lossless Decomposition : </b>The fragment should contain the same information as the original relation</li>
+</ul>
+<ul><li><b>Dependency preservation : </b>All the functional dependencies should be preserved within each fragment Ri</li>
+</ul>
+<ul><li><b>Good form</b><b>: </b>Each fragment Ri should be free from any type of redundancy.</li>
+</ul>
+</span><hr/><br/>
+<span style="font-size: 15pt"><b>Decomposition</b></span><br/>
+<span style="font-size: 12pt">It's replaces a relation with a collection of smaller relations.<br/>
+It breaks the table into multiple tables in the database.<br/>
+It should always be lossless.<span style="font-family: sans"><div style="text-align: justify">The decomposition of a base relation is said to be lossless if the original relation can be recovered back by joining the fragment relations.<br/>
+</div></span><span style="font-family: sans"><div style="text-align: justify">At the time of decomposition the smaller relations must have a foreign key relation(so that natural join is possible)<br/>
+</div></span></span><ul><span style="font-size: 12pt"><span style="font-family: sans"><div style="text-align: justify"><li style="list-style-type: none"><b>Rules </b>: If a relation R is decomposed into two relations R1 and R2, then it will be lossless iff:</li>
+</div></span></span><li style="list-style-type: none"><ul><span style="font-size: 12pt"><span style="font-family: sans"><div style="text-align: justify"><li style="list-style-type: none"/>
+<li style="list-style-type: none">&gt; attribute (R1) U attribute (R2) = attribute (R)</li>
+<li style="list-style-type: none"/>
+</div></span></span><li style="list-style-type: none"><span style="font-size: 12pt"><span style="font-family: sans"><div style="text-align: justify">&gt; attribute (R1) </div></span></span><span style="font-family: Times New Roman"><span style="font-size: 13pt">Ʌ</span></span><span style="font-family: sans"><span style="font-size: 12pt"><div style="text-align: justify">attribute (R2) != </div></span><div style="text-align: justify"><span style="font-size: 13pt"/></div><span style="font-size: 13pt">ɸ </span></span></li>
+<span style="font-family: sans"><span style="font-size: 13pt"><li style="list-style-type: none"/>
+</span><li style="list-style-type: none"><span style="font-size: 12pt">&gt;</span><span style="font-size: 13pt"> </span><span style="font-size: 12pt"><div style="text-align: justify">attribute (R1) <span style="font-size: 13pt"><span style="font-family: Times New Roman">Ʌ</span>attribute (R2) -&gt; </span>attribute (R1)    OR    attribute (R1) <span style="font-family: Times New Roman"><span style="font-size: 13pt">Ʌ</span></span><span style="font-size: 13pt">attribute (R2) -&gt; </span>attribute (R2)</div></span></li>
+</span></ul>
+</li>
+</ul>
+<span style="font-family: sans"><span style="font-size: 12pt"><div style="text-align: justify"><br/>
+            <img height="396" src="image.png" width="600"/><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><hr/></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br/>
+<br/>
+  <img height="377" src="image 2.png" width="600"/>      <img height="401" src="image 3.png" width="600"/><br/>
+<br/>
+<br/>
+<br/>
+</div></span></span><span style="font-size: 12pt"><span style="font-family: sans"><div style="text-align: justify"/>  </span><br/>
+</span><br/>
+</body></html>

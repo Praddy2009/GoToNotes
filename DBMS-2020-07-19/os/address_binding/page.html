@@ -1,0 +1,74 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Address_Binding</title>
+</head><body><br/>
+<span style="font-size: 16pt"><b>Address Binding<br/>
+<br/>
+</b></span><span style="font-size: 13pt">Process of making logical address to physical address in the memory is called Address binding<br/>
+<br/>
+An address binding can be done in three different ways<br/>
+<br/>
+<b>1) Compilation Time: </b>The physical address is embedded to the executable of the program<br/>
+<br/>
+<b>2) Load Time: </b>If the address is not known at the compile time where process will reside then relocatable address will be generated &amp; loader translates it to absolute address.<br/>
+<br/>
+</span><span style="font-size: 13pt"><b>3) Run/Execution Time: </b>Moving a process during run time from one memory location to another.</span><span style="font-size: 16pt"><b><br/>
+</b></span><span style="font-size: 16pt"><b><br/>
+</b></span>              <img height="324" src="image.png" width="500"/><br/>
+<hr/><br/>
+                  <img height="480" src="image 2.png" width="650"/><br/>
+<br/>
+<span style="font-size: 15pt"><b>Note:</b></span><ul><span style="font-size: 13pt"><li>Logical and physical address are same in compile time and load time address binding</li>
+</span><li><span style="font-size: 13pt">They are different in execution time address binding</span><b><span style="font-size: 15pt"/></b></li>
+</ul>
+<hr/><br/>
+<span style="font-size: 15pt"><b>Multiprogramming memory management using partitioning<br/>
+<br/>
+</b></span><span style="font-size: 13pt">In OS, Memory Management is the function responsible for allocating and managing main memory so as to ensure effective and efficient use of Primary Memory.</span><br/>
+<br/>
+                    <img src="image 3.png"/><br/>
+<br/>
+<br/>
+<br/>
+<span style="font-size: 15pt"><b>Fixed Partitioning<br/>
+</b></span><br/>
+<span style="font-size: 13pt">It's the oldest and simplest technique. Here main memory is divided into<b>number of static(fixed) partition</b>at system generated time.<br/>
+Here spanning is not allowed. Process has to be &lt;= size of partition.<br/>
+We can place process in any of the partition. But we try to place it at the first best partition <ul><li>Equal Size Partition</li>
+<li>Unequal Size Partition</li>
+</ul>
+<br/>
+</span><b><span style="font-size: 14pt">Advantage :</span></b><ul><li><span style="font-size: 13pt">Simple to implement</span></li>
+<span style="font-size: 13pt"><li>Little OS overhead</li>
+</span></ul>
+<span style="font-size: 13pt"><br/>
+</span><b><span style="font-size: 14pt">Disadvantage :</span></b><span style="font-size: 13pt"><ul><li>Inefficient</li>
+<li>Max number of active process is fixed</li>
+</ul>
+<br/>
+<span style="font-size: 14pt"><b>Placement Algo :</b></span></span><ul><span style="font-size: 13pt"><li>One process queue for partitioning</li>
+<li>Single queue</li>
+</span><li style="list-style-type: none"><ul><li style="list-style-type: none"><img src="image 4.png"/></li>
+<li style="list-style-type: none">      Equal Size and Unequal Size partition</li>
+<li style="list-style-type: none"/>
+</ul>
+</li>
+</ul>
+       <img src="image 5.png"/><br/>
+<br/>
+<ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><hr/></li>
+</ul>
+</li>
+<li style="list-style-type: none"/>
+</ul>
+<span style="font-size: 15pt"><b>Dynamic Partitioning<br/>
+</b></span><br/>
+<span style="font-size: 13pt">Here partitions are created dynamically.Each process is loaded into a partition of exactly the same size of that process.<br/>
+<br/>
+<span style="font-size: 14pt"><b>Placement Algo :</b></span></span><ul><li><span style="font-size: 13pt"><b>First Fit</b></span><b>: </b><span style="font-size: 13pt">First hole that is big enough is allocated to program</span></li>
+<li><b><span style="font-size: 13pt">Best Fit</span>: </b><span style="font-size: 13pt">Smallest hole that is big enough is allocated to program.</span></li>
+<li><span style="font-size: 13pt"><b>Worst Fit</b></span><b>: </b><span style="font-size: 13pt">Largest hole that is big enough is allocated to program.</span></li>
+</ul>
+<span style="font-size: 13pt"><br/>
+</span>             <img height="330" src="image 6.png" width="500"/></body></html>

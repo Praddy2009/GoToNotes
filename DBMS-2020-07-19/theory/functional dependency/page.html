@@ -1,0 +1,330 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Functional Dependency</title>
+</head><body><b><span style="font-size: 15pt">Functional Dependency</span></b><ul><span style="font-size: 12pt"><li>It's a set of constraints between two attributes in a relation</li>
+<li>It says that if two tuples(rows) have same values for attributes A1,A2,...An, then those two tuples must have to have same values for attributes B1,B2...,Bn.</li>
+<li>If <b>t1(A)=t2(A)</b>, then we must have <b>t1(B)=t2(B)</b>.</li>
+<li>It typically exist between the <b>primary key</b>and <b>non-key attribute </b>within a table</li>
+</span></ul>
+<span style="font-size: 12pt"><ul><li>Its tepresented by arrow sign (<b>-&gt;</b>) <b>X-&gt;Y </b>where X functinality determines Y</li>
+</ul>
+<br/>
+</span>   <img height="201" src="image.png" width="600"/><br/>
+<br/>
+<br/>
+<span style="background-color: #ffff00">    </span><img height="202" src="image 2.png" width="550"/><span style="background-color: #ffff00">    <br/>
+</span><span style="background-color: #ffff00"><hr/></span><span style="background-color: #ffffff"><br/>
+</span><b><span style="font-size: 15pt">Steps to check Functional Dependency</span></b><ul><span style="font-size: 13pt"><li><div style="text-align: justify"><span style="font-family: sans">You must check the value of A , if all the values of A are unique then FD holds good.</span></div></li>
+<li><div style="text-align: justify"><span style="font-family: sans">If all values of B are same then also FD holds good.</span></div></li>
+<li><span style="font-family: sans"><div style="text-align: justify">If two same values of A , we get two different values of B , then FD does not holds good.</div> </span></li>
+</span></ul>
+<span style="font-size: 13pt"><br/>
+<img height="235" src="image 3.png" width="400"/> <img height="215" src="image 4.png" width="300"/>    <img height="229" src="image 5.png" width="350"/><br/>
+<hr/><br/>
+</span><b><span style="font-size: 15pt">Types of Functional Dependency<br/>
+</span></b><ul><b><span style="font-size: 14pt"><li>Trivial functional dependency</li>
+</span></b><li style="list-style-type: none"><ul><li><div style="text-align: justify"><span style="font-family: sans"><span style="font-size: 12pt">A functional dependency X→Y is a trivial functional dependency if Y is a subset or equal of X.</span></span></div><span style="font-family: sans"><span style="font-size: 12pt"> </span></span></li>
+<span style="font-family: sans"><span style="font-size: 12pt"><li><div style="text-align: justify">The following dependencies are also trivial: A-&gt;A &amp; B-&gt;B</div></li>
+</span></span></ul>
+</li>
+</ul>
+<span style="font-family: sans"><span style="font-size: 12pt">      <br/>
+</span></span><span style="font-family: sans"><span style="font-size: 12pt">       </span></span><img height="225" src="image 6.png" width="500"/><br/>
+<ul><li style="list-style-type: none"><ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+</ul>
+</li>
+</ul>
+<ul><b><span style="font-size: 14pt"><li>Non-trivial functional dependency</li>
+</span></b><li style="list-style-type: none"><ul><span style="font-size: 12pt"><li><div style="text-align: justify"><span style="font-family: sans">If a functional dependency X-&gt;Y holds true where Y is not a subset of X then this dependency is called non trivial Functional dependency.</span></div></li>
+</span><li><span style="font-size: 12pt"><span style="font-family: Times New Roman">F</span><span style="font-family: sans">or example, <div style="text-align: justify">Prof→Grade</div></span></span><div style="text-align: justify"> </div><span style="font-family: sans"><span style="font-size: 12pt"> </span></span></li>
+<li><span style="font-family: sans"><span style="font-size: 12pt">Non-trivial FDs are given implicitly in the form of constraints when designing a database</span></span> <span style="font-family: sans"><span style="font-size: 12pt"/></span></li>
+</ul>
+</li>
+</ul>
+<br/>
+      <img height="129" src="image 7.png" width="550"/><br/>
+<ul><li style="list-style-type: none"><ul><li><div style="text-align: justify"><span style="font-family: sans"><span style="font-size: 12pt">If a FD X-&gt;Y holds true where X intersection Y is null  then this dependency is said to be <b>completely non trivial function dependency</b>.</span></span></div></li>
+</ul>
+</li>
+</ul>
+<span style="font-family: sans"><span style="font-size: 12pt">  </span></span><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+</ul>
+</li>
+</ul>
+<ul><b><span style="font-size: 14pt"><li>Multivalued dependency</li>
+</span></b><li style="list-style-type: none"><ul><li><span style="font-family: sans"><div style="text-align: justify"><span style="font-size: 12pt">It occurs when there are more than one independebt multivalued attribute in a table.</span></div></span></li>
+<span style="font-size: 12pt"><li><span style="font-family: Times New Roman">F</span><span style="font-family: sans">or example, Consider a bike manufacture company, which produces two colors (Black and white) in each model every year </span></li>
+</span></ul>
+</li>
+</ul>
+<span style="font-size: 12pt"><span style="font-family: sans"> <div style="text-align: justify"> </div>    </span></span><img height="160" src="image 8.png" width="300"/>     <img height="171" src="image 9.png" width="700"/><br/>
+<b><span style="font-size: 14pt"><br/>
+</span></b><ul><b><span style="font-size: 14pt"><li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+</span></b></ul>
+<ul><b><li><span style="font-size: 14pt">Transitive dependency</span></li>
+</b><li style="list-style-type: none"><ul><span style="font-size: 12pt"><li><span style="font-family: sans"><div style="text-align: justify">A functional dependency is said to be transitive if it is indirectly formed by two fuunctional dependencies.</div></span></li>
+<li><span style="font-family: Times New Roman">F</span><span style="font-family: sans">or example, X<div style="text-align: justify">→</div>Z if three conditions are fulfill</span></li>
+</span><li style="list-style-type: none"><ul><span style="font-size: 12pt"><span style="font-family: sans"><li>X<div style="text-align: justify">→</div>Y</li>
+<li>Y doesn't <div style="text-align: justify">→</div>X</li>
+<li>Y<div style="text-align: justify">→</div>Z </li>
+</span></span></ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul><li style="list-style-type: none"><ul><span style="font-size: 12pt"><li><span style="font-family: sans">It can only occur in a relation of three or more attributes. This dependency help us normalizingthe database in 3NF (3rd Normal form)</span></li>
+</span></ul>
+</li>
+</ul>
+       <br/>
+       <img height="356" src="image 10.png" width="550"/><br/>
+<hr/><span style="font-size: 13pt"><br/>
+</span><span style="font-size: 15pt"><b>Armstrong's Inference Axioms</b></span><br/>
+<span style="font-size: 13pt"><br/>
+</span><span style="font-family: sans"><span style="font-size: 12pt"><div style="text-align: justify">The inference axiom allow user to infer (to conclude) the FD's that are satisfied by a relation</div></span></span><span style="font-size: 13pt"><br/>
+</span><ul><li><b><span style="font-size: 11pt">Primary Rules</span></b></li>
+</ul>
+<ul><li style="list-style-type: none"><b><span style="font-size: 11pt">  &gt;Reflexivity: </span></b><span style="font-size: 11pt">If B </span>⊆ <span style="font-size: 11pt">A then <b><span style="background-color: #ffff99">A</span></b></span><b><span style="background-color: #ffff99"><div style="text-align: justify"><span style="font-size: 12pt"><span style="font-family: sans">→</span></span></div><span style="font-size: 11pt">B</span></span></b></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><span style="background-color: #ffff99"><span style="font-size: 11pt">Ex: { Name , Course }</span></span><div style="text-align: justify"><span style="font-size: 12pt"><span style="font-family: sans">→</span></span></div><span style="font-size: 11pt"><span style="background-color: #ffff99">Course</span></span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul><li style="list-style-type: none"><b><span style="font-size: 11pt">  &gt;Augmentation: </span></b><span style="font-size: 11pt">If <b>A</b></span><b><div style="text-align: justify"><span style="font-size: 12pt"><span style="font-family: sans">→</span></span></div>B</b>, then <b>AC<span style="font-size: 12pt"><span style="font-family: sans"><div style="text-align: justify">→</div></span></span>BC </b>for any C</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><span style="font-size: 11pt"><span style="background-color: #ffff99">Ex:</span><span style="background-color: #ffffff">If Prof</span></span><span style="background-color: #ffffff"><span style="font-family: sans"><span style="font-size: 12pt"><div style="text-align: justify">→</div></span></span><span style="font-size: 11pt">Course</span></span>  <span style="font-size: 11pt">Then, <span style="background-color: #ffff99">{Prof, Major}</span></span><span style="background-color: #ffff99"><span style="font-size: 12pt"><span style="font-family: sans"><div style="text-align: justify">→</div></span></span><span style="font-size: 11pt">{Grade, Major}</span></span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul><li style="list-style-type: none"><b><span style="font-size: 11pt">  &gt;Transitivity: </span></b><span style="font-size: 11pt">If <b>A<span style="font-family: sans"><div style="text-align: justify">→</div></span>B</b></span>, and <span style="font-size: 11pt"><b>B<div style="text-align: justify"><span style="font-family: sans">→</span></div>C</b></span>then <span style="font-size: 11pt"><b>A<div style="text-align: justify"><span style="font-family: sans">→</span></div>C</b></span></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><span style="background-color: #ffff99"><span style="font-size: 11pt">Ex:</span></span><span style="font-size: 11pt"><span style="background-color: #ffffff">If Course</span></span><span style="background-color: #ffffff"><div style="text-align: justify"><span style="font-size: 12pt"><span style="font-family: sans">→</span></span></div><span style="font-size: 11pt">Name</span></span> and <span style="font-size: 11pt">Name</span><span style="font-family: sans"><span style="font-size: 12pt"><div style="text-align: justify"><span style="background-color: #ffffff">→</span></div></span></span><span style="background-color: #ffffff"><span style="font-size: 11pt">Phone_no</span></span> <span style="font-size: 11pt">Then, <span style="background-color: #ffff99">Course</span></span><span style="background-color: #ffff99"><div style="text-align: justify"><span style="font-family: sans"><span style="font-size: 12pt">→</span></span></div><span style="font-size: 11pt">Phone_no</span></span></li>
+</ul>
+</li>
+</ul>
+</li>
+<span style="background-color: #ffff99"><span style="font-size: 11pt"><li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><hr/></li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+</span></span></ul>
+</li>
+<span style="font-size: 11pt"><b><li style="list-style-type: none">&gt;Secondary Rules</li>
+</b></span></ul>
+<span style="font-size: 11pt"><b>  </b></span><ul><li style="list-style-type: none"><b><span style="font-size: 11pt">   &gt;Union: </span></b><span style="font-size: 11pt">If <b>A<div style="text-align: justify"><span style="font-family: sans"><span style="font-size: 12pt">→</span></span></div>B</b>,holds and<b>A<span style="font-size: 12pt"><span style="font-family: sans"><div style="text-align: justify">→</div></span></span>C</b>holds, then<b>A<div style="text-align: justify"><span style="font-family: sans"><span style="font-size: 12pt">→B</span></span></div>C</b>holds </span></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><span style="font-size: 11pt"><span style="background-color: #ffff99">Ex:</span> Prof</span><span style="font-family: sans"><span style="font-size: 12pt"><div style="text-align: justify">→</div></span></span><span style="font-size: 11pt">Grade and Prof<div style="text-align: justify"><span style="font-size: 12pt"><span style="font-family: sans">→</span></span></div>Course FDs are present; therefore <span style="background-color: #ffff99">Prof<span style="font-family: sans"><span style="font-size: 12pt"><div style="text-align: justify">→</div></span></span>{Grade, Course} </span></span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul><li style="list-style-type: none"><b><span style="font-size: 11pt">   &gt;Decomposition: </span></b><span style="font-size: 11pt">If<b>A<span style="font-family: sans"><div style="text-align: justify">→</div></span>BC</b></span><b/><span style="font-size: 11pt">holds, then <b>A<span style="font-size: 12pt"><span style="font-family: sans"><div style="text-align: justify">→</div></span></span>B</b>,holds and<b>A<div style="text-align: justify"><span style="font-family: sans"><span style="font-size: 12pt">→</span></span></div>C</b>holds</span></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><span style="font-size: 11pt"><span style="background-color: #ffff99">Ex:</span><span style="background-color: #ffffff">If </span>Prof<div style="text-align: justify"><span style="font-size: 12pt"><span style="font-family: sans">→</span></span></div>{Grade, Course}, <span style="background-color: #ffffff">then this FD can be decomposed as </span>Prof<div style="text-align: justify"><span style="font-size: 12pt"><span style="font-family: sans"><span style="background-color: #ffffff">→</span></span></span></div><span style="background-color: #ffffff">Grade and Prof<span style="font-family: sans"><span style="font-size: 12pt"><div style="text-align: justify">→</div></span></span>Course</span></span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul><li style="list-style-type: none"><span style="font-size: 11pt"><b>  &gt;Pseudo Transitivity: </b>If <b>A<div style="text-align: justify"><span style="font-family: sans">→</span></div>B</b>holds, and<b>BC<span style="font-family: sans"><div style="text-align: justify">→</div></span>D</b>holds then <b>AC<span style="font-family: sans"><div style="text-align: justify">→</div></span>D</b>holds</span></li>
+<span style="font-size: 11pt"><span style="background-color: #ffff99"><li style="list-style-type: none"/>
+</span><li style="list-style-type: none"/>
+<li style="list-style-type: none">    <img height="276" src="image 11.png" width="550"/></li>
+</span></ul>
+<span style="font-size: 11pt"><span style="background-color: #ffff99"><hr/></span></span><br/>
+<span style="font-size: 15pt"><b>Logical Implication</b></span><br/>
+<span style="font-size: 12pt"><span style="font-family: sans"><div style="text-align: justify"><br/>
+Given a relation schema R and a set of functional dependencies F.<br/>
+Let FD <b>X→Y</b>is not in F. F can be said to logically imply <b>X→Y</b>if for every relation r on the relation schema R that satisfies the FD in F, the relation r also satisfies <b>X→Y<br/>
+</b><b><br/>
+</b></div>F logically implies X→Y is written as: <b>F|=X→Y<br/>
+</b><b><br/>
+</b><div style="text-align: justify">For Ex:<br/>
+</div><div style="text-align: justify">Let R = (A, B, C, D) and F = {A→B, A→C, BC→D}</div><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><div style="text-align: justify"><li style="list-style-type: none">  F|=A→D</li>
+</div></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br/>
+<div style="text-align: justify">Given F = {A→B, C→D} with C⊆B, show that F|=A→D<br/>
+<hr/><br/>
+</div></span></span><span style="font-size: 15pt"><b>Closure on a Attribute Set  &lt;</b></span><a href="https://www.gatevidyalay.com/closure-of-an-attribute-set/">https://www.gatevidyalay.com/closure-of-an-attribute-set/</a> <span style="font-size: 15pt"><b>&gt;</b></span><div style="text-align: justify"><span style="font-size: 12pt"><span style="font-family: sans"><br/>
+</span></span></div><div style="text-align: justify"><span style="font-size: 12pt"><span style="font-family: sans"><br/>
+Attribute Closure of an atrribute set 'A' can be defined as a set of attributes which can be functionally defined from it.<br/>
+</span></span><span style="font-family: sans"><span style="font-size: 11pt">Denoted by <b>F^+</b>.<br/>
+</span></span>  <span style="font-size: 12pt"><span style="font-family: sans"><br/>
+</span></span><span style="font-size: 12pt"><span style="font-family: sans">For Ex: R(A, B ,C) &amp; A→B, B→C</span></span><span style="font-size: 11pt">Find</span>(<span style="font-size: 12pt"><span style="font-family: sans">A)+ ?<br/>
+</span></span><span style="font-size: 12pt"><span style="font-family: sans">Sol: (A)+ =A<ul><li style="list-style-type: none"><ul><li style="list-style-type: none">=AB (A→B)</li>
+<li style="list-style-type: none">=ABC (A→C)</li>
+<li style="list-style-type: none"/>
+</ul>
+</li>
+</ul>
+</span></span></div><span style="font-size: 12pt"><div style="text-align: justify"><span style="font-family: sans">Ex 2: </span></div>Consider a relation R ( A , B , C , D , E , F , G ) with the functional dependencies- <div style="text-align: center"><span style="font-family: Arimo">A → BC, BC → DE, D → F, CF → G<br/>
+</span></div> Sol: Closure of attribute A: <br/>
+</span><br/>
+<div style="text-align: justify"><span style="font-family: sans">A+   = { A }</span></div><br/>
+           = { A , B , C }              ( Using A → BC )<ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none">= { A , B , C , D , E }          ( Using BC → DE )</li>
+</ul>
+</li>
+</ul>
+</li>
+<li style="list-style-type: none">       = { A , B , C , D , E , F }          ( Using D → F )</li>
+</ul>
+<br/>
+<div style="text-align: justify"><span style="font-family: sans">       </span></div>= { A , B , C , D , E , F , G }    ( Using CF → G )<br/>
+<ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><b><li style="list-style-type: none">A+ = { A , B , C , D , E , F , G }</li>
+<li style="list-style-type: none"/>
+</b></ul>
+</li>
+</ul>
+</li>
+<span style="font-size: 12pt"><li style="list-style-type: none"> Closure Of attribute D:</li>
+</span></ul>
+    <ul><li style="list-style-type: none">   D+   = { D }</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">   = { D , F }   ( Using D → F )</li>
+<li style="list-style-type: none"><ul><span style="font-size: 12pt"><li style="list-style-type: none"/>
+</span></ul>
+</li>
+<b><li style="list-style-type: none">   D+ = { D , F }</li>
+<li style="list-style-type: none"/>
+</b></ul>
+</li>
+</ul>
+<br/>
+<span style="font-size: 12pt">Similarly: </span> <b>{ B , C }+ = { B , C , D , E , F , G }</b> <br/>
+<br/>
+        <img height="229" src="image 13.png" width="500"/><hr/><br/>
+<span style="font-size: 15pt"><b>Closure of a set of Functional Dependency</b></span>.<br/>
+<span style="font-size: 12pt"><br/>
+<span style="font-family: sans"><div style="text-align: justify">Given a set F of functional dependencies for a relation schema R, we define F +, the closure of F, to be the set of all functional dependencies that are logically implied by F. Mathematically, </div><br/>
+<div style="text-align: justify"><b>F   ={X→Y/F|=X→Y}<br/>
+<br/>
+Steps to generate all FD's<br/>
+<br/>
+</b><b>First: </b>Apply the inference axiom to all single attributes and use the FD's of F whenever it is applicable<b><br/>
+</b><b><br/>
+</b></div></span><span style="font-family: sans"><div style="text-align: justify"><b>Second: </b></div><span style="font-family: Times New Roman">A</span>pply the inference axioms to all combinations of two attributes and use the functional dependencies of F whenever it is applicable</span> <br/>
+<b><br/>
+</b><b>Next: </b>A<span style="font-family: sans">pply the inference axioms to all combinations of three attributes and use the FDs of F when necessary<br/>
+</span><span style="font-family: sans"><br/>
+Proceed in this manner for as many different attributes as there are in F<b><div style="text-align: justify"><br/>
+</div></b><b><div style="text-align: justify"><br/>
+</div></b></span></span><b><div style="text-align: justify">   <img height="276" src="image 12.png" width="600"/><br/>
+</div></b><hr/><b><span style="font-size: 15pt"><br/>
+</span></b><b><span style="font-size: 15pt">Use of Attribute Closure</span></b>.<br/>
+<ul><li style="list-style-type: none"><span style="font-size: 12pt"><b>&gt;Testing for key: </b>To test whether X(single attribute) is a key or not, X+ is computed. X is a key iff X+ contains all the attributes of R. X is a candidate key if none of its subset is a key(Only Minimal)</span>.</li>
+</ul>
+<br/>
+&lt;<a href="https://www.youtube.com/watch?v=YQt_kz3JgXI">https://www.youtube.com/watch?v=YQt_kz3JgXI</a><br/>
+&gt;&lt;<a href="https://www.youtube.com/watch?v=9fuJUQJd-A8">https://www.youtube.com/watch?v=9fuJUQJd-A8</a> <ul><li style="list-style-type: none">&gt;</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">Hint: the attributes which are not present on right hand side can be in candidate key</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><img height="59" src="image 14.png" width="700"/></li>
+</ul>
+<br/>
+<span style="font-size: 12pt"><b>&gt;Testing Functional Dependency: </b>To check whether a functional dependency X<span style="font-family: sans"><div style="text-align: justify"><b>→</b></div></span>Y holds or not, just check if Y<span style="font-family: sans"><div style="text-align: justify">⊆</div></span>X+</span><ul><li style="list-style-type: none"/>
+</ul>
+<hr/><ul><li style="list-style-type: none"/>
+<div style="text-align: justify"><span style="font-family: sans"><li style="list-style-type: none"/>
+</span></div></ul>
+<div style="text-align: justify"><span style="font-family: sans"> <img height="336" src="image 15.png" width="550"/> <img height="169" src="image 16.png" width="500"/><br/>
+<br/>
+<br/>
+  <img height="264" src="image 17.png" width="550"/>   <img height="263" src="image 18.png" width="500"/><br/>
+<br/>
+<hr/><br/>
+</span></div><span style="font-size: 15pt"><b>Conanical Cover / Minimal Cover &lt;</b></span><a href="https://www.youtube.com/watch?v=o0GQQFu-5C0">https://www.youtube.com/watch?v=o0GQQFu-5C0</a> <span style="font-size: 15pt"><b>&gt;<br/>
+</b></span><span style="font-size: 12pt"><span style="font-family: sans">For a given set F of FDs, a canonical cover, denoted by Fc , is a set of FDs where the following conditions are satisfied:  </span></span><ul><div style="text-align: justify"><span style="font-size: 12pt"><span style="font-family: sans"><li/>
+<li>&gt;F and Fc  are equivalent</li>
+<li>&gt;Every FD of Fc  is simple. That is, the RHS of every functional dependency of Fc  has only one attribute</li>
+<li>&gt;No FD in Fc  is redundant</li>
+</span></span></div><li><div style="text-align: justify"><span style="font-size: 12pt"><span style="font-family: sans">&gt;The determinant or LHS of every FD in Fc is irreducible</span></span></div><span style="font-size: 15pt"><b/></span></li>
+<span style="font-size: 15pt"><b><li/>
+</b></span></ul>
+<span style="font-size: 15pt"><b> <img height="108" src="image 19.png" width="600"/><br/>
+<br/>
+  <img height="234" src="image 20.png" width="550"/><hr/><br/>
+  <img height="157" src="image 21.png" width="550"/><br/>
+<br/>
+<img height="316" src="image 22.png" width="350"/>   <img height="363" src="image 23.png" width="550"/><img height="340" src="image 24.png" width="300"/><br/>
+<br/>
+<br/>
+<br/>
+</b></span><span style="font-family: sans"><div style="text-align: justify"><br/>
+<br/>
+</div></span><div style="text-align: justify"><ul><li style="list-style-type: none"><ul><span style="font-size: 12pt"><span style="font-family: sans"><li style="list-style-type: none"/>
+</span></span></ul>
+</li>
+</ul>
+<br/>
+</div>  <span style="font-size: 12pt"><span style="font-family: sans"><b><br/>
+</b></span></span><span style="font-size: 12pt"><span style="font-family: sans"><b><div style="text-align: justify"><br/>
+</div></b><br/>
+</span></span><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body></html>

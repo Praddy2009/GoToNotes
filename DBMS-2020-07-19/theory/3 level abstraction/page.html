@@ -1,0 +1,33 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>3 level Abstraction</title>
+</head><body><b><span style="font-family: Sylfaen"><span style="font-size: 18pt"><br/>
+3 level Abstraction of Database<br/>
+</span></span></b><span style="font-size: 12pt"><br/>
+Its goal is to seperate the user applications and the physical database. It deals with the data, the relationship between them and the different access methods implemented<b>.<br/>
+</b><b><br/>
+</b></span><b>                  						<img height="310" src="image.png" width="450"/><br/>
+</b><ul><li><b><span style="font-size: 13pt">External/View Level</span><span style="font-size: 18pt"><span style="font-family: Sylfaen"><span style="font-size: 12pt">: </span></span></span></b><span style="font-family: Sylfaen"><span style="font-size: 15pt">It includes a number of external shemas or users per views. It describes the part of the database that a particular user group is interested in and hides the details of database from the user group.</span></span></li>
+</ul>
+<b><span style="font-family: Sylfaen"><span style="font-size: 14pt">  </span></span><ul><li><span style="font-size: 13pt">Conceptual Level</span><span style="font-size: 12pt"><span style="font-size: 18pt"><span style="font-family: Sylfaen">: </span></span></span><span style="font-size: 18pt"><span style="font-family: Sylfaen"><span style="font-size: 15pt">It describes the structure of the whole database for the community of users. It hides the detail of physical storage structure and concentrates on describing datatypes,relationships and entities.It represents the global view of database.</span></span></span></li>
+</ul>
+<ul><li><span style="font-size: 13pt">Internal Level</span><span style="font-size: 12pt"><span style="font-size: 18pt"><span style="font-family: Sylfaen">: </span></span></span><span style="font-size: 18pt"><span style="font-family: Sylfaen"><span style="font-size: 15pt">It has an interna schema which describes the physical storage structure of the database system.It defines various stored record types and specifies what indices exist and how stored fields are represented.</span></span></span></li>
+</ul>
+<span style="font-size: 18pt"><span style="font-family: Sylfaen"><span style="font-size: 15pt"><br/>
+</span>Mapping and Data Independence<br/>
+</span></span></b><span style="font-family: Sylfaen"><br/>
+</span><span style="font-family: Sylfaen"><span style="font-size: 15pt">The process of transforming requests and results between different level are called</span></span><span style="font-size: 15pt"><span style="font-family: Sitka Text"><b>mapping</b></span><span style="font-family: Sylfaen"/></span><br/>
+<ul><li><b><span style="font-size: 13pt">Conceptual/Internal Mapping</span><span style="font-size: 12pt"><span style="font-size: 18pt"><span style="font-family: Sylfaen">: </span></span></span></b><span style="font-family: Sylfaen"><span style="font-size: 15pt">It defines the correspondence between the conceptual view and the stored database.</span></span></li>
+<li style="list-style-type: none"><b><span style="font-family: Sitka Text"><span style="font-size: 13pt">physical data independence</span></span></b><span style="font-family: Sylfaen"><span style="font-size: 14pt">indicates that the internal schema can be changed without any change to the conceptual schema</span></span></li>
+<span style="font-family: Sylfaen"><li style="list-style-type: none"><span style="font-size: 14pt"/></li>
+</span><b><li><span style="font-size: 13pt">External/Conceptual Mapping</span><span style="font-size: 12pt"><span style="font-size: 18pt"><span style="font-family: Sylfaen">: </span></span></span><span style="font-size: 18pt"><span style="font-family: Sylfaen"><span style="font-size: 15pt">It defines the correspondence between a particular external view and the conceptual view.</span></span></span></li>
+</b><li style="list-style-type: none"><b><span style="font-family: Sitka Text"><span style="font-size: 13pt">logical data independence</span></span></b><span style="font-size: 14pt"><span style="font-family: Sylfaen">indicates that the conceptual schema can be changed without any change to the external schema</span></span></li>
+</ul>
+<hr/><span style="font-size: 14pt"><span style="font-family: Sylfaen"><br/>
+</span></span><span style="font-family: Sylfaen"><span style="font-size: 18pt"><b>Database Users</b></span><br/>
+<br/>
+<img height="379" src="image 2.png" width="550"/>              <img height="397" src="image 3.png" width="550"/><span style="font-size: 14pt"><br/>
+</span><span style="font-size: 14pt"><br/>
+<br/>
+</span></span></body></html>

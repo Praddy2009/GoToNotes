@@ -1,0 +1,135 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<style>
+.node
+{
+    padding-left: 20px;
+    display: block;
+}
+
+.node_collapsed
+{
+    padding-left: 20px;
+    display: none;
+
+    
+    visibility: hidden;
+    display: none;
+}
+
+
+
+a:active
+{
+text-decoration:none;
+color: #0000FF;
+font-weight: bold;
+}
+
+a:visited
+{
+text-decoration:none;
+color: #000;
+font-weight: bold;
+}
+
+a:link
+{
+text-decoration:none;
+color: #000;
+font-weight: bold;
+}
+
+a:hover
+{
+text-decoration: underline;
+color: #500;
+font-weight: bold;
+}
+
+</style>
+
+
+<script language="javascript">
+  
+    var displayStates = [];
+
+    function showDiv(div)
+    {    
+        div.style.height     = "";
+        div.style.display    = "block";
+        div.style.visibility = "visible";
+    }
+
+    function hideDiv(div)
+    {
+        div.style.height     = "0px";
+        div.style.display    = "none";      
+        div.style.visibility = "hidden";
+    }
+
+    function toggleDiv(div, defaultState)
+    {
+
+        // set default on first use
+        if (displayStates[div] == undefined)
+            displayStates[div] = defaultState;
+
+        // toggle state
+        displayStates[div] = !displayStates[div];       
+
+        // hide / show
+        if (displayStates[div])
+            showDiv(div);
+        else {
+            hideDiv(div);
+        }
+    }
+
+    function toggleDivName(divname, defaultState)
+    {
+        toggleDiv(document.getElementById(divname), defaultState);
+    }
+
+</script>
+
+<nobr><tt><a href='javascript: toggleDivName("22ecffee-28ca-48ac-8c45-076e3aa182a3", true)'>+</a>&nbsp;</tt>DBMS</nobr><br/>
+<div id='22ecffee-28ca-48ac-8c45-076e3aa182a3' class='node'><nobr><tt><a href='javascript: toggleDivName("be7acdf2-d42b-4eda-a8ff-b3b91a3f38ca", false)'>+</a>&nbsp;</tt>Theory</nobr><br/>
+<div id='be7acdf2-d42b-4eda-a8ff-b3b91a3f38ca' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='theory/intro%20to%20rdbms%20%20sql/page.html' target='viewer'>Intro to RDBMS &amp; SQL</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='theory/data%2C%20info.%20%20dbms/page.html' target='viewer'>Data, Info. &amp; DBMS </a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='theory/3%20level%20abstraction/page.html' target='viewer'>3 level Abstraction</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='theory/storage%20%20query%20manager%20database%20archite/page.html' target='viewer'>Storage &amp; query Manager Database Architecture</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='theory/data%20models/page.html' target='viewer'>Data Models</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='theory/e-r%20model/page.html' target='viewer'>E-R MODEL</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='theory/keys/page.html' target='viewer'>Keys</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='theory/specialization%2C%20generalization%20%20aggrega/page.html' target='viewer'>Specialization, Generalization &amp; Aggregation</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='theory/relational%20model/page.html' target='viewer'>Relational Model</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='theory/er%20-%20relational%20model/page.html' target='viewer'>ER -&gt; Relational Model</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='theory/bad%20db%20design-%20concept%20of%20anomalies/page.html' target='viewer'>Bad DB Design/ Concept of Anomalies</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='theory/functional%20dependency/page.html' target='viewer'>Functional Dependency</a></nobr><br/>
+<nobr><tt><a href='javascript: toggleDivName("c8d622b3-77c2-4b5f-9414-d96f1814d9d8", true)'>+</a>&nbsp;</tt><a href='theory/normalization/page.html' target='viewer'>Normalization</a></nobr><br/>
+<div id='c8d622b3-77c2-4b5f-9414-d96f1814d9d8' class='node'><nobr><tt>&nbsp;&nbsp;</tt><a href='theory/normalization/normal%20forms%20----1nf%2C%202nf%2C%203nf/page.html' target='viewer'>Normal forms ----&gt;&gt;&gt;1NF, 2NF, 3NF</a></nobr><br/>
+</div>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("dc5d751d-ab2a-40c8-8514-aa511d3a25c8", false)'>+</a>&nbsp;</tt>Practical</nobr><br/>
+<div id='dc5d751d-ab2a-40c8-8514-aa511d3a25c8' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='practical/types%20sql%20statements/page.html' target='viewer'>Types SQL Statements</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='practical/data%20types/page.html' target='viewer'>Data Types</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='practical/sql%20statements%20%28create%2Cdesc%2Cinsert%2C%20subs/page.html' target='viewer'>SQL Statements (create,desc,insert, Subs var)</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='practical/select/page.html' target='viewer'>SELECT</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='practical/alter%2C%20delete%2C%20truncate%2C%20drop/page.html' target='viewer'>Alter, Delete, Truncate, Drop</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("291e9318-070f-4605-afb6-e8616efe252b", false)'>+</a>&nbsp;</tt>OS</nobr><br/>
+<div id='291e9318-070f-4605-afb6-e8616efe252b' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='os/intro%20to%20os/page.html' target='viewer'>Intro to OS</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='os/process/page.html' target='viewer'>Process</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='os/address_binding/page.html' target='viewer'>Address_Binding</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='os/paging/page.html' target='viewer'>Paging</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='os/segmentation/page.html' target='viewer'>Segmentation</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("c91eae50-604d-4a79-8ab9-e8171453bd0b", false)'>+</a>&nbsp;</tt><a href='trash' target='viewer'>Trash</a></nobr><br/>
+<div id='c91eae50-604d-4a79-8ab9-e8171453bd0b' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt>New Folder</nobr><br/>
+</div>
+</div>
+</body></html>

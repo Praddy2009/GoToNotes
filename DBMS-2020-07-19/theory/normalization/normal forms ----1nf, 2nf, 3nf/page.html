@@ -1,0 +1,45 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Normal forms ----&gt;&gt;&gt;1NF, 2NF, 3NF</title>
+</head><body>     <img height="242" src="image.png" width="450"/><br/>
+<br/>
+<span style="font-size: 15pt"><b>Normal forms</b></span><br/>
+<span style="font-size: 12pt">It provides a stepwise progression towards the construction of normalized relation schemas, which are free from data redundancies.<br/>
+</span><hr/><span style="font-size: 12pt"/><span style="font-size: 12pt"><br/>
+</span><b><span style="font-size: 15pt">First Normal form (1NF)</span></b><span style="font-size: 12pt"><ul><li>A relation will be 1NF if it contains an atomic value</li>
+<li>It states that an attribute of a table can't hold multiple values. It must hold only single valued attribute.</li>
+<li>It disallows : Multivalued attribute, composite attribute and their combination.</li>
+</ul>
+<ul><b><li style="list-style-type: none">Steps to make it 1NF form</li>
+</b><li style="list-style-type: none">We remove the repeating groups by</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><ul><li><b>Method 1:</b>Flatten the table and change the key</li>
+<li><b>Method 2:</b> Decomposition the relation</li>
+</ul>
+</li>
+</ul>
+<br/>
+<br/>
+</span><b><span style="font-size: 14pt">Method 1:</span></b><span style="font-size: 12pt"><br/>
+</span><span style="font-size: 12pt"><img height="154" src="image 2.png" width="700"/><img height="357" src="image 3.png" width="550"/><br/>
+<br/>
+&quot;Previously <b>Id No</b>was primary key but now in new table Id No with Subject is the primary key.&quot;<br/>
+<br/>
+<br/>
+</span><span style="font-size: 14pt"><b>Method 2:</b></span><span style="font-size: 12pt"><br/>
+</span><span style="font-size: 12pt">Split the table in to two parts. One part for repeatng groups and another is for non repeating groups.<br/>
+The primary key of the original relation should be included in both relations<br/>
+<br/>
+<img height="320" src="image 4.png" width="400"/>     <img height="299" src="image 5.png" width="500"/><br/>
+<hr/><br/>
+ <img height="160" src="image 6.png" width="550"/><br/>
+<hr/></span><span style="font-size: 15pt"><b>Second Normal form (2NF)<br/>
+</b></span><span style="font-size: 12pt">A relation is 2NF iff 2 conditions are satisfied simultaniously: </span><b><span style="font-size: 15pt"/></b><ul><li><span style="font-size: 12pt">It's in 1NF.</span></li>
+<span style="font-size: 12pt"><li>No non key attribute is partially dependent on any key. <span style="font-family: sans"><div style="text-align: justify">i.e., no non-prime attribute (attributes which are not part of any candidate key) is dependent on any proper subset of any candidate key of the table.</div>  </span></li>
+</span></ul>
+<span style="font-size: 12pt"><br/>
+<br/>
+<br/>
+<br/>
+</span></body></html>
