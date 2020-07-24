@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Combining</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Combining</h1><br/>Chapter Goals:<br />    Understand the methods used to combine DataFrame objects.<br />    Write code for combining DataFrames<br />    <br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><br />In the previous chapter, we discussed the append function for concatenating DataFrame rows.To concatenate multiple DataFrames along either rows or columns, we use the pd.concat function.<br /><br /><img src="images/3-1.png" alt="images/3-1.png" />  <img src="images/3-2.png" alt="images/3-2.png" /><br /><br />The pd.concat function takes in a list of pandas objects (normally a list of Data Frames) to concatenate. The function also takes in numerous keyword arguments,with axis being one of the more important ones.<br />   ◇ axis=0 : Concatenate Rows<br />   ◇ axis=1 : Concatenate Columns<br /><br />In the code example, the final call to pd.concat resulted in a DataFrame with many NaN values. This is because the row<br />lables for df1 and df3 didn't match, so result was padded with NaN in locations where values didn't exist.<br /><br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><br /><strong>Merging</strong><br /><br />Apart from combining DataFrames through concatenation, we can also merge multiple DataFrames.The function we use is pd.merge, which takes in two Data Frames for its two required arguments.<br /><br /><img src="images/3-3.png" alt="images/3-3.png" />       <img src="images/3-4.png" alt="images/3-4.png" /><br /><br />Without using any keyword argument,pd.merge joins two DataFrames using all their common column labels. In the code example, the common labels between mlb_df1 and mlb_df2 were name and year.<br /><br />The rows that contain the exact same values for the common column labels will be merged.Since ‘john doe’ for year 2000 was in both mlb_df1 and mlb_df2,its rows was merged. However, ‘john doe’ for year 2003 was only in mlb_df1, so it's row was not merged.<br /><br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><img src="images/3-5.png" alt="images/3-5.png" /><br /><br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><br /><img src="images/3-6.png" alt="images/3-6.png" /><br /><br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><br /><img src="images/3-7.png" alt="images/3-7.png" /><br /><br /><br /><br /></div></body></html>
