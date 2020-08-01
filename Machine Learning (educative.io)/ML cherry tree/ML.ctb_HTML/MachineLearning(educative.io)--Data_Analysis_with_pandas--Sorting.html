@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Sorting</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Sorting</h1><br/><br /><h3>Chapter Goals:</h3><br />  • Learn how to sort a DataFrame by its features<br />  • Write code to sort an MLB player's statistics<br /><br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><br /><strong>Sorting by feature</strong><br /><br />When we deal with a dataset that has many features, it is often useful to sort the dataset. This makes it easier to view the data and spot trends in the values.<br /><br />In pandas, the <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sort_values.html">sort_values</a> function allows us to sort a DataFrame by one or more of its columns. The first argument is either a column label or a list of column labels to sort by.<br /><br />The <code>ascending</code> keyword argument allows us to specify whether to sort in ascending or descending order (default is ascending order, i.e. <code>ascending=True</code>).<br /><br />The code below demonstrates how to use <code>sort_values</code> with a single column label. The first example sorts by <code>'yearID'</code> in ascending order, while the second sorts <code>'playerID'</code> in descending lexicographic (alphabetical) order.<br /><br /><img src="images/7-1.png" alt="images/7-1.png" />   <img src="images/7-2.png" alt="images/7-2.png" /><br /><br />When sorting with a list of column labels, each additional label is used to break ties. Specifically, label <em>i</em> in the list acts as a tiebreaker for label <em>i - 1</em>.<br /><br /><img src="images/7-3.png" alt="images/7-3.png" />   <img src="images/7-4.png" alt="images/7-4.png" /><br /><br />When using two column labels to sort, the list's first label represents the main sorting criterion, while the second label is used to break ties. In the example with sorting by <code>'yearID'</code> and <code>'playerID'</code>, the DataFrame is first sorted by year (in ascending order). For identical years, we sort again by player ID (in ascending order).<br /><br />For multi-label inputs to <code>sort_values</code>, we are allowed to specify different sorting orders for each column label. In our second example, we specified that <code>'yearID'</code> would be sorted in ascending order, while <code>'HR'</code> would be sorted in descending order.<br /><br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><br /><img src="images/7-5.png" alt="images/7-5.png" /><br /><br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><br /><img src="images/7-6.png" alt="images/7-6.png" /><br /><br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><br /><img src="images/7-7.png" alt="images/7-7.png" /><br /><br /></div></body></html>
