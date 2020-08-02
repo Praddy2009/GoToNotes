@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Encode Sans Semi Condensed', sans-serif;
+
+ 
+}
+
+.jumbotron{
+    background-color: greenyellow;
+}
+
+a:hover{
+   text-decoration: none; 
+}
+
+.card-body{
+    color: greenyellow ;
+    background-color: black;
+    border: greenyellow 2px solid;
+    border-radius: 3%;
+}
+
+.card-link{
+    
+    color: greenyellow;
+    padding-left: 50px;
+    padding-right: 36px;
+    padding-bottom: 12px;
+    padding-top: 8px;
+    border: greenyellow 2px solid;
+    
+}
+
+.card-body:hover .card-link{
+    background-color: greenyellow;
+    color: black;
+    z-index: 2;
+}
+
+.card-body{
+    padding-bottom: 10px;
+}
+
+
+
+
