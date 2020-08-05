@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Robust Scaling</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Robust Scaling</h1><br/><br /><h3>Chapter Goals:</h3><br /><br />  • Learn how to scale data without being affected by outliers<br />  <br /><strong>Data outliners</strong><br /><br />An important aspect of data that we have to deal with is <em>outliers</em>. In general terms, an outlier is a data point that is significantly further away from the other data points. For example, if we had watermelons of weights 5, 4, 6, 7, and 20 pounds, the 20 pound watermelon is an outlier.<br /><br /><img src="images/17-1.png" alt="images/17-1.png" /><br /><br />The data scaling methods from the previous chapters are both affected by outliners.Data standardization uses each feature's mean and standard deviation, while ranged scaling uses the maximum and minimum feature values, meaning that they're both susceptible to being skewed by outlier values.<br /><br />We can robustly scale the data, i.e. avoid being affected by outliers, by using use the data's median and <a href="https://en.wikipedia.org/wiki/Interquartile_range">Interquartile Range (IQR)</a>. Since the median and IQR are percentile measurements of the data (50% for median, 25% to 75% for the IQR), they are not affected by outliers. For the scaling method, we just subtract the median from each data value then scale to the IQR.<br /><br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><br /><strong>Robust Scaling with scikit-learn</strong><br /><br />In scikit-learn, we perform robust scaling with the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.RobustScaler.html#sklearn.preprocessing.RobustScaler">RobustScaler</a> module. It is another transformer object, with the same <code>fit</code>, <code>transform</code>, and <code>fit_transform</code> functions described in the previous chapter.<br /><br /><img src="images/17-2.png" alt="images/17-2.png" />   <img src="images/17-3.png" alt="images/17-3.png" /><br /><br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><br /><img src="images/17-4.png" alt="images/17-4.png" /><br /></div></body></html>

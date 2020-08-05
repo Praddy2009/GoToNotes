@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Normalizing Data</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Normalizing Data</h1><br/><br /><h3>Chapter Goals:</h3><br /><br />  • Learn how to apply L2 normalization to data<br /><br /><br /><strong><h3>L2 normalization</h3></strong><strong><br /></strong><br />So far, each of the scaling techniques we've used has been applied to the data features (i.e. columns). However, in certain cases we want to scale the individual data observations (i.e. rows). For instance, when clustering data we need to apply L2 normalization to each row, in order to calculate <a href="https://en.wikipedia.org/wiki/Cosine_similarity">cosine similarity scores</a>. The <strong>Clustering</strong> section will cover data clustering and cosine similarities in greater depth.<br /><br />L2 normalization applied to a particular row of a data array will divide each value in that row by the row's <a href="http://mathworld.wolfram.com/L2-Norm.html">L2 norm</a>. In general terms, the L2 norm of a row is just the square root of the sum of squared values for the row.<br /><br /><img src="images/18-1.png" alt="images/18-1.png" /><br /><br />The above formula demonstrates L2 normalization applied to row <em>X</em> to obtain the normalized row of values, <em>X</em><sub>L2</sub>.<br /><br />In scikit-learn, the transformer module that implements L2 normalization is the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Normalizer.html#sklearn.preprocessing.Normalizer">Normalizer</a>.<br /><br />The code below shows how to use the <code>Normalizer</code>.<br /><br /><img src="images/18-2.png" alt="images/18-2.png" /> <img src="images/18-3.png" alt="images/18-3.png" /><br /><br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><br /><img src="images/18-4.png" alt="images/18-4.png" /><br /></div></body></html>
