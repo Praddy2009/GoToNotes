@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Concatenation</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Concatenation</h1><br/><br />At the very primitive level<br /><br />a = 5 : 8               [Eq 1]<br />b = c(5 : 8)           [Eq 2]<br /><br /><img src="images/5-1.png" alt="images/5-1.png" /><br /><br />both the eq1 and eq2 are same. But when we move forward things change<br /><br />Let's take example of plot.ts()<br /><br />Now what plot.ts does is it creates a time series graph for the observed values (let say observer values are 5,6,7,8,1). Now to feed all these observation in to the fuction we need to use c() so that plot.ts can understand it as vector of numbers.<br /><br /><strong>plot.ts(c(5,6,7,8,1))</strong><br /><br /><img src="images/5-2.png" alt="images/5-2.png" /><br /><br />But in this case if we ommited the<strong> concatenation</strong> then it would have been error<br /><br /><strong>plot.ts(5,6,7,8,1)</strong><br /><br /><img src="images/5-3.png" alt="images/5-3.png" /></div></body></html>

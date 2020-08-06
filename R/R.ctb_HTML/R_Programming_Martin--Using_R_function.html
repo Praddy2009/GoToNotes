@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Using R function</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Using R function</h1><br/><strong>In this section we'll see how to use functions in R</strong><br /><br /><strong>Step 1:</strong> Check about the function in help section. What arguments it takes.<br /><br /><img src="images/4-1.png" alt="images/4-1.png" /><br /><br />So runif generates n random numbers between range min and max<br /><br /><strong>Step 2: </strong>Use it accordingly<br /><br />        # setting a seed to make a random sample reproducible, choose any number you want<br />         <code>set.seed(65)</code><br />        # with argument name, exact argument order<br />        <code>runif(n = 9, min = 3, max= 6)</code><br />        <br />        <img src="images/4-2.png" alt="images/4-2.png" /><br /><br />        <code>set.seed(65)</code><br />        # without argument name, exact argument order<br />        <code>runif(9,3,6)</code><br />        <br />        <img src="images/4-3.png" alt="images/4-3.png" /><br /><br />        <code>set.seed(65)</code><br />        # with argument name, mixed argument order<br />        <code>runif(min = 3, max = 6, n= 9)</code>        <br /><br />        <img src="images/4-4.png" alt="images/4-4.png" /><br /><br />        <code>set.seed(65)</code><br />        # without argument name, mixed argument order<br />        <code>runif(3,6,9)</code> # this means n=3, max=9<br /><br />        <img src="images/4-5.png" alt="images/4-5.png" /><br /><br />        <code>set.seed(65)</code><br />        # using only the first argument. Took min=0 and max =1 by default<br />        <code>runif(3)</code><br /><br />        <img src="images/4-6.png" alt="images/4-6.png" />        <br /><br />        <code>set.seed(65)</code><br />        # using arguments 1 and 3<br />        <code>runif(3,,4)</code><br />        <br />        <img src="images/4-7.png" alt="images/4-7.png" /><br /><br /></div></body></html>
