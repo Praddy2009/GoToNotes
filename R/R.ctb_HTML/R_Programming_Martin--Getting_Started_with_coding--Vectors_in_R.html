@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Vectors in R</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Vectors in R</h1><br/>A <strong>vector</strong> contains element of the same type. The data types can be logical, integer, double, character, complex or raw.<br /><br /><strong>Note</strong> : <br />   1.   typeof() : To check vector data type<br />   2.   length() : To calculate length of vector<br /><br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><br /><strong>Creating a vector</strong><br /><br />Vectors are generally created using the c() function.<br />Since, a vector must have elements of the same type, this function will try and coerce elements to the same type, if they are different.<br /><br />Coercion is from lower to higher types<br /><br />    <img src="images/8-1.png" alt="images/8-1.png" /><br /><br />#Creating a vector of consecutive numbers<br /><br />    <img src="images/8-2.png" alt="images/8-2.png" /><br /><br />#Let's create a similar stuff using <a href="R_Programming_Martin--Some_basic_functions--seq().html">seq()</a><br /><br />    <img src="images/8-3.png" alt="images/8-3.png" /><br />    <img src="images/8-4.png" alt="images/8-4.png" /><br /><br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><br /><strong>Accessing Elements of Vector</strong><br /><br />#Using integer as index<br />    <img src="images/8-5.png" alt="images/8-5.png" /><br /><br />#Using logical vector as index<br />    <img src="images/8-6.png" alt="images/8-6.png" /><br />    <br />#Using character vector as index<br />    <img src="images/8-7.png" alt="images/8-7.png" />      <img src="images/8-8.png" alt="images/8-8.png" /><br />    <br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><br /><strong>Modify vectors</strong><br />    <br />    <img src="images/8-9.png" alt="images/8-9.png" /><br /><br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><br /><strong>To empty a vector</strong><br /><br />    x &lt;- NULL</div></body></html>
