@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Apache Setup</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Apache Setup</h1><br/><br />For Linux<br /><br />    #apt-get -y install python<br />    #sudo apt-get install apache2      //Install apache2 <br />    #a2enmod cgi                               //To enable cgi<br />    #systemctl restart apache2         //To restart apache server<br />    <br />    Now save the webapp/cgi files at /lib/cgi-bin/<br />    Save html files at /var/www/html/<br />    <strong>Navigate</strong><br />    localhost/cgi-bin/test.py</div></body></html>
