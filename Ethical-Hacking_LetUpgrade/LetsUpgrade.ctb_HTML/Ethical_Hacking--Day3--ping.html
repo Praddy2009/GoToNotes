@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>ping</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">ping</h1><br/><br /><img src="images/6-1.png" alt="images/6-1.png" /><br /><br />So now let say we want to see whats the max size of data packet which could be sent without fragmenting.<br /><br />So in widows cmd we'll write<br /><br />    ping <a href="http://www.certifiedhacker.com">www.certifiedhacker.com</a> -f -l 1473<br />    <br />    -f : To not fragment the packets<br />    -l : to define the size of packet<br />    <br />    Note: 1473 was found after bruteforcing <br />   <br />So a packet with size of 1473 will go without fragmenting.<br /><br /></div></body></html>
