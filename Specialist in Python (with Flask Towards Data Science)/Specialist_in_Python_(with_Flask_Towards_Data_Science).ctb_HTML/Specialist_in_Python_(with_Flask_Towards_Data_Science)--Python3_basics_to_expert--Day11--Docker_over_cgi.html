@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Docker over cgi</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Docker over cgi</h1><br/>                       <img src="images/21-1.png" alt="images/21-1.png" /><br /><br />It's due to two things this problem arises:<br /><br />When we see the error we find that the problem is <strong>permission denied</strong> its due to <strong>Security Enhanced Linux</strong>(SELinux)<br /><br />SELinux : Security-Enhanced Linux (<strong>SELinux</strong>)  is a Linux kernel security module that provides a mechanism for  supporting access control security policies, including mandatory access  controls (MAC). <strong>SELinux</strong> is a set of kernel modifications and user-space tools that have been added to various Linux distributions.<br /><br />Use command #<strong>getenforce </strong><br />            <img src="images/21-2.png" alt="images/21-2.png" /><br />To check if it's enabled or disabled. Make sure it's disabled.<br /><br />Command to enable :  #<strong>setenforce 1</strong><br />Command to disable:  #<strong>setenforce 0</strong><br /><br />In our case it's disabled.<br /><br />So lets see the second reason due to which the error occuring and that is sudo priveledges. Since on the client behalf &lt;&gt; is requesting to run the docker over cgi therefore the permission is denied.<br /><br />To check which user is working with cgi use command #<strong>ps aux | egrep '(apache|httpd)'</strong><br /><br />    <img src="images/21-3.png" alt="images/21-3.png" /><br />            <br />Now we need to add www-data in sudoers file. Use #<strong>nano /etc/sudoers</strong><br />and add the user <br />    <img src="images/21-4.png" alt="images/21-4.png" /><br />    <br />Now in the python script use <strong>sudo</strong> in commands<br /><br />     <img src="images/21-5.png" alt="images/21-5.png" /><br />     <br />And this time when we run it over cgi it worked<br /><br /><img src="images/21-6.png" alt="images/21-6.png" />           <img src="images/21-7.png" alt="images/21-7.png" /><br /><br /></div></body></html>
