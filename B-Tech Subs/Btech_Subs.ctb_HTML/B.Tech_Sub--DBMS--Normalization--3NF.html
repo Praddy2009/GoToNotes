@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>3NF</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">3NF</h1><br/><strong>Third Normal Form</strong><br /><br /><strong>Rule </strong>:<br />   ⇒ Table must be present in 2NF.<br />   ⇒ There should be no transitive dependency(non prime attribute can be deteremined only by prime attribute or candidate attribute). <br /><br /><img src="images/41-1.png" alt="images/41-1.png" /><br /><br /><strong>Que</strong> : Check for 3NF :<br />    i) Given : <br />            R(ABCD)<br />            FD: AB → C , C → D<br /><br />    <strong>Step 1</strong> : <span style="color:#2aacc4;">Find the Candidate Key.<br />                  AB have to be in CK as it's not to the right of any FD.<br />                  AB+ = ABCD<br />                  Since none of the parts of AB found in right of any of the FD.<br />                  Therefore,<br />                  CK = {AB}<br />                  Prime Att : A, B<br />                  Non-Prim Att : C, D</span><br />                  <br />     <strong>Step 2</strong> : <span style="color:#2aacc4;">Now check in FD if any non prime attribute defines another non prime attribute and yes for C → D it holds true and hence transitive dependency exists and Relation not in 3NF.<br />     <br />     </span><br />     <strong>Hack</strong> : For each FD<br />        {LHS must be a CK or SK <strong>OR</strong> RHS is a Prime Attribute}<br />            <br />   ii) Given: R(ABCD)<br />                  FD: AB → CD , D → A<br />       <br />       <strong>Step 1 </strong>: <span style="color:#2aacc4;">Finding Candidate key<br />                      B not on right side so it have to be in CK<br />                      B</span><sup><span style="color:#2aacc4;">+</span></sup><span style="color:#2aacc4;">  = B       //B alone can't be CK<br />                      AB</span><sup><span style="color:#2aacc4;">+</span></sup><span style="color:#2aacc4;"> = ABCD<br />                      So AB will be CK now look for other CK if any.<br />                      Since A is present in D → A therefore,<br />                      DB</span><sup><span style="color:#2aacc4;">+</span></sup><span style="color:#2aacc4;"> = ABCD<br />                      <br />                      CK ={AD, DB}<br />                      Prim Att = A, B, D<br />                      Not Prim = C</span><br />                      <br />       <strong>Step 2</strong> : <span style="color:#2aacc4;">Using hack statement we find relation is in 3NF.</span><br />                               </div></body></html>

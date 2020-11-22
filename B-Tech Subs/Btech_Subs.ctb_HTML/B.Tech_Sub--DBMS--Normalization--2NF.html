@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>2NF</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">2NF</h1><br/><strong>Second Normal Form</strong><br /><br /><strong>Rule </strong>:<br />   ⇒ Table must be present in 1NF.<br />   ⇒ All the non prime attributes(attributes which are not participating in formation of candidate key) should be fully functional dependent on candidate key. <strong>OR</strong> There should be no partial dependency(When a part of candidate key determine another non prime attribute.) in the relation.<br /><br /><img src="images/39-1.png" alt="images/39-1.png" /><br /><br /><br /><strong>Que</strong>: Identify relation in 2NF or Not?<br />Given : R(<span style="color:#000000;">A,</span>B,C,D,E,F)<br />            FD {C→F, E→A, EC→D, A→B }<br /><br /><strong>Ans</strong> <br /><span style="color:#329fca;">  </span><span style="color:#000000;">  </span><strong><span style="color:#000000;">Step 1</span></strong><span style="color:#000000;">: </span><span style="color:#329fca;">Let's find candidate key.<br />                  So EC needs to be in candidate key as it's not in right side of any of the FDs<br />                  EC</span><sup><span style="color:#329fca;">+</span></sup><span style="color:#329fca;">  = ECFADB    //hence EC is candidate key<br />                  None of the FD has E or C on it's right side so we can't substitue any value therefore<br />                  Only EC is candidate key<br />                  <br />                  CK = {EC}<br /><br /></span><span style="color:#000000;">    </span><strong><span style="color:#000000;">Step 2:</span></strong><span style="color:#329fca;"> Prime Attribute = {E,C}<br />    <br />   </span><span style="color:#000000;"> </span><strong><span style="color:#000000;">Step 3: </span></strong><span style="color:#329fca;">Non Prime Attribute = {A, B, D, F}<br />    <br />    </span><strong><span style="color:#000000;">Step 4:</span></strong><span style="color:#329fca;"> Check for partial dependency<br />                 Since in our CK {EC} , C→F where F is non prime attribute therefore partial dependency exists.<br />                 And </span><strong><span style="color:#329fca;">Relation is not in 2NF</span></strong><span style="color:#329fca;">.<br /> </span><br />    <strong>Hack</strong> : For partial dependency<br />               FD ka{LHS should be proper subset of CK <strong>&amp;&amp;</strong> RHS should be a non Prime attribute.}<br /><br />    For {EC}  :  proper subset {E} || {C}<br />                                   subset {EC}<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> </div></body></html>

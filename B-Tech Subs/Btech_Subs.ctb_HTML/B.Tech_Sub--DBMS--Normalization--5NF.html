@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>5NF</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">5NF</h1><br/><strong>Lossless/Lossy Join Decomposition</strong><br /><br /><strong>Rule</strong>:<br />    Check at bottom after reading the casestudy.<br />    <br /><strong>Case Study</strong>:<br /><br /><img src="images/43-1.png" alt="images/43-1.png" /><br />Now we normalized the table to reduce anomaly but the thing is we didn't took care of common attribute between two tables.<br /><br />Let's say we get a query to <strong>get the C value where A value = ‘1’</strong>.<br /><br />So the querry will look like this:<br /><strong>    Select R2.C from R2 natural join R1 <br />    Where R1 A='1';<br />        <br /></strong>Now what join does is “<strong>Cross multiplication with condition</strong>” given<br /><br /><img src="images/43-2.png" alt="images/43-2.png" /><img src="images/43-3.png" alt="images/43-3.png" /><br /><br />But now if we see in <br />         ◇ Fig (iv) we get to know that for A with val 1 gives two values of C i.e 1 and 2.<br />         ◇ Fig (i) we only get C=1 for A=1.<br /><br />Since <strong>fig(iv) has 5 tuples != fig(i) has 3 tuples </strong><br /><br />       <img src="images/43-4.png" alt="images/43-4.png" />                                            <br /><br />                                              <img src="images/43-5.png" alt="images/43-5.png" /><br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><br />Now here comes the <strong>Rules</strong><br />    → <strong>R1 U R2 = R</strong><br />    →<strong> R1 ∩ R2 !=Φ</strong><br />    → Take common attribute only CK or SK of either R1 or R2 or both.<br /><br />~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br /><br />Now let's do it again but taking A as the common attribute.<br /><br /><img src="images/43-6.png" alt="images/43-6.png" />      <br /><br />Now again if we apply                       <br />    <strong>Select R2.C from R2 natural join R1 <br />    Where R1 A='1';</strong><br />    <br />We'll get the table<br /><img src="images/43-7.png" alt="images/43-7.png" /><img src="images/43-8.png" alt="images/43-8.png" /><br /><br />So we see that even after dividing the table into two it gives the correct answer to query therefore its perfect.<br /><br />                                                            <img src="images/43-9.png" alt="images/43-9.png" /><strong>                                                 <br /></strong><br /><br /><br />                <br /><br /><br /><br /><strong><br /></strong><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></body></html>

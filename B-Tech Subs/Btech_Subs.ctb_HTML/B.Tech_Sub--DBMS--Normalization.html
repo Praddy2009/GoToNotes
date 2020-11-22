@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Normalization</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Normalization</h1><br/>It's a technique(is the process of splitting relations into well structured relations) to remove or reduce the redundancy from the table.<br /><br />        <img src="images/35-1.png" alt="images/35-1.png" /><br />        <br />        An <strong><span style="text-decoration:underline;">update anomaly</span></strong> is a data inconsistency that results from data redundancy and a partial update. <br />        For example, each employee in a company has a department associated with them as well as the student group they participate in. If A. Bruchs’ department is an error it must be updated at least 2 times or there will be inconsistent data in database. If the user performing the update doesn't realize the data is stored redundantly the update will not be done properly.<br />        <br />        A <strong><span style="text-decoration:underline;">deletion anomaly</span></strong> is the unintended loss of data due to deletion of other data.<br />        For example, if the student group Beta Alpha Psi disbanded and was  deleted from the table above, J. Longfellow and the Accounting department would cease to exist. The results in database inconsistencies and is an example of how combining information that does not really belong together into one table can cause problems.<br />        <br />        An <strong>insertion anomaly</strong> is the inability to add data to the database due to absence of other data. <br />        For example, assume Student_Group is defined so that null values are not allowed. If a new employee is hired but not immediately assigned to a Student_Group then this employee could not be entered into the database. The result in database inconsistencies due to omission.<br />        <br />        Update , deletion and insertion anomalies are very undesirable in any database.Anomalies are avoided by normalization.</div></body></html>

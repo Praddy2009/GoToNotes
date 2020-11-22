@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Key</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Key</h1><br/><strong>Que:</strong> What is key?<br /><strong>Ans:</strong> It's attribute(column) of a table.<br /><br /><strong>Que:</strong> What is the use of a key?<br /><strong>Ans:</strong> -&gt; To uniquely identify any two tuple(row) in the table.<br />         -&gt; To establish relationship among tables.<br /><br /><strong>Scenerio</strong><br />    Let's assume we have a database of students with following entries :<br />    (Adhaar Number, Roll Number, Registration Number, Lisence Number, Voter ID, Phone Number , Name, Marks, CGPA, EMAIL-ID)<br /><br /><strong><span style="text-decoration:underline;">Super Key</span></strong><br />    It's a group of single or multiple keys which identifies rows in a table. Superset of candidate key is super key.<br /><br /><strong><span style="text-decoration:underline;">Primary Key</span></strong>{<span style="color:#ff2c00;">Unique + Not Null</span>}<br />    A primary key, also called a primary keyword, is a key in a relational database that is unique  for each record. A relational database must always have <strong>one and only one</strong> primary key.<br />    In above scenerio <strong>Roll Number</strong> can be a primary key.<br />    <br /><strong><span style="text-decoration:underline;">Candidate key</span></strong><br />    It's a set of attributes(columns) that uniquely identifies tuples in a table. It's a superkey with no related attributes.<br />    In above scenerio <strong>Roll Number</strong>,<strong> Adhaar</strong>,<strong> Reg No</strong>,<strong> Lisence Number</strong>,<strong> VoterID</strong>,<strong>Phone</strong>,<strong> Email ID</strong> can be a primary key.<br />    <br /><strong><span style="text-decoration:underline;">Foreign Key</span></strong><br />    A Foreign key is a field(or a collection of field) in one table that refers to the Primary Key in another table.<br />    It maintains <strong>Refrential Integrity</strong>.<br />    <br />    <img src="images/29-1.png" alt="images/29-1.png" /><br />    <br />    <img src="images/29-2.png" alt="images/29-2.png" /><br />    The FOREIGN KEY constraint also prevents invalid data from being inserted into the foreign key column,because it has to be one of the values contained in the table it points to.<br />    <br />    <img src="images/29-3.png" alt="images/29-3.png" /><br />      <img src="images/29-4.png" alt="images/29-4.png" /><br />      </div></body></html>
